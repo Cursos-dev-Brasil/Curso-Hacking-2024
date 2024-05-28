@@ -20,6 +20,9 @@ Outros comandos são muito importantes para:
 | touch   | touch          | criar um arquivo               |
 | file    | file           | determina um tipo de arquivo   |
 
+- touch: **Criar um arquivo é muito simples, o comando touch aceita apenas um argumento, que é o nome do arquivo que vai ser criado, ao executar o comando: `touch note` o arquivo note é criado em branco, para adicionar texto, você pode usar o comando echo e os comandos ">" e ">>"**
+
+
 ## Parâmetros
 
 A maioria dos comandos tem parâmetros. Parâmetros são formas de especificar algo para o comando. Se nenhum parâmetro for atribuído, o comando executará a forma padrão. Parâmetros são identificados com um hífen (-) seguido por uma letra ou palavra. Ex: `ls -a`
