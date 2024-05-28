@@ -101,3 +101,23 @@ senha 1 - - !4CFF0
 
 Aqui o comando grep filtra a palavra senha no arquivo passwd.txt
 
+## Operadores do terminal
+
+Os operadores do terminal são muito importantes para garantir um melhor aproveitamento e uma melhor produtividade em ambiente Linux 
+| Operador | Descrição                                                                                       | Exemplo                          |
+|----------|-------------------------------------------------------------------------------------------------|----------------------------------|
+| `&`      |  executar comandos em segundo plano no terminal.                                         | `comando &`                      |
+| `&&`     | Combina múltiplos comandos em uma linha ; o segundo comando só executa se o primeiro for bem-sucedido. | `comando1 && comando2`           |
+| `>`      | Redireciona a saída de um comando para outro lugar, como um arquivo, sobrescrevendo seu conteúdo se o arquivo já existir. | `echo "conteúdo" > arquivo.txt`  |
+| `>>`     | Redireciona a saída de um comando para outro lugar, como um arquivo, adicionando ao final do conteúdo existente no arquivo. | `echo "mais conteúdo" >> arquivo.txt` |
+
+
+- `&`: **esse operador executa comandos em segundo plano, se quisermos copiar um arquivo grande, levaria muito tempo e travaria nosso terminal. O operador "&" adicionado ao comando executa a tarefa a segundo plano, sem precisar interromper outros processoa**
+
+- `&&`: **Esse comando é enganador por se parecer muito com o operador "&",só que ao contrário dele, o operador de "&&" é usado para rodar mais de um comando de uma vez, `comando 1 &&,comando 2`. Vale lembrar ar que o comando 2 só será executado se o comando 1 for bem sucessido**
+
+- `>`: **Esse operador é conhecido como redirecionamento de saída,  ou seja, pegamos a saída de um comando que executamos e enviamos a saída para outro lugar. Um bom exemplo disso é usar o comando echo para redirecionar a string para outro arquivo, por exemplo.**
+
+*Nota: se o arquivo existir, o conteúdo é sobre escrito, caso contrário o arquivo é criado*
+
+- '>>': **Esse operador também é um direcionamento de saída, o que diferencia ele do,">". Em vez de sobreescrever o arquivo, ele adiciona o novo conteúdo ao final do arquivo, mantendo o resto do conteúdo
