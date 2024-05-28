@@ -4,7 +4,7 @@
 Esse curso é destinado a *iniciantes* na cyber segurança, Hacking e Programação, porém, o conteúdo vai desde como se proteger de um invasor até como montar um vírus voltado para um sistema windows
 
 ## Isenção de responsabilidade
-O proprietário desse curso se isenta de qualquer dano material ou moral que esse curso possa representar aos usuários ou a terceiros
+O proprietário desse curso se isenta da responsabilidade de qualquer dano material ou moral que esse curso possa representar aos usuários ou a terceiros
 
 ## Pré-requisitos
 Agora que você já sabe o básico do curso, vamos falar de requisitos: 
