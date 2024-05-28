@@ -2,6 +2,14 @@
 
 *obs: devido ao tamanho do arquivo anterior, criamos um novo*
 
+## Comandos para interagir com sistema de arquivos 
+outros comandos são muito importantes para: 
+- criar diretórios
+- apagar diretórios
+- mover diretórios
+- criar arquivos
+- apagar arquivos
+- mover arquivos
 ## parâmetros
 
 A maioria dos comandos tem parâmetros, parâmetros são formas de especificar algo para o comando, se nenhum parâmetro for atribuído o comando executará a forma padrão, parâmetros são identificados com um hífen(-) seguido por uma letra ou palavra. Ex: ls -a
