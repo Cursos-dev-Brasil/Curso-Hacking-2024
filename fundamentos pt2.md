@@ -10,6 +10,14 @@ outros comandos são muito importantes para:
 - criar arquivos
 - apagar arquivos
 - mover arquivos
+
+| Comando | Nome completo | função |
+| mkdir | make directory |cria um diretório |
+| rm | remove | remove um arquivo ou diretório |
+| mv | move | mover um arquivo ou diretório |
+| cp | copy | cópia um arquivo ou diretório |
+| touch | touch | criar um arquivo |
+| file | file | determina um tipo de arquivo |
 ## parâmetros
 
 A maioria dos comandos tem parâmetros, parâmetros são formas de especificar algo para o comando, se nenhum parâmetro for atribuído o comando executará a forma padrão, parâmetros são identificados com um hífen(-) seguido por uma letra ou palavra. Ex: ls -a
