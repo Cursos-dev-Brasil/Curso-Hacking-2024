@@ -2,6 +2,10 @@
 
 *obs: devido ao tamanho do arquivo anterior, criamos um novo*
 
+## parâmetros
+
+A maioria dos comandos tem parâmetros, parâmetros são formas de especificar algo para o comando, se nenhum parâmetro for atribuído o comando executará a forma padrão, parâmetros são identificados com um hífen(-) seguido por uma letra ou palavra. Ex: ls -a
+
 ## conexão usando *SSH*
 uma conexão Ssh (secure shell) é um tipo de protocolo usado na transferência de dados entre máquinas, é um protocolo que criptografa seus dados ao ser enviados e só os descriptografa quando a mensagem alcança o destino
 
