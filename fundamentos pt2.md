@@ -12,7 +12,7 @@ outros comandos são muito importantes para:
 - mover arquivos
 
 | Comando | Nome completo | função |
-| mkdir | make directory |cria um diretório |
+| mkdir | make directory | cria um diretório |
 | rm | remove | remove um arquivo ou diretório |
 | mv | move | mover um arquivo ou diretório |
 | cp | copy | cópia um arquivo ou diretório |
