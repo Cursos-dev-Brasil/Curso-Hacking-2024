@@ -58,3 +58,6 @@ os logs são importantes para:
 
 ## logs do sistema operacional
 - além dos logs de serviço software, existem os logs do sistema operacional que, servem para diagnosticar e garantir a saúde do kernau e dos arquivos e pastas do sistema.
+
+o caminho dos logs do sistema é: **/var/log/syslog/**
+além do arquivo: **/var/log/Auth.log** que salva todas as tentativas de autenticação, bem e mal sucedidas
