@@ -38,3 +38,20 @@ logs sao arquivos essenciais para a manutenção do sistema, e contém informaç
  - error log: contém informações sobre erros de um servidor, localizado em /var/log/apache2/error.log
 2. fail2ban
  - fail to ban log: informações sobre atividades suspeitas no Linux, como tentativas de brute force, localizado no em /var/log/fail2ban.log
+3. UFW
+- UFW (uncomplicated firewall): Registra atividades de firewall, como tentativas de bloqueio de conexão, localizado em /var/log/ufw.log
+
+### Importância de logs:
+os logs são importantes para:
+- Monitoramento de saúde do sistema
+- identificação de problemas de desempenho ou falha de sistemas
+- segurança 
+- auditoria 
+
+### Tipos de logs comuns
+
+1. error.log
+- log normalmente usado para diagnosticar erros e falhas em softwares, crucial para diagnosticar e resolver problemas no software ou dependências
+
+2. access.log
+- log usado para armazenar informações sobre solicitações,  como IP do cliente, data e hora da solicitação e recurso solicitado
