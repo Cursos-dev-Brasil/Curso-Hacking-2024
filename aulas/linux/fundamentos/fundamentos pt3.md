@@ -114,3 +114,25 @@ Crontabs são usados pelo Linux para agendar tarefas em horários específicos, 
 Cada linha de comando tem 6 parâmetros que definem como é quando vão ser executados
 - MIN (o minutodahora que o comando é executado)
 - HOUR (a hora do dia em que o comando é executado)
+- DOM (o dia do mês que o comando vai ser executado)
+- MON (o mês em que o comando vai ser executado)
+- DOW (Dia da semana em que o comando vai ser executado)
+- CMD (Comando ou script que vai ser executado)
+
+para fazer um backup de 12 em 12h você pode usar:
+```
+0/12*** cp -R /home/cmnatic/documents/var/backups
+```
+"0" representa o minuto
+"*/12" representa a hora (12), e os 3 asteriscos representam que não importa MDN, MON, e DOM em que o comando vai ser executado
+O restante é o comando que será executado
+
+### Edição de crontabs
+Para editar uma conta, você pode simplesmente usar o comando `crontab -e`, esse comando abre o editor de texto (nano ou vim) onde você pode adicionar, deletar e editar suas tarefas agendadas
+
+#### Wildcards
+
+um wildcard (*) é usado para especificar que uma tarefa deve ser executada em todos os valores possíveis
+- `* * * * * *` executaria o comando a todo minuto
+- `0 0 * * * *` executa o comando toda meia noite
+
