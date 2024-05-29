@@ -107,3 +107,10 @@ root@linux1:~/ echo "hello, World!" &
 [1]16532
 ```
 ao invés de executar a saída do comando echo, o operador `&` faz com que o comando seja executado no id 16532
+
+## Crontabs
+Crontabs são usados pelo Linux para agendar tarefas em horários específicos, Crontabs são essenciais para executar tarefas que não são muito usadas, mas acontecem de tempos em tempos, como backups, atualizações de sistemas ou scripts agendados
+
+Cada linha de comando tem 6 parâmetros que definem como é quando vão ser executados
+- MIN (o minutodahora que o comando é executado)
+- HOUR (a hora do dia em que o comando é executado)
