@@ -34,4 +34,7 @@ logs sao arquivos essenciais para a manutenção do sistema, e contém informaç
 ### exemplos de logs
 
 1. servidor web apache
-	-access log: contém informações sobre todas as solicitações de um servidor, localizado em /var/log/apache2/access.log
+	- access log: contém informações sobre todas as solicitações de um servidor, localizado em /var/log/apache2/access.log
+ - error log: contém informações sobre erros de um servidor, localizado em /var/log/apache2/error.log
+2. fail2ban
+ - fail to ban log: informações sobre atividades suspeitas no Linux, como tentativas de brute force, localizado no em /var/log/fail2ban.log
