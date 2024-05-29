@@ -98,4 +98,10 @@ O systemctl tem 4 opções possíveis:
 - enable (ativar processo)
 - disable (desativar processo)
 
-## Back
+## Backgrounding e foregrounding no Linux
+
+os processos podem ser iniciados em **segundo plano** e em **primeiro plano**, comando X mo echo são executados em primeiro plano, pois é o que o único comando e não foi instruído para rodar em segundo plano
+exemplo: 
+```
+root@linux1:~/ echo "hello, World!" &
+ 
