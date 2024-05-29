@@ -91,3 +91,11 @@ Quando o sistema é inicializado e ele se inicializa, o systemd é um dos primei
 alguns aplicativos são iniciados na inicialização do sistema. Por exemplo, servidores web, banco de dados ou servidores de transferência de dados, normalmente esse tipo de software é crucial e é instruído para iniciar com o sistema.
 
 Podemos usar o comando systemctl -, esse comando permite interagir com o processo/demon no systemd. systemctl é um comando fácil de usar e a sintaxe dele é: *`systemctl [opção] [serviço]`*. Por exemplo, para iniciar um servidor apache, usamos o comando `systemctl start apache2`, para por exemplo parar o apache, usamos `systemctl stop apache2`
+
+O systemctl tem 4 opções possíveis:
+- start (Iniciar processo)
+- stop (parar processo)
+- enable (ativar processo)
+- disable (desativar processo)
+
+## Back
