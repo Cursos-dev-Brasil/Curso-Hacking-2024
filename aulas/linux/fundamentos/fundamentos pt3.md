@@ -104,4 +104,6 @@ os processos podem ser iniciados em **segundo plano** e em **primeiro plano**, c
 exemplo: 
 ```
 root@linux1:~/ echo "hello, World!" &
- 
+[1]16532
+```
+ao invés de executar a saída do comando echo, o operador `&` faz com que o comando seja executado no id 16532
