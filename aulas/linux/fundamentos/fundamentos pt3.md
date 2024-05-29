@@ -88,4 +88,6 @@ Quando o sistema é inicializado e ele se inicializa, o systemd é um dos primei
 
 # Iniciar processos na inicialização
 
-alguns aplicativos são iniciados na inicialização do sistema. Por exemplo, servidores web, banco de dados
+alguns aplicativos são iniciados na inicialização do sistema. Por exemplo, servidores web, banco de dados ou servidores de transferência de dados, normalmente esse tipo de software é crucial e é instruído para iniciar com o sistema.
+
+Podemos usar o comando systemctl -, esse comando permite 
