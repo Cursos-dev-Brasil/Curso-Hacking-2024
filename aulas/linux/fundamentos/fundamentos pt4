@@ -55,3 +55,6 @@ os logs são importantes para:
 
 2. access.log
 - log usado para armazenar informações sobre solicitações,  como IP do cliente, data e hora da solicitação e recurso solicitado
+
+## logs do sistema operacional
+- além dos logs de serviço software, existem os logs do sistema operacional que, servem para diagnosticar e garantir a saúde do kernau e dos arquivos e pastas do sistema.
