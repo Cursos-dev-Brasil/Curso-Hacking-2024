@@ -27,3 +27,6 @@ para remover repositórios use:
 sudo add-apt-repository --remove ppa:PPA_Name/ppa
 sudo apt remove sublime-text
 ```
+
+## logs
+logs sao arquivos essenciais para a manutenção do sistema, e contém informações como erros, avisos, verificações de funcionamento e etc. Os arquivos de log naturalmente ficam no diretório /var/log onde essed arquivos e pastas tem informações de registro para serviços e softwares. O Linux é muito eficiente na questão de automação desses logs, usando o processo de *rotação*
