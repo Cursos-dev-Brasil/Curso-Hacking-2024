@@ -136,3 +136,8 @@ um wildcard (*) é usado para especificar que uma tarefa deve ser executada em t
 - `* * * * * *` executaria o comando a todo minuto
 - `0 0 * * * *` executa o comando toda meia noite
 
+##### Recursos para iniciantes
+Existem algumas ferramentas para facilitar a criação de crontabs, essas ferramentas são boas para iniciantes:
+- crontab generator (online): você fornece os parâmetros e o crontab Gen cria o comando organizado
+
+cronGuru (online): outro recurso para entender e gerar códigos crontab
