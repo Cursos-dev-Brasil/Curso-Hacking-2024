@@ -10,7 +10,11 @@ Esse é um **principio fundamental da rede TCP/IP.** Como o nome sugere, essa va
 
 simplificando mais ainda, se o **nmap envia uma solicitação** TCP com a **flag SYN para uma porta fechada**, o servidor alvo **responde com um pacote TCP com a flag RST** (reset). com essa definição, o Nmap **estabelece a porta como fechada**. Da mesma forma, se a **solicitação é enviada para uma porta aberta**, o **servidor responde com um pacote TCP** com as **flags SYN/ACK.** O nmap então **marca essa porta como aberta** e completa o handshake e completa o handshake **enviando a 3° via com o pacote com a flag ACK**
 
+![Esquema do scan de portas TCP](/content/tcp.png)
+
 Ok, sabemos oque o nmap faz para definir se uma porta está aberta ou fechada, mas e **se a porta estiver aberta, mas atrás de um firewall?**
+
+![Captura de pacotes wireshark](/content/tcp-wireshark.png)
 
 Muitos firewalls são **configurados para descartar/ignorar pacotes de entrada.** Então quando o nmap **envia a solicitação TCP**, não tem saída nenhuma, isso indica que a **porta é protegida por um firewall** e é considerada **filtrada**
 
