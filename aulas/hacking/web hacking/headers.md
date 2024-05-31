@@ -19,3 +19,7 @@ Cookies: Envia dados para ajudar o servidor a "lembrar" das informações do usu
 Set-cookie: Informa o cliente para armazenar informações para serem reenviadas ao servidor  nas próximas sessões
 
 Cache-Control: Indica por quanto tempo armazenar o conteúdo na resposta no cache do navegador até ate solicitar novamente
+
+Content-Type: Informa ao cliente quais dados são retornados, como HTML, CSS, JS, Imagens, PDF, vídeos e etc... permitindo ao navegador processar os dados
+
+Content-Encoding: Específica o Método de compressão usado para reduzir o tamanho dos dados enviados
