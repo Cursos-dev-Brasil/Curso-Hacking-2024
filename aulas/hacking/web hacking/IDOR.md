@@ -1,4 +1,4 @@
-# Insegure Direct Object Reference (ID OR)
+# Insegure Direct Object Reference (IDOR)
 
 se refere a uma vulnerabilidade de controle de acesso onde você pode acessar recursos que normalmente seriam inacessíveis. isso acontece quando o programador expoe uma referência direta de objeto, que é um identificador que se refere a objetos específicos no servidor.
 
