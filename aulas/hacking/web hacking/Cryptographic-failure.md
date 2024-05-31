@@ -35,7 +35,7 @@ sqlite>
 ```
 
 você pode visualizar as tabelas com o comando tables
-```sqlite
+```sql
 user@linux$ sqlite3 example.db                     
 SQLite version 3.39.2 2022-07-21 15:24:47
 Enter ".help" for usage hints.
