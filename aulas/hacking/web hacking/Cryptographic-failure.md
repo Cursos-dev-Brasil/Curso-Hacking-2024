@@ -17,7 +17,7 @@ Um banco de dados flat-file pode ser acessado diretamente pelo PC em que está s
 O formato mais comum é mais simples para um DB flat-file é no formato de Sqlite, esse tipo de banco de dados suporta a maioria das linguagens de programação e possuem um cliente dedicado para consultá-lo na CLI
 
 Vamos supor que você conseguiu baixar o banco de dados, agora você pode executá-lo e examiná-lo
-```
+```bash
 user@linux$ ls -l 
 -rw-r--r-- 1 user user 8192 Feb  2 20:33 example.db
 
@@ -32,4 +32,13 @@ user@linux$ sqlite3 example.db
 SQLite version 3.39.2 2022-07-21 15:24:47
 Enter ".help" for usage hints.
 sqlite> 
+```
+
+você pode visualizar as tabelas com o comando tables
+```sqlite
+user@linux$ sqlite3 example.db                     
+SQLite version 3.39.2 2022-07-21 15:24:47
+Enter ".help" for usage hints.
+sqlite> .tables
+customers
 ```
