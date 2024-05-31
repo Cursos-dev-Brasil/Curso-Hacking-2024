@@ -8,3 +8,6 @@ Quando você acessa sua conta gmail usando o navegador, quer ter certeza de que 
 
 Em níveis complexos, aproveitar falhas criptográficas envolve técnicas como Man in The Middle Attacks, em que o atacante força conexões do usuário por um dispositivo que eles controlam. depois, eles se aproveitariam da criptografia fraca em qualquer dado transmitido para acessar as informações (se os dados estiverem criptografados em primeiro lugar). Claro, muitos exemplos são muito mais simples, e vulnerabilidades podem ser encontradas em aplicativos web que podem ser exploradas sem conhecimento avançado de rede. De fato, em alguns casos, os dados podem ser encontrados diretamente no próprio servidor web.
 
+A forma mais fácil de armazenar uma grande quantidade de dados em um formato acessível é usando um banco de dados, e isso é perfeito para aplicações web, já que permite o usuário acessar seu perfil em qualquer lugar, normalmente motores de banco de dados seguem a sintaxe da Structured Query Language (SQL)
+
+Em um ambiente de produção é comum ver banco de dados configurados em servidores dedicados  executando serviços como MySQL
