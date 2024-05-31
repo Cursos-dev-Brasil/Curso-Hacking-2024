@@ -27,7 +27,7 @@ example.db: SQLite 3.x database, last written using SQLite version 3039002, file
 
 Podemos ver que tem um banco de dados SQLite na pasta, agora podemos executá-lo:
 
-```bash
+```sql
 user@linux$ sqlite3 example.db                     
 SQLite version 3.39.2 2022-07-21 15:24:47
 Enter ".help" for usage hints.
