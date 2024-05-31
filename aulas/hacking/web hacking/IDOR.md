@@ -4,4 +4,4 @@ se refere a uma vulnerabilidade de controle de acesso onde você pode acessar re
 
 ## Desafio guiado retirado da Tryhackme
 
-Vamos dizer que você quer acessar sua conta bancária e depois da autenticação, somos redirecionados para [Essa URL]()
+Vamos dizer que você quer acessar sua conta bancária e depois da autenticação, somos redirecionados para [Essa URL](https:// bank.thm/account?id=111111)
