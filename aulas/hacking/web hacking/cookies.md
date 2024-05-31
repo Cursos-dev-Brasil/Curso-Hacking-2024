@@ -6,6 +6,6 @@ Os cookies são usados para muitos propósitos, mas são muito usados para auten
 
 # vendo Seus Cookies
 
-Você pode visualizar quais cookies seu navegador está enviando para um site usando as ferramentas de desenvolvedor do navegador. Se você não sabe como acessar as ferramentas
+Você pode visualizar quais cookies seu navegador está enviando para um site usando as ferramentas de desenvolvedor do navegador. Se você não sabe como acessar as ferramentas de desenvolvedor: no Chrome, clique nos três pontos no lado direito superior, depois em mais ferramentas, depois em ferramentas de desenvolvedor
 
-Uma vez com as ferramentas de desenvolvedor abertas, clique na aba "Network" (Rede). Esta aba mostrará uma lista de todos os recursos que seu navegador solicitou. Você pode clicar em cada um para receber uma descrição detalhada da solicitação e resposta. Se seu navegador enviou um cookie, você verá isso na aba "Cookies" da solicitação. 
+com as ferramentas de desenvolvedor abertas, clique na aba "Network/rede". Essa aba mostra uma lista de recursos que seu navegador solicitou. Você pode clicar em cada um para receber uma descrição detalhada da solicitação e resposta. Se seu navegador enviou um cookie, você verá isso na aba "Cookies" da solicitação. 
