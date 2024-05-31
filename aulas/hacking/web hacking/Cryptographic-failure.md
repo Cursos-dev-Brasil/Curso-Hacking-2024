@@ -24,3 +24,12 @@ user@linux$ ls -l
 user@linux$ file example.db 
 example.db: SQLite 3.x database, last written using SQLite version 3039002, file counter 1, database pages 2, cookie 0x1, schema 4, UTF-8, version-valid-for 1
 ```
+
+Podemos ver que tem um banco de dados SQLite na pasta, agora podemos executá-lo:
+
+```bash
+user@linux$ sqlite3 example.db                     
+SQLite version 3.39.2 2022-07-21 15:24:47
+Enter ".help" for usage hints.
+sqlite> 
+```
