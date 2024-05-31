@@ -65,5 +65,5 @@ Temos 4 colunas, e cada uma remete a um dado
 
 Note que a senha (última coluna) são vários caracteres "aleatórios", não, isso não é a senha de cada usuário, isso é chamado de hash, e é uma espécie de criptografia de senha
 
-Quando se trata de quebra de hash, temos várias ferramentas disponíveis, para não precisar de downloads por agora, vamos usar uma ferramenta online, a Crackstation, esse site é bom para quebrar hashs de senha fracos, para um hash mais forte, precisaríamos de uma ferramenta mais forte, nessa tabela, só teremos hashs fracos, que o Crackstation deve ser suficiente
+Quando se trata de quebra de hash, temos várias ferramentas disponíveis, para não precisar de downloads por agora, vamos usar uma ferramenta online, a [Crackstation](https://crackstation.net), esse site é bom para quebrar hashs de senha fracos, para um hash mais forte, precisaríamos de uma ferramenta mais forte, nessa tabela, só teremos hashs fracos, que o Crackstation deve ser suficiente
 
