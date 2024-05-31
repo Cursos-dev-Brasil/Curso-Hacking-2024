@@ -28,4 +28,6 @@ Códigos de status comuns:
 
 - 405 - Method Not Allowed: Indica que o Método de solicitação não é autorizado pelo recurso solicitado
 
-- 500 - Internal Server Error: O servidor um erro ao processar a solicitação 
+- 500 - Internal Server Error: O servidor um erro ao processar a solicitação
+
+- 503 - Service Unavailable: O servidor não pode lidar com a manutenção por que está sobrecarregado ou em manutenção 
