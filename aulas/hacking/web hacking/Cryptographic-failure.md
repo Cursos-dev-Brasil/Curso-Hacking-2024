@@ -67,3 +67,4 @@ Note que a senha (última coluna) são vários caracteres "aleatórios", não, i
 
 Quando se trata de quebra de hash, temos várias ferramentas disponíveis, para não precisar de downloads por agora, vamos usar uma ferramenta online, a [Crackstation](https://crackstation.net), esse site é bom para quebrar hashs de senha fracos, para um hash mais forte, precisaríamos de uma ferramenta mais forte, nessa tabela, só teremos hashs fracos, que o Crackstation deve ser suficiente
 
+Tente usar suas habilidades de pesquisa para identificar qual tipo de hash é e tente quebrá-lo no Crack station Para quebrar o hash de joy Paulson (5f4dcc3b5aa765d61d8327deb882cf99)
