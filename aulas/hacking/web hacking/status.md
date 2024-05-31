@@ -20,3 +20,12 @@ Códigos de status comuns:
 
 - 301 - Moved permanently: redireciona Para uma nova página permanente
 
+- 302 - Found: Faz um Redirecionamento temporário
+
+- 403 - Forbidden: indica que o cliente não tem permissão para acessar o recurso
+
+- 404 - Page not found: Indica que a solicitação que o cliente fez não existe
+
+- 405 - Method Not Allowed: Indica que o Método de solicitação não é autorizado pelo recurso solicitado
+
+- 500 - Internal Server Error: O servidor um erro ao processar a solicitação 
