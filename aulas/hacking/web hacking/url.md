@@ -30,3 +30,5 @@ Server: nginx/1.15.8
 Date: Fri, 09 Apr 2021 13:34:03 GMT
 Content-Type: text/html
 Content-Length: 98
+
+Cada linha oferece informações sobre o estado da requisição, por exemplo "200 OK", o servidor, data e hora, o tipo de conteúdo e o tamanho do conteúdo 
