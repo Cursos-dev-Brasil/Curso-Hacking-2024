@@ -33,4 +33,30 @@ Esses registros resolvem para outro nome de domínio. Por exemplo, a loja online
 Esses registros resolvem o endereço dos servidores que lidam com o e-mail para o domínio consultado. Por exemplo, uma resposta de registro MX para tryhackme.com poderia ser alt1.aspmx.l.google.com. Esses registros também vêm com uma flag de prioridade, indicando em qual ordem tentar os servidores, útil caso o servidor principal falhe e o e-mail precise ser enviado para um servidor de backup.
 ## Registro TXT
 
-Os registros TXT são campos de texto livre onde qualquer dado baseado em texto pode ser armazenado. Eles têm múltiplos usos, mas alguns comuns incluem listar servidores autorizados a enviar e-mails em nome do domínio (ajudando a combater spam e e-mails falsificados) e verificar a propriedade do nome de domínio ao se inscrever em serviços de terceiros. 
+Os registros TXT são campos de texto livre onde qualquer dado baseado em texto pode ser armazenado. Eles têm múltiplos usos, mas alguns comuns incluem listar servidores autorizados a enviar e-mails em nome do domínio (ajudando a combater spam e e-mails falsificados) e verificar a propriedade do nome de domínio ao se inscrever em serviços de terceiros.
+
+### O que acontece quando você faz uma solicitação DNS
+
+1. **Verificação no cache local:** Quando você solicita um nome de domínio, seu computador verifica primeiro seu cache local para ver se você já consultou o endereço recentemente. Se encontrado, o endereço é usado e a solicitação termina aqui.
+
+2. **Servidor DNS Recursivo:** Se o endereço não for encontrado localmente, uma solicitação é feita ao Servidor DNS Recursivo, geralmente fornecido pelo seu ISP, mas você pode escolher seu próprio servidor DNS. Este servidor também tem um cache local de nomes de domínio recentemente consultados. Se um resultado for encontrado localmente, ele é enviado de volta ao seu computador e a solicitação termina aqui.
+
+3. **Servidores DNS Raiz:** Se o Servidor DNS Recursivo não encontrar o endereço, ele começa uma jornada para encontrar a resposta correta, começando pelos servidores DNS raiz da internet. Esses servidores redirecionam você para o Servidor de Domínio de Nível Superior (TLD) correto, dependendo do seu pedido. Por exemplo, ao solicitar www.tryhackme.com, o servidor raiz reconhece o TLD .com e encaminha você para o servidor TLD apropriado que lida com endereços .com.
+
+4. **Servidor TLD:** O servidor TLD mantém registros sobre onde encontrar o servidor autoritativo que pode responder à solicitação DNS. O servidor autoritativo, ou servidor de nomes, é responsável por armazenar os registros DNS de um domínio específico. Por exemplo, os servidores de nomes para tryhackme.com são kip.ns.cloudflare.com e uma.ns.cloudflare.com.
+
+5. **Servidor DNS Autoritativo:** Este servidor responde à solicitação DNS com os registros apropriados. Dependendo do tipo de registro solicitado, a resposta é enviada de volta ao Servidor DNS Recursivo, onde uma cópia local será armazenada em cache para futuras solicitações e depois retransmitida ao cliente original que fez a solicitação.
+
+6. **Valor TTL:** Todos os registros DNS vêm com um valor TTL (Time To Live). Este valor, representado em segundos, indica quanto tempo a resposta deve ser armazenada em cache localmente até que você precise consultá-la novamente. O cache economiza a necessidade de fazer uma solicitação DNS toda vez que você se comunica com um servidor.
+
+### Diagrama de Fluxo (Visualização):
+
+1. **Cliente -> Cache Local:** Verifica se o endereço está armazenado localmente.
+2. **Cliente -> Servidor DNS Recursivo:** Solicita ao servidor DNS recursivo se não encontrado localmente.
+3. **Servidor DNS Recursivo -> Cache Local:** Verifica se o endereço está armazenado no cache local.
+4. **Servidor DNS Recursivo -> Servidor Raiz:** Se não encontrado, solicita ao servidor raiz.
+5. **Servidor Raiz -> Servidor TLD:** O servidor raiz redireciona para o servidor TLD apropriado.
+6. **Servidor TLD -> Servidor Autoritativo:** O servidor TLD direciona para o servidor autoritativo.
+7. **Servidor Autoritativo -> Servidor DNS Recursivo:** O servidor autoritativo responde com o registro DNS.
+8. **Servidor DNS Recursivo -> Cache Local:** Armazena a resposta no cache local.
+9. **Servidor DNS Recursivo -> Cliente:** Transmite a resposta de volta ao cliente original.
