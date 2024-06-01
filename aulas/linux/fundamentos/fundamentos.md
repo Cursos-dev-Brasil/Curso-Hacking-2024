@@ -1,6 +1,6 @@
 # Antes de começar com o hacking, é preciso saber como um sistema Linux funciona e por que ele é útil no hacking
 
-**O linux é um dos Sistemas operacionais mais utilizados do mundo e é um sistema altamente flexível, além de ser leve, o requisito minimo de um linux são 512Mb de ram dependendo da distro. Provavelmente você já usou um linux, seja em um sistema de um carro, ou até nos semáforos da cidade, obviamente, o linux também tem suas desvantagens, ao mesmo tempo que é flexível e leve, não é tão simples de aprender, entender e até usar**
+**O linux é um dos Sistemas operacionais mais utilizados do mundo e é um sistema altamente flexível, além de ser leve, o requisito minimo de um linux são 512Mb de ram dependendo da distribuição. Provavelmente você já usou um linux, seja em um sistema de um carro, ou até nos semáforos da cidade, obviamente, o linux também tem suas desvantagens, ao mesmo tempo que é flexível e leve, não é tão simples de aprender, entender e até usar**
 
 **Para fazer o linux mais leve possível, muitas coisas devem ser sacrificadas, como GUI's, portanto, uma boa parte das interfaces Windows ou Mac, podem não estar disponiveis no Linux, a maioria dos linux são altamente customizáveis pelo usuário ou já são pré-definidas para um público alvo**
 
