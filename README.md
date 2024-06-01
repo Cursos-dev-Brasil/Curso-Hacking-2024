@@ -6,6 +6,22 @@ Este curso é destinado a iniciantes na cibersegurança, hacking e programação
 ## Isenção de Responsabilidade
 O proprietário deste curso se isenta da responsabilidade por qualquer dano material ou moral que este curso possa causar aos usuários ou a terceiros.
 
+## Proposta de Valor
+
+Este curso é baseado em conteúdo disponível na Internet, porém, boa parte desse conteúdo é difícil de encontrar ou costuma ser disponibilizado a preços altíssimos. Aqui está como nosso curso se destaca:
+
+1. **Organização:** Destacamos a importância da organização do conteúdo, economizando tempo e esforço dos alunos na busca por informações.
+
+2. **Acesso Exclusivo:** Oferecemos acesso exclusivo a conteúdos difíceis de encontrar ou não disponíveis para todos.
+
+3. **Metodologia de Ensino:** Apresentamos o conteúdo de forma clara, prática e aplicável, indo além da simples apresentação de informações.
+
+4. **Suporte e Comunidade:** Oferecemos suporte para os alunos por meio de issues no github e nosso atendimento no discord.
+
+5. **Atualizações Constantes:** Nosso curso é atualizado regularmente com novas informações, tendências e técnicas atualizadas da área.
+
+6. **Diferenciação:** Destacamos os pontos que nos diferenciam de outras opções no mercado, como nossa abordagem única e a qualidade do conteúdo oferecido.
+
 ## Pré-requisitos
 Antes de iniciar, é importante estar preparado com os seguintes requisitos:
 
