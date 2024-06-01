@@ -62,6 +62,22 @@ Para uma experiência mais sólida neste curso, é recomendável possuir alguns 
 ## Computador Operável
 Para uma experiência mais completa e eficiente, recomendamos o uso de um computador. Embora seja possível aprender conceitos básicos em dispositivos móveis, um computador oferece mais recursos e flexibilidade para o aprendizado.
 
+
+## Nossas redes
+
+### Twitter:
+- Siga-nos no Twitter [@TechMinds](https://twitter.com/TechMindsHQ) para atualizações em tempo real sobre cursos, eventos e notícias relacionadas à cibersegurança e hacking ético.
+
+### Facebook:
+- Curta nossa página no Facebook [TechMinds](https://www.facebook.com/TechMinds) para conteúdo exclusivo, dicas, e interação com a comunidade TechMinds.
+
+### LinkedIn:
+- Conecte-se conosco no LinkedIn [TechMinds](https://www.linkedin.com/company/techminds) para oportunidades de networking, carreira e conteúdo profissional.
+
+### YouTube:
+- Inscreva-se em nosso canal no YouTube [TechMinds](https://www.youtube.com/TechMinds) para tutoriais, workshops e vídeos educacionais sobre cibersegurança e hacking ético.
+
+
 ### Instalando o Termux para Estudo em Dispositivos Móveis
 - Baixe o Termux na Play Store ou F-Droid.
 - Após a instalação, explore as diversas ferramentas disponíveis para simular um ambiente Linux em seu dispositivo móvel.
