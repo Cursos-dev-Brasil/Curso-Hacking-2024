@@ -1,0 +1,3 @@
+# Falhas na integridade de dados
+
+a integridade de dados refere-se à capacidade de garantir que um conjunto de dados permaneça não modificado. É fundamental na segurança cibernética para evitar modificações não desejadas ou maliciosas nos dados. Um exemplo comum é o uso de hashes para verificar a integridade de arquivos baixados. Outro aspecto importante é a integridade dos tokens de sessão em aplicações web, onde métodos como JSON Web Tokens (JWT) são usados para garantir que os tokens não sejam manipulados por usuários maliciosos. Essas práticas ajudam a prevenir falhas na integridade dos dados, que podem levar a acessos não autorizados e outras vulnerabilidades.

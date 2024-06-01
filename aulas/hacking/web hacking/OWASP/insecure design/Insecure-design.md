@@ -1,0 +1,4 @@
+# Design inseguro
+
+Design inseguro se refere a vulnerabilidades inerentes à arquitetura do aplicativo. Não são vulnerabilidades relacionadas a implementação ou configurações ruins, mas a ideia por trás do aplicativo (ou uma parte dele) é falha desde o início. Na maioria das vezes, essas vulnerabilidades ocorrem quando uma modelagem de ameaças inadequada é feita durante as fases de planejamento do aplicativo e se propagam até o aplicativo final. Outras vezes, vulnerabilidades de design inseguro também podem ser introduzidas pelos desenvolvedores ao adicionar alguns "atalhos" no código para facilitar seus testes. Um desenvolvedor poderia, por exemplo, desativar a validação OTP nas fases de desenvolvimento para testar rapidamente o resto do aplicativo sem inserir manualmente um código em cada login, mas esquecer de reativá-la ao enviar o aplicativo para produção.
+
