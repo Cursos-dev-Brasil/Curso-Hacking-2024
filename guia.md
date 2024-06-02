@@ -7,4 +7,5 @@ A lista a seguir começa pela aula mais básica até a aula mais avançada do cu
 1. [Fundamentos Linux](aulas/linux/fundamentos/)
 2. [modelo OSI](aulas/network/modelo-osi.md)
 3. [modelo TCP/IP](aulas/network/modeloTCPIP.md)
-4. [DNS](aulas/network/ferramentas/DNS.md)
+4. [Whois](aulas/network/ferramentas/whois.md)
+5. [DNS](aulas/network/ferramentas/DNS.md)
