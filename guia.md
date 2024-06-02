@@ -4,19 +4,27 @@ As aulas podem ficar um pouco confusas em certo ponto, principalmente pelo fato 
 
 A lista a seguir começa pela aula mais básica até a aula mais avançada do curso (até o momento)
 
-1. [Fundamentos Linux](aulas/linux/fundamentos/)
-2. [Whois](aulas/network/ferramentas/whois.md) 
-3. [DNS](aulas/network/ferramentas/DNS.md) 
-4. [Ping](aulas/network/ferramentas/ping.md)
-5. [modelo OSI](aulas/network/modelo-osi.md)
-6. [modelo TCP/IP](aulas/network/modeloTCPIP.md)
-7. [encapsulamento](aulas/network/encapsulamento.md)
-8. [introdução nmap](aulas/network/ferramentas/nmap/nmap.md)
-	* varreduras nmap (ordem: TCP, UDP, SYN, ICMP, Outras)
-	* scripts nmap
-9. [Evasão de firewall](aulas/network/ferramentas/nmap/firewall-evasion.md)
-10. [osint (ordem: pesquisa-básica.md, manual.md, busca-vulnerabilidades.md](aulas/geral/pesquisa)
-11. [http(s) (ordem: http(s).md, Headers.md, metodos.md, URL.md, status.md, Cookies.md)](aulas/hacking/web-hacking)
-12. Burp suite
-13. owasp
-14. bash
+1. Fundamentos Linux
+2. Whois
+3. DNS
+4. Ping
+5. modelo OSI
+6. modelo TCP/IP
+7. encapsulamento
+8. Introdução ao Nmap
+* Varreduras Nmap (TCP, UDP, SYN, ICMP, Outras)
+*Scripts Nmap
+9. Evasão de firewall
+10. Osint
+* Pesquisa Básica
+* Manual
+* Busca de Vulnerabilidades
+11. HTTP(S)
+* Headers
+* Métodos
+* URL
+* Status
+* Cookies
+* Burp Suite
+12 OWASP
+*13Bash
