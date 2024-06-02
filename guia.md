@@ -12,7 +12,7 @@ A lista a seguir começa pela aula mais básica até a aula mais avançada do cu
 6. [modelo TCP/IP](aulas/network/modeloTCPIP.md)
 7. [introdução nmap](aulas/network/ferramentas/nmap/nmap.md)
 	* varreduras nmap (ordem: TCP, UDP, SYN, ICMP, Outras)
-	* 
+	* scripts nmap
 
 7. [encapsulamento](aulas/network/encapsulamento.md)
 
