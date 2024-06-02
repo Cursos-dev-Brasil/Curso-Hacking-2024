@@ -9,3 +9,4 @@ A lista a seguir começa pela aula mais básica até a aula mais avançada do cu
 3. [modelo TCP/IP](aulas/network/modeloTCPIP.md)
 4. [Whois](aulas/network/ferramentas/whois.md)
 5. [DNS](aulas/network/ferramentas/DNS.md)
+6. [Ping](aulas/network/ferramentas/ping.md)
