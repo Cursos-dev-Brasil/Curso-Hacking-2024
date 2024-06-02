@@ -17,3 +17,6 @@ A lista a seguir começa pela aula mais básica até a aula mais avançada do cu
 9. [Evasão de firewall](aulas/network/ferramentas/nmap/firewall-evasion.md)
 10. [osint (ordem: pesquisa-básica.md, manual.md, busca-vulnerabilidades.md](aulas/geral/pesquisa)
 11. [http(s) (ordem: http(s).md, Headers.md, metodos.md, URL.md, status.md, Cookies.md)](aulas/hacking/web-hacking)
+12. Burp suite
+13. owasp
+14. bash
