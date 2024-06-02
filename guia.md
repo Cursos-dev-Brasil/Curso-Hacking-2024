@@ -5,4 +5,5 @@ As aulas podem ficar um pouco confusas em certo ponto, principalmente pelo fato 
 A lista a seguir começa pela aula mais básica até a aula mais avançada do curso (até o momento)
 
 1. [Fundamentos Linux](aulas/linux/fundamentos/)
-2. [modelo OSI](aulas/network/OSImodel.md)
+2. [modelo OSI](aulas/network/modelo-osi.md)
+3. [modelo TCP/IP](aulas/network/modelo-tcpIp.md)
