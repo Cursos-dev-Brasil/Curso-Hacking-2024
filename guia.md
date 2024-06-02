@@ -5,8 +5,9 @@ As aulas podem ficar um pouco confusas em certo ponto, principalmente pelo fato 
 A lista a seguir começa pela aula mais básica até a aula mais avançada do curso (até o momento)
 
 1. [Fundamentos Linux](aulas/linux/fundamentos/)
-2. [modelo OSI](aulas/network/modelo-osi.md)
-3. [modelo TCP/IP](aulas/network/modeloTCPIP.md)
-4. [Whois](aulas/network/ferramentas/whois.md)
-5. [DNS](aulas/network/ferramentas/DNS.md)
-6. [Ping](aulas/network/ferramentas/ping.md)
+2. [Whois](aulas/network/ferramentas/whois.md) 
+3. [DNS](aulas/network/ferramentas/DNS.md) 
+4. [Ping](aulas/network/ferramentas/ping.md)
+5. [modelo OSI](aulas/network/modelo-osi.md)
+6. [modelo TCP/IP](aulas/network/modeloTCPIP.md)
+
