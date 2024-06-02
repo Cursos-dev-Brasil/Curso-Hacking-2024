@@ -15,4 +15,4 @@ A lista a seguir começa pela aula mais básica até a aula mais avançada do cu
 	* varreduras nmap (ordem: TCP, UDP, SYN, ICMP, Outras)
 	* scripts nmap
 9. [Evasão de firewall](aulas/network/ferramentas/nmap/firewall-evasion.md)
-10. [osint](aulas/geral/pesquisa)
+10. [osint (ordem: pesquisa-básica.md, manual.md](aulas/geral/pesquisa)
