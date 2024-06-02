@@ -6,4 +6,4 @@ A lista a seguir começa pela aula mais básica até a aula mais avançada do cu
 
 1. [Fundamentos Linux](aulas/linux/fundamentos/)
 2. [modelo OSI](aulas/network/modelo-osi.md)
-3. [modelo TCP/IP](aulas/network/modelo-tcpIp.md)
+3. [modelo TCP/IP](aulas/network/modeloTCPIP.md)
