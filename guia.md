@@ -13,6 +13,6 @@ A lista a seguir começa pela aula mais básica até a aula mais avançada do cu
 7. [introdução nmap](aulas/network/ferramentas/nmap/nmap.md)
 	* varreduras nmap (ordem: TCP, UDP, SYN, ICMP, Outras)
 	* scripts nmap
-8. [Evasão de firewall](aulas/network/feramentas/firewall-evasion.md)
+8. [Evasão de firewall](aulas/network/feramentas/nmap/firewall-evasion.md)
 9. [encapsulamento](aulas/network/encapsulamento.md)
 
