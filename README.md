@@ -67,16 +67,10 @@ Para uma experiência mais completa e eficiente, recomendamos o uso de um comput
 
 ### Twitter:
 - Siga-nos no Twitter [@TechMinds](https://twitter.com/TechMindsHQ) para atualizações em tempo real sobre cursos, eventos e notícias relacionadas à cibersegurança e hacking ético.
-
-### Facebook:
-- Curta nossa página no Facebook [TechMinds](https://www.facebook.com/TechMinds) para conteúdo exclusivo, dicas, e interação com a comunidade TechMinds.
-
-### LinkedIn:
-- Conecte-se conosco no LinkedIn [TechMinds](https://www.linkedin.com/company/techminds) para oportunidades de networking, carreira e conteúdo profissional.
-
 ### YouTube:
 - Inscreva-se em nosso canal no YouTube [TechMinds](https://www.youtube.com/TechMinds) para tutoriais, workshops e vídeos educacionais sobre cibersegurança e hacking ético.
-
+### Instagram:
+- Acesse nosso instagram [@TechMindsHQ](https://www.instagram.com/techmindshq/) para encontrar dicas, tutoriais e insights sobre CyberSecurity, hacking e programação. Nos siga para se manter atualizado com o mundo da CyberSecurity e aprender conosco!
 
 ### Instalando o Termux para Estudo em Dispositivos Móveis
 - Baixe o Termux na Play Store ou F-Droid.
