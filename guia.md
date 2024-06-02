@@ -10,9 +10,9 @@ A lista a seguir começa pela aula mais básica até a aula mais avançada do cu
 4. [Ping](aulas/network/ferramentas/ping.md)
 5. [modelo OSI](aulas/network/modelo-osi.md)
 6. [modelo TCP/IP](aulas/network/modeloTCPIP.md)
-7. [introdução nmap](aulas/network/ferramentas/nmap/nmap.md)
+7. [encapsulamento](aulas/network/encapsulamento.md)
+8. [introdução nmap](aulas/network/ferramentas/nmap/nmap.md)
 	* varreduras nmap (ordem: TCP, UDP, SYN, ICMP, Outras)
 	* scripts nmap
-8. [Evasão de firewall](aulas/network/ferramentas/nmap/firewall-evasion.md)
-9. [encapsulamento](aulas/network/encapsulamento.md)
-
+9. [Evasão de firewall](aulas/network/ferramentas/nmap/firewall-evasion.md)
+10. [osint](aulas/geral/pesquisa)
