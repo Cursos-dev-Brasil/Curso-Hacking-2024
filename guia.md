@@ -10,4 +10,5 @@ A lista a seguir começa pela aula mais básica até a aula mais avançada do cu
 4. [Ping](aulas/network/ferramentas/ping.md)
 5. [modelo OSI](aulas/network/modelo-osi.md)
 6. [modelo TCP/IP](aulas/network/modeloTCPIP.md)
+7. [encapsulamento](aulas/network/encapsulamento.md)
 
