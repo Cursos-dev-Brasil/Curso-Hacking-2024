@@ -1,4 +1,4 @@
-# Pesquisas no hacking
+# Pesquisas no hacking *
 Hoje em dia, a capacidade de pesquisar é a qualidade mais importante de um hacker. Hacking requer conhecimento pelo menos base em várias áreas, já que entender como algo funciona é crucial para invadir. Mas ninguém sabe tudo, até hackers com 20 anos de experiência tem problemas e travam em algum lugar, é aí que a pesquisa entra, no mundo real, ninguém vai te dar respostas ou dicas
 
 Com o tempo você vai perceber que dependendo da coisa que você pesquisa vai ser muito difícil encontrar algo, mas na SI, nunca vai ter um ponto em que você não precise procurar informações
@@ -49,4 +49,3 @@ acesse o link e descubra como usar a ferramenta<br>
 [Clique para abrir o Link](https://0xrick.github.io/lists/stego/)<br>
 
 A pesquisa que fizemos aqui foi simples, começamos com a necessidade de descobrir como extrair arquivos secretos de uma imagem, depois descobrimos uma técnica para fazer isso, depois descobrimos uma ferramenta, para depois descobrir como baixar e usar a ferramenta
-
