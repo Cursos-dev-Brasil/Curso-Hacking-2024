@@ -16,7 +16,7 @@ Agora que você sabe identificar uma aula com desafios, você precisa saber reso
 
 Agora que você sabe identificar e resolver as flags, você precisa saber como envia-las, nosso modelo foi baseado na plataforma *Hack The Box*, só que adaptado, primeiro, você abre uma [**issue**](https://github.com/Cursos-dev-Brasil/Curso-Hacking-2024/issues/new) no repositóro com o nome do desafio e a flag, por exemplo:
 
-![issue](image.png)
+![issue](content/image.png)
 
 Sua imagem vai ser analisada pela equipe, e vai ser respondida o mais rápido possível
 

@@ -78,7 +78,7 @@ root@linux1:~$ find -name passwd.txt
 ```
 Ótimo, encontramos o arquivo dentro de documents.
 
-*dica: Observe que tem um "." antes do nome do arquivo, isso significa que ele não será listado para o explorador de arquivos ou no próprio terminal, para corrigir isso você pode usar o comando ls -a ou ls -Hidden para exibir os arquivos ocultos*
+*dica: Observe que tem um "." antes do nome do arquivo, isso significa que ele não será listado automaticamente, para corrigir isso você pode usar o comando ls -a ou ls -Hidden para exibir os arquivos ocultos*
 
 Para encontrar o arquivo que sabemos usamos -name, mas e se não soubermos o nome ou queremos pesquisar todos os arquivos com extensão .txt
 
