@@ -34,7 +34,7 @@ Não vamos entrar em detalhes sobre o vim por enquanto por ser um editor muito m
 
 ### Baixar arquivos usando o Wget
 
-O comando Wget permite que você faza downloads de arquivos web via HTTP - como se estivesse acessando o arquivo pelo navegador web. A única coisa que precisamos é o caminho completo do script que vamos baixar, desde o https:// até o link do download, por exemplo, se eu quisesse baixar um arquivo "arquivo.txt" pela web eu usaria:
+O comando Wget permite que você faça downloads de arquivos web via HTTP - como se estivesse acessando o arquivo pelo navegador web. A única coisa que precisamos é o caminho completo do script que vamos baixar, desde o https:// até o link do download, por exemplo, se eu quisesse baixar um arquivo "arquivo.txt" pela web eu usaria:
 `wget https://XXXXX.XXXXXX/XXXXX.XXXXXX/XXXXXXXXXXX-XXXXXX/XXXX/XXX/arquivo.txt`
 
 ### Transferir arquivos do seu host usando o Scp
