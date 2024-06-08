@@ -15,14 +15,15 @@ Outros comandos são muito importantes para:
 |---------|----------------|--------------------------------|
 | touch   | touch          | criar um arquivo               |
 | mkdir   | make directory | cria um diretório              |
-| rm      | remove         | remove um arquivo ou diretório |
+| rmdir   | remove directory | Remove um diretório |
+| rm      | remove         | remove um arquivo |
 | mv      | move           | mover um arquivo ou diretório  |
-| cp      | copy           | cópia um arquivo ou diretório  |
+| cp      | copy           | copia um arquivo ou diretório  |
 | file    | file           | determina um tipo de arquivo   |
 
 - touch e mkdir: **Criar arquivos ou pastas é muito simples, o comando touch aceita apenas um argumento, que é o nome do arquivo que vai ser criado, ao executar o comando: `touch note` o arquivo note é criado em branco, para adicionar texto, você pode usar o comando echo e os comandos ">" e ">>". O mkdir também aceita apenas um parametro, que é o diretório `mkdir new_dir`**
 
-- rm: **rm é um pouco diferente dos outros comandos que cobrimos até agora. Você pode simplesmente remover arquivos usando rm. No entanto, você precisa fornecer a flag -R do lado do nome do diretório que deseja remover**
+- rm, rmdir: **rm é um pouco diferente dos outros comandos que cobrimos até agora. Você pode simplesmente remover arquivos usando rm. No entanto, você precisa fornecer a flag -R do lado do nome do diretório que deseja remover**
 
 - cp: **O comando de copy aceita 2 argumentos: arg1(o nome do arquivo existente) e o arg2(nome do novo arquivo copiado), por exemplo: `cp clientes.txt clientes_backup.txt`**
 
