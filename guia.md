@@ -37,7 +37,9 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 
 10. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
     - Pesquisa de informações em fontes abertas.
-
+11. [**Enumeração e fuzzing**](aulas/network/ferramentas)
+   - [Gobuster](aulas/network/ferramentas/gobuster.md)
+   - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
 11. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
     - Protocolos HTTP(S) e web hacking.
 
