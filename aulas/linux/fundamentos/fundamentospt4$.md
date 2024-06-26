@@ -2,7 +2,7 @@
 
 ## gerenciamento de pacotes
 
-Quando desenvolvedores criam um software para a comunidade, eles colocam em um repositório padrão Linux chamado "apt", se aprovado, o conteúdo é liberado para instalação com o comando `apt install [serviço]`
+Quando um dev cria um software, eles colocam em um repositório padrão chamado "apt", se aprovado, o conteúdo é liberado para instalação com o comando `apt install [serviço]`
 
 o comando apt faz parte de um conjunto de ferramentas Linux chamado apt, o apt permite instalar ou remover softwares e fontes
 

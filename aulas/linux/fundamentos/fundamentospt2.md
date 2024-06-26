@@ -1,9 +1,9 @@
 # Fundamentos Linux Parte 2
 
-*obs: devido ao tamanho do arquivo anterior, criamos um novo*
+*obs: O arquivo anterior é muito grande, então criamos a parte 2 (mentira, é só pra somar mais conteúdo mesmo)*
 
 ## Comandos para interagir com sistema de arquivos
-Outros comandos são muito importantes para: 
+Outros comandos são importantes para: 
 - criar diretórios
 - apagar diretórios
 - mover diretórios
@@ -33,28 +33,28 @@ Outros comandos são muito importantes para:
 
 ## Parâmetros
 
-A maioria dos comandos tem parâmetros. Parâmetros são formas de especificar algo para o comando. Se nenhum parâmetro for atribuído, o comando executará a forma padrão. Parâmetros são identificados com um hífen (-) seguido por uma letra ou palavra. Ex: `ls -a`
+A maioria dos comandos tem parâmetros. Parâmetros são jeitos de especificar algo comando. Se nenhum parâmetro for atribuído, o comando executa o comando padrão, aí você pergunta "e se a ferramenta não tiver uma forma padrão?" e eu te respondo, isso não é opção. Parâmetros são identificados com um hífen (um traço pra quem pulou a aula de português) depois uma letra ou palavra. Ex: `ls -a`
 
 ## Conexão usando *SSH*
-Uma conexão SSH (Secure Shell) é um tipo de protocolo usado na transferência de dados entre máquinas. É um protocolo que criptografa seus dados ao serem enviados e só os descriptografa quando a mensagem alcança o destino.
+Uma conexão SSH (Secure Shell) é um protocolo para transferir dados sem um idiota tentando roubar seus dados (um dia você vai ser esse idiota). Ele criptografa seus dados enviados e descriptografa quando a mensagem alcança o destino.
 
 ### Sintaxe SSH
-A sintaxe SSH é simples e fácil de lembrar. Para se conectar a uma máquina usando SSH, a sintaxe básica é:
+A sintaxe é simples e não precisa de um bloco de notas pra lembrar dela. Para se conectar a uma máquina usando SSH, a sintaxe é:
 `ssh nome_de_usuario@ip_alvo`
 
-Se tudo der certo, o SSH vai pedir a confirmação de que você confia no Host. Caso você confirme, ele pedirá a senha.
+Se tudo funcionar, o SSH vai pedir a confirmação de que você confia no Host. Caso você confirme, ele pedirá a senha.
 
-*Nota: o campo da senha não vai ter feedback visual, ou seja, a senha não será mostrada. Apenas digite a senha e aperte enter.*
+*Nota: o campo da senha não tem feedback visual, a senha não é mostrada, então não, seu teclado não desconectou.*
 
 ## Permissões
-Alguns usuários tem controle total sobre alguns arquivos e outros não, para saber oque um usuário pode ou não fazer em um arquivo, podemos usar o comando ls com a flag -lh
+Alguns usuários tem controle sobre alguns arquivos e outros não, para saber oque um usuário pode ou não fazer em um arquivo, podemos usar o comando ls com a flag -lh
 
 ```
 root@linux2:~$ ls -lh
 -rw-r--r-- 1 cmnatic cmnatic 0 Feb 19 10:37 file1
 -rw-r--r-- 8 cmnatic cmnatic 0 Feb 19 10:37 file2
 ```
-Essas colunas são importantes para determinar caracteristicas de um arquivo ou pasta e se podemos acessar, alterar ou move-la. Alguns arquivos funcionam exclusivamente para certos usuários
+Essa parte é importante para determinar caracteristicas de um arquivo ou pasta e se podemos acessar, alterar ou move-la. Alguns arquivos funcionam só pra um usuário especifico
 
 as permissões que um usuário pode ter são:
 
@@ -64,34 +64,39 @@ as permissões que um usuário pode ter são:
 
 ## Mudando de usuário
 
-trocar de usuário é fácil graças ao comando `su`, a menos que você seja o root (ou esteja usando permissões de root com sudo) você precisa sabeer de 2 ccoisas
+trocar de usuário é tranquilo graças ao `su`, se você não for o root (ou esteja usando permissões de root com sudo) você precisa de 2 coisas
 
-- O nome do usuário onde você vai mudar
+- O nome do usuário de destino você vai mudar
 - a senha do usuário
 
-o comando su tem algumas flags relevantes. Por exemplo a flag -l ou --login para iniciar um shell semelhante ao usuário fazendo login no sistema, com váriaveis de ambiente e coisas do tipo
+su tem flags importantes. Por exemplo a flag -l ou --login para iniciar um shell semelhante ao usuário fazendo login no sistema, com váriaveis de ambiente e coisas do tipo
 
 ## Diretórios padrão
 
 ### /etc
-Esse é um diretório essencial do sistema linux. A pasta etc é um diretório padrão para arquivos de sistema do sistema operacional
-
-O arquivo sudoers, por exemplo, contém uma lista de usuários que podem executar comandos como root usando sudo
-
-Outro arquivo comum é o passwd e o shadow. Os dois são especificos do linux, por que mostram como o sistema armazena as senhas de cada usuário usando criptografia sha512
+Esse é um diretório essencial do linux. A pasta etc é um diretório padrão para arquivos de sistema do sistema operacional, para os queridos usuários Windows, a System32
 
 alguns conteúdos importantes do diretório /etc são: 
 
+O arquivo sudoers, por exemplo, tem uma lista de usuários que podem executar comandos como root usando sudo
+
+Outro arquivo comum é o passwd e o shadow. Os dois são do linux, por que mostram como o sistema armazena as senhas usando criptografia sha512
+
+
 ### /var
-O diretório */var* (abreviação de variable data) é uma pasta raiz que armazena dados que são acessados ou escritos por serviços ou aplicações em execução, por exemplo arquivos de log são escritos em */var/log* ou outros dados que não precisam necessariamente ser relacionados a um usuário especifico (como um banco de dados)
+O */var* (abreviação de variable data) é uma pasta com dados acessados ou escritos por serviços ou aplicações, tipo um arquivo de log, que é escrito em */var/log* ou outros dados que não precisam  ser relacionados a um usuário (como um banco de dados)
 
 alguns conteúdos importantes do diretório /var são:
-backups log opt tmp
+
+backups 
+log 
+opt 
+tmp
 
 ### /root
-a pasta root é a pasta home do administrador do sistema(root). Não tem muito oque dizer sobre essa pasta, ninguém além do usuário root pode abrir os arquivos de dentro dela, os arquivos desse diretório só dependem do usuário root
+a pasta root é a pasta home do administrador do sistema (vulgo root). Não tem muito oque dizer sobre essa, ninguém além do root pode abrir os arquivos de dentro dela, os arquivos desse diretório só dependem do usuário root
 
 ### /tmp
-esse é um diretório raiz único encontrado no linux, é abreviação de temporário e é usado para armazenar dados que só vão ser usados uma ou duas vezes, quando você reinicia o computador, esses dados são deletados
+esse é um diretório raiz encontrado no linux, é abreviação de temporário e é usado para armazenar dados que só vão ser usados uma ou duas vezes, quando você reinicia o computador, esses dados são deletados
 
 A parte útil dessa pasta para um pentester é que qualquer usuário pode editar o conteúdo dessa pasta por padrão. ou seja, tendo acesso a máquina, esse é um bom lugar para nossos dados, como scripts de enumeração

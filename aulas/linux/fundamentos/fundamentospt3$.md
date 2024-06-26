@@ -1,14 +1,14 @@
 # Fundamentos linux parte 3 
 
-Até agora só sabemos adicionar conteúdo a um arquivo usando `echo "conteúdo" > arquivo.txt`, mas esse método não é eficiente, principalmente quando você precisar colar múltiplas linhas de código ou outros tipos de conteúdo
+Até agora você sabe adicionar conteúdo a um arquivo com `echo "conteúdo" > arquivo.txt`, mas esse método é horrível, principalmente quando você precisa colar várias linhas ou outros tipos de dados
 
 ## editores de texto de terminal
 
-Existem opções com uma variedade de utilidades e funções, nesse curso, o foco vai ser sempre o *nano*
+Existem opções, nesse curso, o foco vai ser sempre o *nano*
 
 ### Nano
 
-É fácil começar com o Nano. Para editar um arquivo com nano usamos nano nome_do_arquivo
+É fácil começar com o Nano. Para editar um arquivo com nano usamos `nano nome_do_arquivo`
 
 Interface nano:
 ```
@@ -30,16 +30,16 @@ Você pode usar os recursos do nano usando ctrl (representado na interface por "
 
 ### Vim
 
-Não vamos entrar em detalhes sobre o vim por enquanto por ser um editor muito mais avançado, mas no futuro vamos.
+Não vamos entrar em detalhes por enquanto por ser um editor mais avançado, foca em se acostumar com o nano por agora.
 
 ### Baixar arquivos usando o Wget
 
-O comando Wget permite que você faza downloads de arquivos web via HTTP - como se estivesse acessando o arquivo pelo navegador web. A única coisa que precisamos é o caminho completo do script que vamos baixar, desde o https:// até o link do download, por exemplo, se eu quisesse baixar um arquivo "arquivo.txt" pela web eu usaria:
+O comando Wget faça download de arquivos web via HTTP - como se você estivesse acessando o arquivo pelo navegador. A única coisa que você precisa é do caminho completo do script, desde o https:// até o link do download, se eu quisesse baixar um arquivo "arquivo.txt" pela web eu usaria:
 `wget https://XXXXX.XXXXXX/XXXXX.XXXXXX/XXXXXXXXXXX-XXXXXX/XXXX/XXX/arquivo.txt`
 
 ### Transferir arquivos do seu host usando o Scp
 
-Secury copy, ou SCP é uma forma de copiar arquivos de forma segura. Diferente do cp, ele permite transferir arquivos de dois computadores usando SSH para autentificar e criptografar
+Secury copy, ou SCP é um jeito de copiar arquivos sem um ladrãozinho capturar seus dados. Diferente do cp, ele permite transferir arquivos de dois computadores usando SSH para autentificar e criptografar
 
 O SCP trabalha com um modelo de fonte (computador com o arquivo original) e destino (computador em que o arquivo vai ser copiado)
 o SCP permite:
@@ -55,53 +55,54 @@ o comando scp para transferir dados de um sistema em que você não está logado
 
 ### Servindo arquivos do seu host - Web
 
-O python3 vem com um módulo fácil de usar chamado HTTPServer. Esse módulo transforma o seu pc em um servidor HTTP rápido e fácil de usar que você pode usar para distribuir seus arquivos que podem ser baixados remotamente com curl ou wget
+O python3 vem com um módulo fácil de usar, o HTTPServer. Isso transforma o seu pc literalmente em um servidor você pode usar para distribuir arquivos que podem ser baixados remotamente
 
 o HTTPServer serve os arquivos no diretório onde o comando foi usado, para transformar o seu pc no servidor, é só usar o comando `python3 -m http.server` no terminal
 
-Agora você pode usar o wget para baixar o arquivo remotamente usando o ip da sua máquina que está hospedando o server.
-**nota: o servidor python roda na porta *8000* <br>Você precisa abrir um novo terminal para executar o wget enquanto o servidor roda, caso você cancele o script HTTPServer o servidor para de rodar**
+Agora você pode usar o wget para baixar o arquivo remotamente usando o ip da sua máquina que hospeda o server.
+**nota: o servidor roda na porta *8000* <br>Você precisa abrir um novo terminal para executar o wget enquanto o servidor roda, caso você cancele o script o servidor para de rodar**
 
 ## Visualizar processos
-Você pode usar o comando `ps` para fornecer uma lista de processos em execução na sessão e algumas informações como código de status, sessão que está executando, quanto tempo de CPU é consumido e o nome e pid do programa ou comando
+Você pode usar `ps` para conseguir uma lista de processos em execução na sessão e algumas informações como status, sessão, quantos gigas de ram o chrome tá usando e o nome e pid(process id) do programa ou comando
 
-para ver os processos rodados por outros usuários podemos usar o comando
+pra xeretar os processos usados por outros usuários, você pode usar:
 
 `ps aux`
 
-Outro comando útil é o `top`. Que fornece estatisticas em tempo real dos processos rodando em vez de visualização única, o top atualiza a lista a cada 10 segundos. 
+Outro comando útil é o `top`. ele fornece dados em tempo real dos processos em vez de visualização única, o top atualiza a lista a cada 10 segundos. 
 
-Gerenciar processos
+## Gerenciar processos
 
-Você pode terminar processos, existem vários tipos de sinais que se correlacionam como o processo é tratado pelo kernel. Para encerrar um comando, podemos usar o comando kill e o PID associado que desejamos encerrar. Por exemplo, para encerrar o PID 1337, usaríamos kill 1337.
+Você pode encerrar processos, existem vários tipos de sinais que se correlacionam como o processo é tratado pelo kernel. Para encerrar um comando, podemos usar o comando kill e o PID associado . Por exemplo, para encerrar o processo com PID 1337, usaríamos kill 1337.
 
-- SIGTERM - Encerra o processo, mas permite que ele execute algumas tarefas de limpeza antes
-- SIGKILL - Encerra o processo - não faz nenhuma limpeza depois
+- SIGTERM - Encerra o processo, mas permite que execute algumas tarefas de limpeza
+- SIGKILL - Encerra o processo - não faz nenhuma limpeza
 - SIGSTOP - Para/suspende um processo
 
-O OS usa namespaces para dividir recursos disponíveis no PC (ram, cpu e prioridade), é como dividir o PC em partes, cada parte terá acesso a uma parte de recursos que ele pode usar
-namespaces são bons para segurança, já que só processos do msm namespace podem se ver
+O Sistema usa namespaces para dividir recursos do PC (ram, cpu e prioridade), é tipo dividir o PC e impedir que o google ocupe 20 gigas de ram, cada parte do pc tem acesso a uma partição de recursos que ele pode usar
+namespaces são bons para segurança, já que só processos do mesmo namespace podem se ver, é como se só pessoas autorizadas pudessem ver a sua casa.
 
-O processo com o pid 0 é iniciado quando o OS é inicializado. Esse processo é o init (no ubuntu), como o systemd, usado para fornecer uma forma de gerenciar processos de um usuário entre o OS e o usuário
+O processo com o pid 0 é iniciado quando o sistema é ligado. Esse processo é o init (no ubuntu), como o systemd, usado como uma forma de gerenciar processos entre o sistema e o usuário
 
-Quando o sistema é inicializado e ele se inicializa, o systemd é um dos primeiros processos iniciados. Qualquer software iniciado começa como um processo filho do systemd. Ou seja, ele é controlado pelo systemd, mas é executado como um processo independente para tornar mais fácil a identificação
+Quando o sistema é iniciado, o systemd é um dos primeiros processos iniciados. Qualquer software  começa como processo filho do systemd. Então, ele é controlado pelo systemd, mas é executado como processo independente para tornar a identificação mais fácil
 
-# Iniciar processos na inicialização
+## Iniciar processos na inicialização
 
-alguns aplicativos são iniciados na inicialização do sistema. Por exemplo, servidores web, banco de dados ou servidores de transferência de dados, normalmente esse tipo de software é crucial e é instruído para iniciar com o sistema.
+alguns aplicativos são iniciados com o sistema. Por exemplo, servidores, banco de dados, normalmente esse tipo de software é importante e é programado para iniciar com o sistema.
 
-Podemos usar o comando systemctl -, esse comando permite interagir com o processo/demon no systemd. systemctl é um comando fácil de usar e a sintaxe dele é: *`systemctl [opção] [serviço]`*. Por exemplo, para iniciar um servidor apache, usamos o comando `systemctl start apache2`, para por exemplo parar o apache, usamos `systemctl stop apache2`
+Podemos usar `systemctl -`, esse comando permite interagir com o processo/demon no systemd. systemctl é um comando fácil e a sintaxe é: *`systemctl [opção] [serviço]`*, para iniciar um servidor apache, usamos o comando `systemctl start apache2`, para parar o apache, usamos `systemctl stop apache2`
 
-O systemctl tem 4 opções possíveis:
-- start (Iniciar processo)
-- stop (parar processo)
-- enable (ativar processo)
-- disable (desativar processo)
+O systemctl tem 4 opções:
+- start (Iniciar)
+- stop (parar)
+- enable (ativar)
+- disable (desativar)
 
 ## Backgrounding e foregrounding no Linux
 
-os processos podem ser iniciados em **segundo plano** e em **primeiro plano**, comando X mo echo são executados em primeiro plano, pois é o que o único comando e não foi instruído para rodar em segundo plano
-exemplo: 
+os processos podem ser iniciados em **segundo plano** e em **primeiro plano**, o comando echo é executado em primeiro plano, por que é o único comando e não foi instruído para rodar em segundo plano
+
+Iniciar um processo em segundo plano te ajuda a não ficar olhando pra tela sem fazer nada enquanto uma varredura de 2h funciona 
 ```
 root@linux1:~/ echo "hello, World!" &
 [1]16532
@@ -109,10 +110,10 @@ root@linux1:~/ echo "hello, World!" &
 ao invés de executar a saída do comando echo, o operador `&` faz com que o comando seja executado no id 16532
 
 ## Crontabs
-Crontabs são usados pelo Linux para agendar tarefas em horários específicos, Crontabs são essenciais para executar tarefas que não são muito usadas, mas acontecem de tempos em tempos, como backups, atualizações de sistemas ou scripts agendados
+Crontabs são usadas para agendar tarefas em horários específicos, Crontabs são boas para executar tarefas que não são muito usadas, mas acontecem de tempo em tempo, como um backup, atualizações ou scripts agendados
 
-Cada linha de comando tem 6 parâmetros que definem como é quando vão ser executados
-- MIN (o minutodahora que o comando é executado)
+Cada linha de comando demtro de uma crontab tem 6 parâmetros que definem como e quando vão ser executados
+- MIN (o minuto da hora que o comando é executado)
 - HOUR (a hora do dia em que o comando é executado)
 - DOM (o dia do mês que o comando vai ser executado)
 - MON (o mês em que o comando vai ser executado)
@@ -124,16 +125,15 @@ para fazer um backup de 12 em 12h você pode usar:
 0/12*** cp -R /home/cmnatic/documents/var/backups
 ```
 "0" representa o minuto
-"*/12" representa a hora (12), e os 3 asteriscos representam que não importa MDN, MON, e DOM em que o comando vai ser executado
-O restante é o comando que será executado
+"*/12" representa a hora (12), e os 3 asteriscos representam que não importa DOW, MON, e DOM em que o comando vai ser executado, restante é o comando
 
 ### Edição de crontabs
-Para editar uma conta, você pode simplesmente usar o comando `crontab -e`, esse comando abre o editor de texto (nano ou vim) onde você pode adicionar, deletar e editar suas tarefas agendadas
+Para editar uma crontab, você pode usar o comando `crontab -e`, esse comando abre o editor de texto onde você pode adicionar, deletar e editar suas crontabs
 
-#### Wildcards
+### Wildcards
 
 um wildcard (*) é usado para especificar que uma tarefa deve ser executada em todos os valores possíveis
-- `* * * * * *` executaria o comando a todo minuto
+- `* * * * * *` executa o comando a todo minuto
 - `0 0 * * * *` executa o comando toda meia noite
 
 ##### Recursos para iniciantes
