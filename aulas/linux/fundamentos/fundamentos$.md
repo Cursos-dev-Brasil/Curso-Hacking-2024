@@ -1,6 +1,6 @@
 # Antes de começar com o hacking, é preciso saber como um sistema Linux funciona e por que ele é útil no hacking
 
-**O linux é um dos Sistemas mais manjados do mundo e é sistema flexível, ele é leve, o requisito minimo de um linux é de 512Mb de ram dependendo da distribuição, é bem leve, então você vai ter bastante espaço pra guardar aqueles arquivos que eu sei que você tem. Provavelmente você já usou um linux, como eu disse ele é muito manjado, então todo mundo já usou linux, seja em um carro, ou até nos semáforos da cidade, obviamente, o linux tem suas desvantagens, ele não é tão simples de aprender, entender e usar**
+**O linux é um dos Sistemas mais manjados do mundo e é um sistema flexível, ele é leve, o requisito minimo de um linux é de 512Mb de ram dependendo da distribuição, é bem leve, então você vai ter bastante espaço pra guardar aqueles arquivos seus arquivos pesados. Provavelmente você já usou um linux, como eu disse ele é muito manjado, então todo mundo já usou linux, seja em um carro, ou até nos semáforos da cidade, obviamente, o linux tem suas desvantagens, ele não é tão simples de aprender, entender e usar**
 
 **Para fazer o linux mais leve, cagaram pra um monte de funções dos concorrentes, tipo as GUIs, a maioria dos linux são customizáveis pelo usuário ou são pré-definidas para um público alvo, então relaxa, você não precisa esperar 4 horas pra baixar um sistema cheio de aplicativo louco que você nem vai usar**
 
@@ -110,7 +110,7 @@ Os operadores do terminal são importantes para você perder menos tempo executa
 | `>>`     | Redireciona a saída de um comando para outro lugar, como um arquivo, adicionando ao final do conteúdo existente no arquivo. | `echo "mais conteúdo" >> arquivo.txt` |
 
 
-- `&`: **esse operador executa comandos em segundo plano, se quisermos copiar um arquivo grande, levaria muito tempo e travaria nosso terminal. O operador "&" adicionado ao comando executa a tarefa a segundo plano, sem precisar interromper outros processoa**
+- `&`: **esse operador executa comandos em segundo plano, se quisermos copiar um arquivo grande, levaria uma eternidade seu terminal viraria uma pedra em quanto isso. O operador "&" no fim do comando executa a tarefa a segundo plano, sem interromper seus cyber crimes**
 
 - `&&`: **Esse comando é enganador por se parecer muito com o operador "&",só que ao contrário dele, o operador de "&&" é usado para rodar mais de um comando de uma vez, `comando 1 &&,comando 2`. Vale lembrar ar que o comando 2 só será executado se o comando 1 for bem sucessido**
 

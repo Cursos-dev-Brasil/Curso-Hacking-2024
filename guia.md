@@ -52,6 +52,7 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
     - Uso do Burp Suite em testes de segurança.
       1. [**Introdução**](aulas/hacking/burp-suite/burp-suite.md)
       2. [**Ataques de Força Bruta no Burp**](aulas/hacking/burp-suite/brute.md)
+      3. [**SQLMap e Burp Suite**](aulas/hacking/burp-suite/burp&SQLi.md)
 
 17. [**OWASP (Open Web Application Security Project)**](aulas/hacking/web-hacking/OWASP/)
     - Diretrizes e ferramentas da OWASP para segurança em aplicações web.

