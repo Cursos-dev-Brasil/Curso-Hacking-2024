@@ -26,4 +26,11 @@ Para encontrar os dados usamos o seguinte comando (supondo que sua wordlist tenh
 
 Embora seja mais rápido do que suas alternativas (como dirbuster) no kali, é limitado a worldists e opções fornecidas, quanto melhor a wordlist para o alvo, mais resultados você terá. Wordlists como a SecLists têm listas para aplicações e plataformas, você pode usar as informações na enumeração para determinar qual wordlist se encaixa melhor no seu caso
 
-Gobuster funciona como qualquer ferramenta linux, então tem um manual
+Gobuster funciona como qualquer ferramenta linux, então tem um [manual online](https://manpages.ubuntu.com/manpages/noble/en/man1/gobuster.1.html), você pode usar ela como referência para aprender outros parametros e opções, aqui, vamos entrar em telhas da principais
+
+### Opções Comuns
+| Opção    | Descrição
+|----------|------------------------------------------------------|
+| -u       | Usado para especificar a URL enumerada                                |
+| -w       | Usado para especificar qual Wordlist será anexada ao caminho         |
+| -x       | Usado para especificar extensões de arquivos                          |

@@ -1,12 +1,6 @@
-# Guia de estudo das aulas
-
-As aulas podem ficar um pouco confusas em certo ponto, principalmente pelo fato de ser muito conteúdo e simplesmente ser impossível separar cada tópico por pastas, por isso, esse guia vai te mostrar exatamente aonde começar e qual ordem seguir
-
-A lista a seguir começa pela aula mais básica até a aula mais avançada do curso (até o momento)
-
 # Guia de Estudo das Aulas
 
-Este guia organiza o conteúdo do curso de forma progressiva e lógica para facilitar o aprendizado.
+Este guia organiza o conteúdo do curso de forma progressiva e lógica para facilitar a sua vida.
 
 1. [**Fundamentos Linux**](aulas/linux/fundamentos/)
    - Introdução ao Linux.
@@ -18,7 +12,7 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
    - Modelos de rede OSI e TCP/IP.
 
 4. [**DNS**](aulas/network/ferramentas/DNS.md)
-   - Funcionamento detalhado do DNS
+   - Funcionamento detalhado do DNS.
 
 5. [**Ping e Ferramentas de Rede**](aulas/network/ferramentas/)
    - Uso de Ping e outras ferramentas.
@@ -37,22 +31,27 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 
 10. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
     - Pesquisa de informações em fontes abertas.
-11. [**Enumeração e fuzzing**](aulas/network/ferramentas)
-   - [Gobuster](aulas/network/ferramentas/gobuster.md)
-   - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
-11. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
+
+11. [**Enumeração e Fuzzing**](aulas/network/ferramentas)
+    - [Gobuster](aulas/network/ferramentas/gobuster.md)
+    - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
+
+12. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
     - Protocolos HTTP(S) e web hacking.
 
-12. [**Headers, Métodos, Url, Cookies, Status**](aulas/hacking/web-hacking/)
+13. [**Headers, Métodos, URL, Cookies, Status**](aulas/hacking/web-hacking/)
     - Análise de cabeçalhos, métodos HTTP e URLs.
 
-13. [**Web Reverse Shell**](aulas/hacking/web-hacking/web-rev-shell.md)
-   - Introdução a reverse shell na web
-   
-14. [**Burp Suite**](aulas/hacking/burp-suite)
+14. [**SQL Injection**](aulas/hacking/web-hacking/sqlInjection.md)
+    - Exploração e defesa contra injeções SQL.
+
+15. [**Web Reverse Shell**](aulas/hacking/web-hacking/web-rev-shell.md)
+    - Introdução a reverse shell na web.
+
+16. [**Burp Suite**](aulas/hacking/burp-suite)
     - Uso do Burp Suite em testes de segurança.
       1. [**Introdução**](aulas/hacking/burp-suite/burp-suite.md)
-      2. [**Ataques de Força Bruta no burp**](aulas/hacking/burp-suite/brute.md)
+      2. [**Ataques de Força Bruta no Burp**](aulas/hacking/burp-suite/brute.md)
 
-15. [**OWASP (Open Web Application Security Project)**](aulas/hacking/web-hacking/OWASP/)
+17. [**OWASP (Open Web Application Security Project)**](aulas/hacking/web-hacking/OWASP/)
     - Diretrizes e ferramentas da OWASP para segurança em aplicações web.
