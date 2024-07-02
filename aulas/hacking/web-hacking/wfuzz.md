@@ -14,7 +14,7 @@ Dessa forma, a palavra FUZZ é substituida pelas palavras da wordlist
 
 Consulta 1: https://www.example.com/admin/note.txt
 Consulta 2: https://www.example.com/administrator/note.txt
-Consulta 3: https://www.example.com/system/note.txt
+Consulta 3: https://www.example.com/system/note.txt   
 
 É importante lembrar que você pode fuzzar qualquer parte da URL, então você pode usar qualquer parâmetro mesmo não conhecendo ele
 

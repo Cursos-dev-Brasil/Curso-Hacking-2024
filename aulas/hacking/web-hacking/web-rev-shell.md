@@ -9,7 +9,7 @@ Não temos texto (e paciência) para repassar todos os tipos de desvios de filtr
 ### 1. Filtragem de extensão de arquivo:
 
 como o nome diz, a filtragem de extensão verifica a extensão do arquivo. Isso é feito com uma lista de extensões permitidas e comparando o arquivo com a lista. Se a extensão não estiver na lista, o upload é rejeitado. Então... qual é o desvio? Bem, a resposta é que depende de como o filtro é implementado. Muitos filtros dividem um nome de arquivo no ponto (.) e verificam o que vem depois dele. Isso torna fácil contornar o upload com uma extensão dupla (por exemplo, .jpg.php). O filtro se divide nos pontos e verifica o que ele considera ser a extensão na lista. Se jpg for permitida, o upload é bem-sucedido e o script PHP é carregado no servidor.
-adicionando um sistema de upload, é uma boa prática fazer upload dos arquivos para um diretório que não pode ser acessado remotamente. Infelizmente, isso geralmente não é o caso, e os scripts são carregados em um subdiretório no servidor web (tipo /uploads, /images, /media ou /resources), podemos encontrar o script em https://www.thebestfestivalcompany.xyz/images/shell.jpg.php.
+quando adicionar um sistema de upload, é uma boa fazer upload dos arquivos para um diretório que não pode ser acessado remotamente. Infelizmente, isso geralmente não é o caso, e os scripts são carregados em um subdiretório no servidor web (tipo /uploads, /images, /media ou /resources)
 
 
 ## Web Reverse Shell

@@ -43,7 +43,7 @@ SELECT * FROM users WHERE username='''
 
 Essa marca gera um erro, e esse erro é usado para explorar a injeção
 
-No geral, a injeção sql é um ataque para quebrar a lógica do código sql, injetar o seu e depois "consertar" a parte quebrada com comentários no final
+No geral, a injeção sql é um ataque para quebrar a lógica do código sql, injetar a sua e depois "consertar" a parte quebrada com comentários
 
 ![SQLinjection](/content/sqlInjection.png)
 
