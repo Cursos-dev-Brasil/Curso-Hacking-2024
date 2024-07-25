@@ -116,6 +116,6 @@ Os operadores do terminal são importantes para você perder menos tempo executa
 
 - `>`: **Esse operador é conhecido como redirecionamento de saída,  ou seja, pegamos a saída de um comando que executamos e enviamos a saída para outro lugar. Um bom exemplo disso é usar o comando echo para redirecionar a string para outro arquivo, por exemplo.**
 
-*Nota: se o arquivo existir, o conteúdo é sobre escrito, caso contrário o arquivo é criado*
+*Nota: se o arquivo existir, o conteúdo é sobre-escrito, caso contrário o arquivo é criado*
 
 - `>>`: **Esse operador também é um direcionamento de saída, o que diferencia ele do,">". Em vez de sobreescrever o arquivo, ele adiciona o novo conteúdo ao final do arquivo, mantendo o resto do conteúdo
