@@ -1,6 +1,6 @@
 # Desafio de esteganografia
 
-**Desafio referente a aula [pesquisa básica](../aulas/geral/pesquisa/pesquisa-basica.md)**
+**Desafio referente a aula [pesquisa básica](/aulas/OSINT/pesquisa/pesquisa-basica$.md)**
 
 Como foi recomendado na aula, vamos usar o steghide na prática, vamos usa-lo para extrair um arquivo de uma imagem .jpg, Seu objetivo é simples, extrair um arquivo da imagem [dog.jpg](content/dog.jpg), para isso, temos algumas recomendações/requisitos
 

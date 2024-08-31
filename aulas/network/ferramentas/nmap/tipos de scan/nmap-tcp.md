@@ -1,6 +1,6 @@
 # Varredura TCP connect (-sT)
 
-Para entender essas varreduras, você precisa estar **confortável com o TCP three-way handshake** (handshake de 3 vias), explicamos isso em [Modelo TCP/IP](../../modeloTCPIP.md)
+Para entender essas varreduras, você precisa estar **confortável com o TCP three-way handshake** (handshake de 3 vias), explicamos isso em [Modelo TCP/IP](/aulas/network/modeloTCPIP.md)
 
 Esse é um **principio fundamental da rede TCP/IP.** Como o nome sugere, essa varredura **funciona realizando o three-way handshake com cada porta** alvo. Em outras palavras, o Nmap tenta se conectar a cada porta TCP, e dependendo da resposta ele sabe se o serviço está rodando ou não
 

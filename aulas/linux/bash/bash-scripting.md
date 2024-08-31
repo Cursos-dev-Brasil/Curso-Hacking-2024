@@ -99,7 +99,7 @@ echo "Olá, $name"
 
 Quando executado, você deve ver algo como: 
 <br>
-![saída](../../../content/bash-input.png)
+![saída](/content/bash-input.png)
 
 Para se adaptar com comandos básicos, você pode tentar criar algo, como um gerador de biografia, onde você usa nome idade e ocupação como parametros, armazena em variáveis exibe na tela dentro de uma frase
 

@@ -70,6 +70,9 @@ Alguns sites podem usar consultas diferentes, como:
 
 Nesse caso, você precisa adicionar um parentese único ao payload: `') or true --` para funcionar
 
+
+Um site que demonstra bem um ataque de SQLInjection é o da [hacksplaining](https://www.hacksplaining.com/lessons/sql-injection)
+
 ### Blind SQL Injection
 
 Em alguns casos, os desenvolvedores usam o cérebro para anular qualquer erro. Infelizmente, isso torna impossível o ataque anterior

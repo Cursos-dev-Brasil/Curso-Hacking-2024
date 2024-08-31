@@ -76,3 +76,16 @@ Para uma experiência mais completa e eficiente, recomendamos o uso de um comput
 ## Instalando o Termux para Estudo em Dispositivos Móveis
 Baixe o Termux na Play Store ou F-Droid.
 Após a instalação, explore as diversas ferramentas disponíveis para simular um ambiente Linux em seu dispositivo móvel.
+
+###### Aviso
+
+Esse curso é feito usando uma mistura de conteúdo espalhado pela internet, com a minha própria experiência e forma de explicar, dentre as muitas fontes do curso temos:
+
+- Try Hack Me
+- Hack The Box
+- Forum black rat
+- Fórum white hat
+- hacksplaining
+- Dark Web
+
+Além de outras fontes, grande parte do conteúdo do curso está disponível na internet mas extremamente desorganizado e em muitos casos com um preço extremamente alto

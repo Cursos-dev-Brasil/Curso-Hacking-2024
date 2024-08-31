@@ -9,7 +9,7 @@ Para encontrar uma vulnerabilidade em um sistema, você pode procurar em alguns 
 - NVD
 - CVE Mitre
 
-o ExploitDB costuma ser útil para hackers, por que contém exploits que podem ser baixados e usados imediatamente. Costuma ser uma das primeiras paradas quando você encontra um software potencialmente vulnerável
+o ExploitDB costuma ser útil, por que contém exploits que podem ser baixados e usados imediatamente. Costuma ser uma das primeiras paradas quando você encontra um software potencialmente vulnerável
 
 o NVD (National Vulnerability Database) acompanha as CVE's (Common Vulnerabilities and Exposures) é um lugar bom para procurar vulnerabilidades em um software especifico. O formato de um CVE é: **CVE-ano-número**
 

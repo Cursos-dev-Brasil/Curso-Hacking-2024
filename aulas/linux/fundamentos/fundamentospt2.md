@@ -15,8 +15,8 @@ Outros comandos são importantes para:
 |---------|----------------|--------------------------------|
 | touch   | touch          | criar um arquivo               |
 | mkdir   | make directory | cria um diretório              |
-| rmdir   | remove directory | Remove um diretório |
-| rm      | remove         | remove um arquivo |
+| rmdir   | remove directory | Remove um diretório          |
+| rm      | remove         | remove um arquivo              |
 | mv      | move           | mover um arquivo ou diretório  |
 | cp      | copy           | copia um arquivo ou diretório  |
 | file    | file           | determina um tipo de arquivo   |

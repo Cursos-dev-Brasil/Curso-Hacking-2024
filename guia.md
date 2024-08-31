@@ -29,30 +29,42 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 9. [**Evasão de Firewall**](aulas/network/ferramentas/nmap/firewall-evasion.md)
    - Estratégias para evasão de firewall e filtros de rede.
 
-10. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
+
+10. [**ataque MITM**](aulas/network/sniffing.md)
+   - Ataque de interceptação de dados
+
+11. [**Protocolos de rede**](aulas/OSINT/pesquisa/)
+   - Protocolos de rede que compõe a internet
+    - [SMB](/aulas/network/protocols/SMB/)
+    - [Telnet](/aulas/network/protocols/Telnet/)
+    - [arp](/aulas/network/protocols/arp.md)
+    - [ftp](/aulas/network/protocols/FTP/)
+
+
+12. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
     - Pesquisa de informações em fontes abertas.
 
-11. [**Enumeração e Fuzzing**](aulas/network/ferramentas)
+13. [**Enumeração e Fuzzing**](aulas/network/ferramentas)
     - [Gobuster](aulas/network/ferramentas/gobuster.md)
     - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
 
-12. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
+14. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
     - Protocolos HTTP(S) e web hacking.
 
-13. [**Headers, Métodos, URL, Cookies, Status**](aulas/hacking/web-hacking/)
+15. [**Headers, Métodos, URL, Cookies, Status**](aulas/hacking/web-hacking/)
     - Análise de cabeçalhos, métodos HTTP e URLs.
 
-14. [**SQL Injection**](aulas/hacking/web-hacking/sqlInjection.md)
+16. [**SQL Injection**](aulas/hacking/web-hacking/sqlInjection.md)
     - Exploração e defesa contra injeções SQL.
 
-15. [**Web Reverse Shell**](aulas/hacking/web-hacking/web-rev-shell.md)
+17. [**Web Reverse Shell**](aulas/hacking/web-hacking/web-rev-shell.md)
     - Introdução a reverse shell na web.
 
-16. [**Burp Suite**](aulas/hacking/burp-suite)
+18. [**Burp Suite**](aulas/hacking/burp-suite)
     - Uso do Burp Suite em testes de segurança.
       1. [**Introdução**](aulas/hacking/burp-suite/burp-suite.md)
       2. [**Ataques de Força Bruta no Burp**](aulas/hacking/burp-suite/brute.md)
       3. [**SQLMap e Burp Suite**](aulas/hacking/burp-suite/burp&SQLi.md)
 
-17. [**OWASP (Open Web Application Security Project)**](aulas/hacking/web-hacking/OWASP/)
+19. [**OWASP (Open Web Application Security Project)**](aulas/hacking/web-hacking/OWASP/)
     - Diretrizes e ferramentas da OWASP para segurança em aplicações web.

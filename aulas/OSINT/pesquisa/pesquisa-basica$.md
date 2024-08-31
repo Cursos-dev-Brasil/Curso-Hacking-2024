@@ -31,7 +31,7 @@ O Link parece ser útil.
 
 ![StegHide](/content/steghide.png)
 
-Essa ferramenta parece ser útil. Ela é usada para extrair arquivos embutidos em fotos **.JPEG, .BMP, .WAV, .AU**, também mostra que pode ser intalado usando `apt`, se você já viu as aulas de fundamentos, sabe oque é isso, senão viu, pode ou pesquisar, ou ler sobre o apt em: [fundamentos](../../linux/fundamentos/fundamentos%20pt4.md)
+Essa ferramenta parece ser útil. Ela é usada para extrair arquivos embutidos em fotos **.JPEG, .BMP, .WAV, .AU**, também mostra que pode ser intalado usando `apt`, se você já viu as aulas de fundamentos, sabe oque é isso, senão viu, pode ou pesquisar, ou ler sobre o apt em: [fundamentos](/aulas/linux/fundamentos/fundamentospt4$.md)
 
 caso queira pesquisar:
 
