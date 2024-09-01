@@ -1,28 +1,26 @@
-# **OSI model**
+# Modelo OSI
 
-The OSI (**Open System Interconnection**) Model é um modelo padronizado que usamos para demonstrar a teoria por trás das redes de computadores. Na prática, é na verdade o modelo TCP/IP mais compacto que é a base das redes do mundo real, mas, o modelo OSI, de muitas maneiras, é mais fácil de entender.
+O Modelo OSI (Open System Interconnection) é aquele manual que você não lê, mas deveria. Ele explica como as redes funcionam, dividindo tudo em 7 camadas. E sim, são muitas camadas, mas fica tranquilo – vou explicar cada uma pra você nunca mais esquecer (se esquecer é só voltar aqui, é assim que arquivos de texto funcionam)
 
-O modelo OSI consiste em **7 camadas**:
+## Camada 7 - Aplicação:
+Essa é a camada onde tudo acontece – é aqui que os aplicativos entram em contato com a rede. Basicamente, se o seu e-mail não for enviado, é culpa desta camada... ou da sua internet, que só falha quando você mais precisa.
 
-## **Camada 7 - Aplicação:**
-- A camada de aplicação consiste em fornecer opções de redes para programas em execução. Trabalha quase exclusivamente com aplicativos, fornecendo uma interface para transmitir dados.
+## Camada 6 - Apresentação:
+Aqui, a mágica acontece. Ela converte os dados que chegam em algo que o sistema possa entender, porque, convenhamos, se você não consegue se comunicar com um espanhol, por que um computador que fala em binário saberia se comunicar com você? Ela também cuida da criptografia, até por que ninguém quer ser hackeado e passar a vergonha do hacker saber que sua senha é “password123”, né?
 
-## **Camada 6 - Apresentação:**
-- A camada de apresentação recebe dados da camada de aplicação. Esses dados normalmente estão em um formato que o aplicativo entende, mas não necessariamente em um formato padronizado que pode ser entendido pela camada de aplicação no computador receptor. A camada de apresentação traduz os dados em um formato padronizado, além de lidar com a criptografia, compressão ou transformações nos dados. Com isso completo, os dados são passados para a camada de sessão.
+## Camada 5 - Sessão:
+Essa camada é a responsável por manter a conversa em andamento. Ela abre, fecha e mantém as sessões de comunicação. Se essa camada fosse uma pessoa, ela seria aquele amigo que nunca desliga o telefone sem dizer “tchau” umas dez vezes.
 
-## **Camada 5 - Sessão:**
-- Quando a camada de sessão recebe os dados formatados da camada de apresentação, ela verifica se pode estabelecer uma conexão com o outro computador pela rede. Se não, envia de volta um erro e o processo não continua. Se uma sessão puder ser estabelecida, então é trabalho da camada de sessão manter a conexão ativa, e cooperar com a camada de sessão do computador remoto para sincronizar as comunicações.
+## Camada 4 - Transporte:
+É aqui que as coisas ficam sérias. Esta camada decide como os dados vão viajar pela rede. Se fosse um jogo, seria o modo hard: TCP para os perfeccionistas (checa os dados antes de enviar), e UDP (Vai sem nenhuma verificação, só o poder da oração) para quem gosta de viver perigosamente, sem confirmar se tudo foi entregue.
 
-## **Camada 4 - Transporte:**  
-- A camada de transporte é uma camada que desempenha funções importantes. Seu primeiro objetivo é escolher o protocolo pelo qual os dados são transmitidos. Os dois mais comuns na camada de transporte são TCP (**Transmission Control Protocol**) e UDP (**User Datagram Protocol**); com TCP, a transmissão é baseada em conexão, o que significa que uma conexão entre os computadores é estabelecida e mantida durante a solicitação.
+## Camada 3 - Rede:
+A camada de rede é o GPS dos seus dados. Ela descobre para onde eles devem ir e a melhor rota para chegar lá. Claro, se ela fosse um GPS de verdade, diria algo como “Recalculando...” sempre que você menos espera.
 
-## **Camada 3 - Rede:**
-- A camada de rede é responsável por localizar o destino da sua solicitação. Por exemplo, a Internet é uma rede enorme; quando você quer solicitar informações de uma página da web, é a camada de rede que pega o endereço IP da página e descobre a melhor rota.
+## Camada 2 - Enlace de Dados:
+Aqui, a camada de enlace se certifica de que os dados cheguem ao destino certo. Pensa nela como um carteiro, mas um carteiro bom, um carteiro que sabe a diferença entre ‘Rua A’ e ‘Avenida B’. E não, ela não vai deixar sua encomenda na casa do vizinho por engano.
 
-## **Camada 2 - Enlace de dados:**
-- A camada de enlace se concentra no endereçamento fisíco da transmissão. Ela recebe um pacote da camada de rede (com o IP do computador remoto) e adiciona o MAC (Endereço fisíco) do ponto final do receptor.
+## Camada 1 - Física:
+Finalmente, chegamos à camada física, onde tudo se torna real – ou pelo menos, elétrons e luzes. Se seus dados não passarem por aqui, é como tentar enviar um e-mail sem energia elétrica... boa sorte com isso (se conseguir me avisa)!
 
-## **Camada 1 - Fisíca:**
-- A camada fisíca é relacionada ao hardware. É onde os pulsos elétricos são enviados e recebidos. A função dessa camada é traduzir os dados binários em sinais e transimiti-los na rede, além de receber sinais de entrada e converter de volta para binário.
-
-![Representação do modelo OSI](/content/modelo-osi.png)
+Com o modelo OSI, fica claro que a comunicação em rede é mais do que apenas um "enviar formulário". E não se esquece, na próxima vez que sua internet cair, você pode culpar qualquer uma dessas camadas – só não vai culpar a camada 8 (a operadora).

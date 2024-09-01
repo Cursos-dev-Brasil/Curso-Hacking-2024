@@ -11,7 +11,7 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 3. [**Modelo OSI e TCP/IP**](aulas/network/)
    - Modelos de rede OSI e TCP/IP.
 
-4. [**DNS**](aulas/network/ferramentas/DNS.md)
+4. [**DNS**](aulas/network/DNS.md)
    - Funcionamento detalhado do DNS.
 
 5. [**Ping e Ferramentas de Rede**](aulas/network/ferramentas/)

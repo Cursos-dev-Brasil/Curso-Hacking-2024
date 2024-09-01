@@ -1,102 +1,111 @@
 # Fundamentos Linux Parte 2
+*Obs: O arquivo anterior era tão grande que teve que ser cortado em dois. (Na verdade, só queríamos te dar mais trabalho, mas fica entre nós.)*
 
-*obs: O arquivo anterior é muito grande, então criamos a parte 2 (mentira, é só pra somar mais conteúdo mesmo)*
+## Comandos para Interagir com Arquivos
 
-## Comandos para interagir com sistema de arquivos
-Outros comandos são importantes para: 
-- criar diretórios
-- apagar diretórios
-- mover diretórios
-- criar arquivos
-- apagar arquivos
-- mover arquivos
+Agora que você já está começando a dominar o Linux (mentira, você não sabe nem o que é um kernel), é hora de se preparar para os comandos de manipulação de arquivos e diretórios. Se você não decorar isso, provavelmente não vai saber nem mexer num terminal. Entre as funções de manipulação de arquivos mais importantes estão:
 
-| Comando | Nome completo  | Função                         |
-|---------|----------------|--------------------------------|
-| touch   | touch          | criar um arquivo               |
-| mkdir   | make directory | cria um diretório              |
-| rmdir   | remove directory | Remove um diretório          |
-| rm      | remove         | remove um arquivo              |
-| mv      | move           | mover um arquivo ou diretório  |
-| cp      | copy           | copia um arquivo ou diretório  |
-| file    | file           | determina um tipo de arquivo   |
+Criar diretórios
+Apagar diretórios
+Mover diretórios
+Criar arquivos
+Apagar arquivos
+Mover arquivos
 
-- touch e mkdir: **Criar arquivos ou pastas é muito simples, o comando touch aceita apenas um argumento, que é o nome do arquivo que vai ser criado, ao executar o comando: `touch note` o arquivo note é criado em branco, para adicionar texto, você pode usar o comando echo e os comandos ">" e ">>". O mkdir também aceita apenas um parametro, que é o diretório `mkdir new_dir`**
+| Comando | Nome Completo     | Função                         |
+|---------|-------------------|--------------------------------|
+| touch   | touch             | Criar um arquivo               |
+| mkdir   | make directory    | Criar um diretório             |
+| rmdir   | remove directory  | Remover um diretório           |
+| rm      | remove            | Remover um arquivo             |
+| mv      | move              | Mover um arquivo ou diretório  |
+| cp      | copy              | Copiar um arquivo ou diretório |
+| file    | file              | Determinar o tipo de arquivo   |
 
-- rm, rmdir: **rm é um pouco diferente dos outros comandos que cobrimos até agora. Você pode simplesmente remover arquivos usando rm. No entanto, você precisa fornecer a flag -R do lado do nome do diretório que deseja remover**
 
-- cp: **O comando de copy aceita 2 argumentos: arg1(o nome do arquivo existente) e o arg2(nome do novo arquivo copiado), por exemplo: `cp clientes.txt clientes_backup.txt`**
+### Criar Arquivos e Diretórios
+Touch e mkdir: Com uma palavra, você cria um arquivo pra botar qualquer coisa (é sério, é qualquer coisa):
 
-- mv: **cp copia todo o conteúdo do arquivo existente para o novo arquivo. No caso de mover um arquivo, o mv também aceita dois argumentos, mas, em vez de copiar e/ou criar um novo arquivo, mv junta ou modifica o segundo arquivo que fornecemos como argumento. Além de mover um arquivo para uma nova pasta, você também pode usar mv para renomear um arquivo ou pasta.**
+`touch [nome_do_arquivo]`
 
-- file: **Oque pode enganar as pessoas e causar confusão é a suposição do que tem dentro do arquivo. Na maioria das vezes um arquivo tem uma extensão, oque ajuda a saber oque tem dentro, mas pode acontecer da extensão não ter sido colocada. O comando *file* serve para descobrir exatamente o tipo de arquivo, e descobrir oque podemos fazer a partir disso**
+com mkdir, você cria um diretório (ou uma pasta pros nossos amigos da janela), do jeito que você quiser:
 
-## Parâmetros
+`mkdir [nome_da_pasta]`
 
-A maioria dos comandos tem parâmetros. Parâmetros são jeitos de especificar algo comando. Se nenhum parâmetro for atribuído, o comando executa o comando padrão, aí você pergunta "e se a ferramenta não tiver uma forma padrão?" e eu te respondo, isso não é opção. Parâmetros são identificados com um hífen (um traço pra quem pulou a aula de português) depois uma letra ou palavra. Ex: `ls -a`
+### Remover Arquivos e Diretórios
+rm e rmdir: O comando rm é um balde de água na fogueira (ele apaga tudo). Para remover um arquivo, é só colocar um:
 
-## Conexão usando *SSH*
-Uma conexão SSH (Secure Shell) é um protocolo para transferir dados sem um idiota tentando roubar seus dados (um dia você vai ser esse idiota). Ele criptografa seus dados enviados e descriptografa quando a mensagem alcança o destino.
+`rm [arquivo]`
+
+Agora, se você quiser eliminar uma pasta e tudo o que tem dentro deela, adicione a flag -R e se prepara pra ver a coitada sumir:
+
+`rm -R [pasta]`
+
+Mas, se você só quer se livrar de um diretório vazio, use rmdir:
+
+`rmdir [pasta_vazia]`
+
+Um golpe só e vala.
+
+### Copiar e Mover Arquivos e Diretórios
+cp e mv: Quer multiplicar arquivos? cp é o comando para isso:
+
+cp: O comando de copy só copia os arquivos, é bem simples
+
+`cp [arquivo] [copia_arquivo]`
+
+Simples, né? É tipo tirar uma selfie com um amigo e depois tirar outra. Só que, em vez de se preocupar com a iluminação, você só tem que se preocupar em não perder a cópia!
+
+mv: Serve pra duas coisas, mover e renomear, porque? não sei tbm, vai ver 1 comando a mais ia deixar o linux muito pesado:
+
+`mv documento.txt novo_documento.txt`
+
+pra mover o arquivo para outra pasta:
+
+`mv documento.txt /novo_diretorio/`
+
+file: Se você se deparou com um arquivo e não faz ideia do que ele é, file é seu Sherlock Holmes. Ele analisa e revela a identidade do arquivo, sem o drama
+
+`file arquivo`
+
+## Permissões e Segurança: O Mundo dos Direitos
+
+Para saber quem pode fazer o quê com seus arquivos, use o comando ls com a flag -lh:
+
+`ls -lh`
+
+Isso mostra quem tem permissão para ler, escrever ou executar arquivos.
+
+## Conexão usando SSH
+Uma conexão SSH (Secure Shell) é um protocolo para transferir dados sem um idiota tentando roubar seus dados (um dia você pode ser esse idiota). Ele criptografa seus dados enviados e descriptografa quando a mensagem chega ao destino.
+
+obs: esses dados só são descriptografados com uma chave de criptografia (RSA)
 
 ### Sintaxe SSH
-A sintaxe é simples e não precisa de um bloco de notas pra lembrar dela. Para se conectar a uma máquina usando SSH, a sintaxe é:
-`ssh nome_de_usuario@ip_alvo`
+A sintaxe é fácil e não precisa de um bloco de notas pra lembrar. Para se conectar a uma máquina usando SSH, a sintaxe é:
 
-Se tudo funcionar, o SSH vai pedir a confirmação de que você confia no Host. Caso você confirme, ele pedirá a senha.
+ssh [nome_de_usuario]@[ip_alvo]
 
-*Nota: o campo da senha não tem feedback visual, a senha não é mostrada, então não, seu teclado não desconectou.*
+Se tudo funcionar, o SSH vai pedir a confirmação de que você confia no Host. Caso você confirme, ele vai pedir a senha.
 
-## Permissões
-Alguns usuários tem controle sobre alguns arquivos e outros não, para saber oque um usuário pode ou não fazer em um arquivo, podemos usar o comando ls com a flag -lh
+Nota: O campo da senha não tem feedback visual; a senha não é mostrada, então não, seu teclado não desconectou (eu já fiquei 40 minutos achando que era erro no teclado).
 
-```
-root@linux2:~$ ls -lh
--rw-r--r-- 1 cmnatic cmnatic 0 Feb 19 10:37 file1
--rw-r--r-- 8 cmnatic cmnatic 0 Feb 19 10:37 file2
-```
-Essa parte é importante para determinar caracteristicas de um arquivo ou pasta e se podemos acessar, alterar ou move-la. Alguns arquivos funcionam só pra um usuário especifico
+## Mudando de Usuário
+Trocar de usuário é tranquilo graças ao su.
 
-as permissões que um usuário pode ter são:
+su tem flags importantes. Por exemplo, a flag -l ou --login inicia um shell fazendo login no sistema, com variáveis de ambiente e essas coisas.
 
-- leitura
-- Escrita
-- Execução
+## Diretórios Padrão
 
-## Mudando de usuário
+O linux é um sistema organizado e não tem um monte de pasta com nome sem sentido e sem nehuma utilidade, por isso ele tem alguns diretórios que você precisa conhecer pra trabalhar com essa maravilha de sistema
 
-trocar de usuário é tranquilo graças ao `su`, se você não for o root (ou esteja usando permissões de root com sudo) você precisa de 2 coisas
+/etc: A central de comando do Linux. Aqui ficam os arquivos de configuração do sistema. É quase o coração do sistema, com arquivos que definem o que todos podem ou não fazer
 
-- O nome do usuário de destino você vai mudar
-- a senha do usuário
+/var: Onde tudo que é variável fica. Aqui ficam logs, backups e outros dados temporários.
 
-su tem flags importantes. Por exemplo a flag -l ou --login para iniciar um shell semelhante ao usuário fazendo login no sistema, com váriaveis de ambiente e coisas do tipo
+/root: A área VIP para o superusuário. Só o root pode mexer aqui. É tipo a sala secreta do dono.
 
-## Diretórios padrão
+/tmp: O depósito de lixo descartável. Arquivos que você não precisa para sempre vão aqui. É tipo a lixeira, mas um pouco mais organizada.
 
-### /etc
-Esse é um diretório essencial do linux. A pasta etc é um diretório padrão para arquivos de sistema do sistema operacional, para os queridos usuários Windows, a System32
-
-alguns conteúdos importantes do diretório /etc são: 
-
-O arquivo sudoers, por exemplo, tem uma lista de usuários que podem executar comandos como root usando sudo
-
-Outro arquivo comum é o passwd e o shadow. Os dois são do linux, por que mostram como o sistema armazena as senhas usando criptografia sha512
-
-
-### /var
-O */var* (abreviação de variable data) é uma pasta com dados acessados ou escritos por serviços ou aplicações, tipo um arquivo de log, que é escrito em */var/log* ou outros dados que não precisam  ser relacionados a um usuário (como um banco de dados)
-
-alguns conteúdos importantes do diretório /var são:
-
-backups 
-log 
-opt 
-tmp
-
-### /root
-a pasta root é a pasta home do administrador do sistema (vulgo root). Não tem muito oque dizer sobre essa, ninguém além do root pode abrir os arquivos de dentro dela, os arquivos desse diretório só dependem do usuário root
-
-### /tmp
-esse é um diretório raiz encontrado no linux, é abreviação de temporário e é usado para armazenar dados que só vão ser usados uma ou duas vezes, quando você reinicia o computador, esses dados são deletados
-
-A parte útil dessa pasta para um pentester é que qualquer usuário pode editar o conteúdo dessa pasta por padrão. ou seja, tendo acesso a máquina, esse é um bom lugar para nossos dados, como scripts de enumeração
+## Parâmetros
+A maioria dos comandos tem parâmetros. Um parâmetro é tipo uma forma de dizer "execute isso com isso". Se nenhum parâmetro for atribuído, o comando executa a função padrão. Se você se pergunta "e se a ferramenta não tiver uma função padrão?", eu te respondo: Não faz pergunta difícil amigo. Parâmetros são identificados com um hífen (ou um traço, pra quem pulou a aula de português) seguido de uma letra ou palavra. Exemplo: ls -a.

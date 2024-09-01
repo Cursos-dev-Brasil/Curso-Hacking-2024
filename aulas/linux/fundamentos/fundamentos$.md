@@ -34,5 +34,13 @@ Se você acha que procurar arquivos é tipo procurar uma agulha no palheiro, pen
 ## Operadores do Terminal: Seus Superpoderes Digitais
 Os operadores do terminal são quase truques pra tornam sua vida mais fácil economizando 0.7 segundos.
 
+| Operador | Descrição | Exemplo | Observação |
+|----------|-----------|---------|------------|
+| `&`      | Executa comandos em segundo plano. | `comando &` | (Porque você não precisa ficar esperando um comando gigante terminar) |
+| `&&`     | Combina comandos, onde o segundo só roda se o primeiro der certo. | `comando1 && comando2` | (Pra que fazer uma coisa de cada vez, se você pode fazer duas, uma depois da outra?) |
+| `>`      | Redireciona a saída pra um arquivo, substituindo o conteúdo se o arquivo já existir. | `echo "conteúdo" > arquivo.txt` | (Sobre escreve sem dor de cabeça!) |
+| `>>`     | Adicione a saída ao final de um arquivo sem apagar o que já estava lá. | `echo "mais conteúdo" >> arquivo.txt` | (Porque você pode querer adicionar, não apagar!) |
+
+Agora você tá  pronto para explorar o Linux e começar a hackear sistemas bancários com ferramentas prontas (contém ironia). 
 
 
