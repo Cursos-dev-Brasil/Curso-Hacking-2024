@@ -20,4 +20,8 @@ os principais algoritmos de criptografia simétrica são o AES, RC4, DES, RC5 e 
 
 #### Criptografia Assimétrica
 
-o tipo mais seguro de criptografia, ela funciona no servidor-cliente, o servidor envia uma chave, conhecida como chave pública, para o cliente, essa chave é usada para criptografar os dados e enviar de volta pro servidor, quando os dados chegam no servidor, o servidor usa uma chave privada pra descriptografar os dados, as duas chaves se completam e a privada não funciona sem a pública 
+o tipo mais seguro de criptografia, ela funciona no servidor-cliente, o servidor envia uma chave, conhecida como chave pública, para o cliente, essa chave é usada para criptografar os dados e enviar de volta pro servidor, quando os dados chegam no servidor, o servidor usa uma chave privada pra descriptografar os dados, as duas chaves se completam e a privada não funciona sem a pública
+
+essa criptografia torna o processo dos dados muito mais difícil, já que seu servidor gasta muito tempo criptografando, descriptografando e fazendo todo o processo chato de tratamento de erros
+
+Por isso, normalmente a criptografia simétrica é usada para os dados, e a assimétrica criptografa a chave simétrica, uso torna o trabalho mais fácil
