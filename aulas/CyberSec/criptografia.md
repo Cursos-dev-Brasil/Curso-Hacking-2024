@@ -2,7 +2,7 @@
 
 Caso você não proteja seus dados, eles podem ser interceptados por qualquer idiota usando Wireshark, a criptografia garante que caso qualquer engraçadinho tente roubar seus dados, receba um monte de letras e números sem o menor padrão e sem nenhuma possibilidade de descriptografia
 
-A criptografia tem como objetivo garantir os princípios de 
+A criptografia tem como objetivo garantir os princípios de confidenciabilidade, integridade e autenticidade
 
 ## Como funciona
 
