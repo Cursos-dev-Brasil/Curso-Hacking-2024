@@ -16,7 +16,7 @@ Existem 2 tipos famosos de criptografia
 
 Nesse estilo de criptografia uma única chave é gerada para criptografar e descriptografar os dados, obviamente isso não é seguro, imagina enviar seus dados criptografados junto com a chave pra descriptografar, não é a decisão Mais inteligente que você pode tomar, normalmente a criptografia simétrica e usada nos dados e a criptografia assimétrica é usada na chave simétrica 
 
-os principais 
+os principais algoritmos de criptografia simétrica são o AES, RC4, DES, RC5 e RC6, o que muda é como ele criptografa os dados, no geral o mais usado é o AES (advanced 
 
 #### Criptografia Assimétrica
 
