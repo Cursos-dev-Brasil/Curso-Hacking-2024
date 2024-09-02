@@ -44,3 +44,4 @@ Os operadores do terminal são quase truques pra tornam sua vida mais fácil eco
 Agora você tá  pronto para explorar o Linux e começar a hackear sistemas bancários com ferramentas prontas (contém ironia). 
 
 
+6

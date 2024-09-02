@@ -1,36 +1,56 @@
-# Introdução ao gobuster
-Logicamente, muitas partes de um site tem erros que um usuário médio não pode ver. Esses erros podem ser qualquer coisa, de um sitemap até um diretório oculto com arquivos que não deveriam ser vistos por qualquer um. Infelizmente, isso faz com que os desenvolvedores com preguiça de proteger esses diretórios (experiência própria), permitindo que qualquer um descubra esses diretórios, e consequentemente, acesse ele para roubar informações. O Gobuster é uma ferramenta importante para descobrir esses diretórios. A ideia por trás da ferramenta é simples: forçar paths (diretórios) comuns para verificar se são válidos. Parecido como você faria no navegador, mas muito, muito e muito mais rápido. o Gobuster tem 3 modos: dir, vhost e dns, o modo mais provável de ser usado é o dir, então vamos usar ele, a sintaxe para esse comando é: 
+# Descobrindo Segredos com o Gobuster
+
+Imagina que você está navegando por um site, navegando pelas páginas que todo mundo vê. Mas e se eu te disser que, escondido no meio daquele dominio, existem diretórios secretos, arquivos esquecidos e até mesmo sitemaps abandonados que os desenvolvedores deixaram de proteger? Sim, isso acontece mais do que você imagina! E é aqui que entra o Gobuster, uma ferramenta incrível para caçar esses segredos como um verdadeiro detetive digital.
+
+## O que é o Gobuster?
+O Gobuster é como aquele amigo impaciente que, ao invés de explorar um site clicando em cada link, decide testar todos os caminhos de uma vez só – e rápido! Ele é feito para descobrir diretórios e arquivos ocultos, forçando caminhos comuns que os desenvolvedores esquecem de esconder. E se você já tentou adivinhar URLs no navegador, sabe como é chato. Mas o Gobuster faz isso em uma fração de minutos!
+
+## Os Modos do Gobuster
+
+O Gobuster tem três modos principais, mas o que você vai usar na maior parte do tempo é o modo dir. Por quê? Porque é o modo que força a barra de diretórios num dominio, ou seja, ele procura diretórios tepois do https://site.com/<>. A sintaxe básica do comando é:
 
 `gobuster dir <resto do comando>`
 
-## Como funcionam wordlists
+### Wordlists
+Sem uma wordlist, o gobuster faz o mesmo trabalho que os presidentes do Brasil, ou seja, nenhum. Pensa nela como a "contribuição" que o presidente ganha pra trabalhar. Nesse caso é uma lista de palavras.
 
-Vamos usar a tabela abaixo para demonstrar como uma wordlist funciona:
+#### Como Funciona?
 
-| URL Original              | Item na Wordlist | URL Final                        |
-|---------------------------|------------------|----------------------------------|
-| http://example.com        | backups          | http://example.com/backups       |
-| http://example.com        | shepards         | http://example.com/shepards      |
+| URL Original            | Item na Wordlist  | URL Final                        |
+|------------------------ |------------------ |----------------------------------|
+| http://example.com      | backups           | http://example.com/backups       |
+| http://example.com      | shepards          | http://example.com/shepards      |
 
-O gobuster tem alguns truques, ele suporta extensões, então você pode forçar arquivos. Podemos usar outra tabela para mostrar isso: 
+Simples, né? Mas calma que tem mais! O Gobuster é mais esperto que você e consegue forçar arquivos específicos usando extensões
 
-| URL Original         | Item na Wordlist | Extensão Especificada | URL Final                       |
-|----------------------|------------------|-----------------------|---------------------------------|
-| http://example.com   | backup           | php                   | http://example.com/backup.php   |
-| http://example.com   | backup           | txt                   | http://example.com/backup.txt   |
-| http://example.com   | icecream         | html                  | http://example.com/icecream.html |
+| URL Original           | Item na Wordlist | Extensão Especificada | URL Final                        |
+|------------------------|------------------|-----------------------|----------------------------------|
+| http://example.com      | backup           | php                   | http://example.com/backup.php    |
+| http://example.com      | backup           | txt                   | http://example.com/backup.txt    |
+| http://example.com      | icecream         | html                  | http://example.com/icecream.html |
 
-Para encontrar os dados usamos o seguinte comando (supondo que sua wordlist tenha as palavras backup e icecream)
+Imagina que você tem uma wordlist com as palavras "backup" e "icecream". O comando para o Gobuster seria algo assim
 
 `gobuster dir -u example.com -w wordlist.txt -x php,txt,html`
 
-Embora seja mais rápido do que suas alternativas (como dirbuster) no kali, é limitado a worldists e opções fornecidas, quanto melhor a wordlist para o alvo, mais resultados você terá. Wordlists como a SecLists têm listas para aplicações e plataformas, você pode usar as informações na enumeração para determinar qual wordlist se encaixa melhor no seu caso
+O Gobuster vai tentar “backup.php”, “backup.txt”, “icecream.html” e assim por diante. Rápido, eficiente e preparado pra descobrir qualquer coisa que os desenvolvedores idiotas tenham deixado para trás
 
-Gobuster funciona como qualquer ferramenta linux, então tem um [manual online](https://manpages.ubuntu.com/manpages/noble/en/man1/gobuster.1.html), você pode usar ela como referência para aprender outros parametros e opções, aqui, vamos entrar em telhas da principais
+##### Quanto Melhor a Wordlist, Melhor o Resultado
 
-### Opções Comuns
-| Opção    | Descrição
-|----------|------------------------------------------------------|
-| -u       | Usado para especificar a URL enumerada                                |
-| -w       | Usado para especificar qual Wordlist será anexada ao caminho         |
-| -x       | Usado para especificar extensões de arquivos                          |
+Na verdade, o poder do Gobuster tá nas wordlists que você usa. Quanto mais específica e bem construída a  wordlist, mais chances de encontrar algo. E, se você está se perguntando onde encontrar essas listas, a resposta é simples: [SecLists](https://github.com/danielmiessler/SecLists). Lá, você encontra wordlists para diferentes tipos de aplicações e plataforma.
+
+### Opções Comuns do Gobuster
+Aqui estão algumas das opções comuns que você vai usar no Gobuster
+
+| Opção | Descrição                                          |
+|-------|----------------------------------------------------|
+| -u    | Especifica a URL que você quer explorar.          |
+| -w    | Especifica a wordlist que você vai usar para tentar os caminhos. |
+| -x    | Especifica as extensões de arquivos que você quer forçar. |
+
+E se você quiser ir além do básico, o Gobuster funciona como qualquer ferramenta Linux. Tem um [manual online](https://manpages.ubuntu.com/manpages/focal/man1/gobuster.1.html) que você pode consultar para explorar todas as outras opções e parâmetros.
+
+
+
+
+

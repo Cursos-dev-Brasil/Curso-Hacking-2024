@@ -27,3 +27,5 @@ Antigamente, as redes eram como a cidade de São Paulo de noite (sem regras) –
 
 No final das contas, o TCP/IP é o verdadeiro "trabalhador" das redes, enquanto o OSI é o "professor" que explica o que está acontecendo. E lembre-se: da próxima vez que sua conexão estiver ruim, agradeça ao TCP pela dedicação em garantir que seus dados cheguem intactos (ou pelo menos não tão ruins).
 
+
+![](/content/comparaçãoTCp-OSI.png)

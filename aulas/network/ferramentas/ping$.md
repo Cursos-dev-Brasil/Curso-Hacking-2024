@@ -1,11 +1,37 @@
-# Ping
+# ping
+Você já se perguntou como os computadores sabem se podem "conversar" com outros dispositivos na rede? É aqui que o comando ping entra. O ping é uma ferramenta útil pra testar a conectividade entre seu computador e um recurso remoto, seja um site, um servidor ou outro computador na sua rede.
 
-O comando `ping` é usado para testar a conexão com um recurso remoto. isso pode ser um site, ou um computador na mesma rede que a sua. Ping funciona com o protocolo ICMP, que é um dos protocolos TCP/IP um pouco menos conhecido. O protocolo opera da camada de Rede (Network) do modelo OSI, e no modelo Internet do TCP/IP. A sintaxe básica do comando é `ping <endereço>`
+## O que é o ping?
+O comando ping usa o protocolo ICMP (Internet Control Message Protocol) para enviar pacotes a um endereço específico e aguarda uma resposta. É tipo tacar uma pedra no seu amigo pra ver se ele grita (não faça isso). isso ajuda a verificar se o destino está acessível e quanto tempo leva para a comunicação acontecer.
 
-Você pode por exemplo testar sua comunicação com o google.com
+## Sintaxe Básica
+A sintaxe básica do comando ping é:
 
-![ping Google](/content/ping.png)
+ping google.com
 
-o comando retorna o ip do servidor, ao invés da URL fornecida. Essa é uma função secundária útil do ping, por que pode ser usado para determinar o ip do servidor que hospeda o site. Uma das vantagens do ping é que ele é onipresente em qualquer dispositivo habilitado para rede. 
+Executando esse comando, o ping retorna o IP do servidor (em vez da URL fornecida) e exibe o tempo de resposta, que pode ajudar a diagnosticar problemas de conexão.
 
-Tente usar o comando ping no site *https://discord.com/*, tente exibir os 2 tipos de ip (IPV4 e IPV6) usando flags
+## Pingando o Discord
+Vamos fazer um teste prático com o Discord. Pra testar a conectividade com o site do Discord e exibir tanto o IP IPv4 quanto o IPv6, você pode usar as seguintes opções do ping.
+
+### Teste o IPv4
+`ping discord.com`
+
+Este comando tenta resolver o endereço IPv4 do Discord. O retorno inclui o IP e o tempo de resposta.
+
+### Teste o IPv6
+
+Para testar o IPv6, você pode usar a flag -6:
+
+`ping -6 discord.com`
+
+Este comando tenta resolver o endereço IPv6. Assim como o IPv4, o retorno inclui o IP e o tempo de resposta.
+
+## Por Que o ping é Útil?
+O ping é uma ferramenta onipresente em qualquer dispositivo e é útil para:
+
+- Verificar se um dispositivo está acessível na rede.
+- Medir o tempo de resposta (latência) entre dois dispositivos.
+- Diagnosticar problemas de conectividade e desempenho de rede.
+
+![](/content/ping.png)

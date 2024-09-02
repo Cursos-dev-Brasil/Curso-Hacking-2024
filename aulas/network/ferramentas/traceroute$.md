@@ -1,10 +1,18 @@
-# Traceroute
-O comando lógico que segue o ping é o **traceroute**, que pode ser usado para mapearo caminho que a solicitação percorre até á máquina de destino
+# Traceroute: A Jornada Épica da Sua Mensagem
+Imagina que você tá mandando mensagem pro seu amigo no japão (isso é um cenário hipotético por que você não tem amigos nem pessoalmente). A primeira coisa que você se pergunta é: como é que a sua mensagem vai chegar até lá? Não se preocupe, o traceroute é a ferramenta que vai revelar essa jornada!
 
-A **internet é composta por muitos, muitos e muitos servidores e pontos finais**, todos conectados. Isso significa que para chegar no conteúdo, você precisa passar por um monte de servidores. o Traceroute **permite que você veja cada uma dessas conexões**, ele permite que você veja cada passo entre o seu computador e o destino. A sintaxe básica do comando traceroute é `traceroute <endereço>`
+## O Que É o Traceroute?
+O traceroute (ou tracert para os fãs do sistema-que-não-deve-ser-mencionado) é como um GPS na internet. Ele mostra o caminho que a sua mensagem faz até o destino, passando por vários servidores e pontos de rede. Cada parada que a sua mensagem faz é chamada de "hop" (pular, em inglês). O traceroute te dá uma visão geral de cada um desses saltos, como se fosse um mapa da sua mensagem.
 
-Por padrão, o traceroute no windows (tracert) opera usando o mesmo protocolo que o ping utiliza (ICMP), em Unix like, ele opera usando. Obviamente isso pode ser alterado com flags
+## Por Que Isso É Importante?
+A internet é um labirinto de servidores e conexões. Quando você acessa um site, sua mensagem não vai diretamente do seu computador para o servidor (não, não existe uma rede de alcance ilimitado pra fazer isso). Em vez disso, ela passa por vários servidores e pontos de rede antes de chegar ao destino. O traceroute te mostra todos esses pontos e quantos saltos foram necessários para sua mensagem chegar onde precisa.
 
-![traceroute](/content/traceroute.png)
+## Como Funciona?
+A sintaxe do traceroute é:
 
-Nesse caso, antes de chegar me discord.com, eu passei por exatamente 8 rotas do meu roteador até o servidor do discord
+`traceroute discord.com`
+No sistema-que-não-deve-ser-mencionado, você usaria tracert, mas não vou entrar em detalhes porque, sinceramente, quem liga pra isso?
+
+Por padrão, o traceroute no sistema-que-não-deve-ser-mencionado usa o protocolo ICMP (Da pra ver que o billy não tem muita criatividade), assim como o ping. Em sistemas Unix-like, o traceroute pode usar diferentes protocolos e permite ajustes com flags, para você personalizar a viagem da mensagem.
+
+![](/content/traceroute.png)
