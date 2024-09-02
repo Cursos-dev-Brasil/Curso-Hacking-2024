@@ -27,6 +27,8 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 8. [**Encapsulamento de Dados**](aulas/network/encapsulamento.md)
    - Conceito de encapsulamento.
 
+9. [**Criptografia**]()
+   - Principios da criptografia
 9. [**Nmap**](aulas/network/ferramentas/nmap/nmap.md)
    - Visão geral e utilização básica do Nmap.
 
