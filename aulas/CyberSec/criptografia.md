@@ -16,6 +16,8 @@ Existem 2 tipos famosos de criptografia
 
 Nesse estilo de criptografia uma única chave é gerada para criptografar e descriptografar os dados, obviamente isso não é seguro, imagina enviar seus dados criptografados junto com a chave pra descriptografar, não é a decisão Mais inteligente que você pode tomar, normalmente a criptografia simétrica e usada nos dados e a criptografia assimétrica é usada na chave simétrica 
 
+os principais 
+
 #### Criptografia Assimétrica
 
 o tipo mais seguro de criptografia, ela funciona no servidor-cliente, o servidor envia uma chave, conhecida como chave pública, para o cliente, essa chave é usada para criptografar os dados e enviar de volta pro servidor, quando os dados chegam no servidor, o servidor usa uma chave privada pra descriptografar os dados, as duas chaves se completam e a privada não funciona sem a pública 
