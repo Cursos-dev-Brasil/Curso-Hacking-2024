@@ -1,6 +1,8 @@
 # Criptografia
 
-Caso você não proteja seus dados, eles podem ser interceptados por qualquer idiota usando Wireshark, a criptografia garante que caso qualquer engraçadinho tente roubar seus dados, a única coisa que ele vai ter é um monte de letras e números sem o menor padrão e sem nenhuma possibilidade de descriptografia
+Caso você não proteja seus dados, eles podem ser interceptados por qualquer idiota usando Wireshark, a criptografia garante que caso qualquer engraçadinho tente roubar seus dados, receba um monte de letras e números sem o menor padrão e sem nenhuma possibilidade de descriptografia
+
+A criptografia tem como objetivo garantir os princípios de 
 
 ## Como funciona
 
@@ -14,4 +16,4 @@ o tipo mais seguro de criptografia, ela funciona no servidor-cliente, o servidor
 
 #### Criptografia Assimétrica
 
-É bem menos segura, esse tipo de criptografia gera só uma chave, essa chave é usada para criptografia e descriptografa 
+É bem menos segura, esse tipo de criptografia gera só uma chave, essa chave é usada para criptografia e descriptografa
