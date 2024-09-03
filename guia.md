@@ -8,46 +8,47 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 
 2. [**Fundamentos Linux**](aulas/linux/fundamentos/)
    - Introdução ao Linux.
-x - [**Tmux**](aulas/linux/ferramentas/tmux/tmux.md)
-3. [**Bash Scripting**](aulas/linux/bash/bash-scripting.md)
+3. [**Tmux**](aulas/linux/ferramentas/tmux/tmux.md)
+4. [**Bash Scripting**](aulas/linux/bash/bash-scripting.md)
    - Scripts básicos em Bash.
 
-4. [**Termos comuns**](aulas/CyberSec/infosec/Termos-comuns.md)
+5. [**Termos comuns**](aulas/CyberSec/infosec/Termos-comuns.md)
    - Os termos mais usados na cybersegurança e na segurança da informação
    
-5. [**Modelo OSI e TCP/IP**](aulas/network/)
+6. [**Modelo OSI e TCP/IP**](aulas/network/)
    - Modelos de rede OSI e TCP/IP.
 
-6. [**DNS**](aulas/network/DNS.md)
+7. [**DNS**](aulas/network/DNS.md)
    - Funcionamento detalhado do DNS.
 
-x. [**SSH**](aulas/linux/ferramentas/ssh/ssh.md)
+8. [**SSH**](aulas/linux/ferramentas/ssh/ssh.md)
    - Secure shell
 
-7. [**Ping e Ferramentas de Rede**](aulas/network/ferramentas/)
+9. [**Ping e Ferramentas de Rede**](aulas/network/ferramentas/)
    - Uso de Ping e outras ferramentas.
 
-8. [**Encapsulamento de Dados**](aulas/network/encapsulamento.md)
+10. [**Encapsulamento de Dados**](aulas/network/encapsulamento.md)
    - Conceito de encapsulamento.
 
-9. [**Criptografia**](aulas/CyberSec/criptografia.md)
+11. [**Criptografia**](aulas/CyberSec/criptografia.md)
    - Principios da criptografia
 
-9. [**Nmap**](aulas/network/ferramentas/nmap/nmap.md)
+12. [**Nmap**](aulas/network/ferramentas/nmap/nmap.md)
    - Visão geral e utilização básica do Nmap.
 
-10. [**Varreduras Nmap e Scripts**](aulas/network/ferramentas/nmap/)
+13. [**Varreduras Nmap e Scripts**](aulas/network/ferramentas/nmap/)
    - Varredura avançada e scripts no Nmap.
-x. - [**netcat**](aulas/linux/ferramentas/nc/netcat.md)
-11. [**Evasão de Firewall**](aulas/network/ferramentas/nmap/firewall-evasion.md)
+14. - [**netcat**](aulas/linux/ferramentas/nc/netcat.md)
+
+15. [**Evasão de Firewall**](aulas/network/ferramentas/nmap/firewall-evasion.md)
    - Estratégias para evasão de firewall e filtros de rede.
 
-12. [**VPN (Virtual Private Network)**](aulas/network/vpn.md)
+16. [**VPN (Virtual Private Network)**](aulas/network/vpn.md)
 
-13. [**ataque MITM**](aulas/network/sniffing.md)
+17. [**ataque MITM**](aulas/network/sniffing.md)
    - Ataque de interceptação de dados
 
-14. [**Protocolos de rede**](aulas/OSINT/pesquisa/)
+18. [**Protocolos de rede**](aulas/OSINT/pesquisa/)
    - Protocolos de rede que compõe a internet
     - [SMB](/aulas/network/protocols/SMB/)
     - [Telnet](/aulas/network/protocols/Telnet/)
@@ -55,27 +56,26 @@ x. - [**netcat**](aulas/linux/ferramentas/nc/netcat.md)
     - [ftp](/aulas/network/protocols/FTP/)
 
 
-15. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
+19. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
     - Pesquisa de informações em fontes abertas.
 
-16. [**Enumeração e Fuzzing**](aulas/network/ferramentas)  
+20. [**Enumeração e Fuzzing**](aulas/network/ferramentas)  
     - [enumeração com what web](aulas/hacking/web-hacking/banner-grabbing/whatweb/whatweb.md)
     - [Gobuster](aulas/network/ferramentas/gobuster.md)
     - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
 
-17. [**servidor Web**](aulas/hacking/web-hacking/servidor-web.md)
+21. [**servidor Web**](aulas/hacking/web-hacking/servidor-web.md)
    - explicação breve do conceito de servidor web
 
-18. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
+22. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
     - Protocolos HTTP(S) e web hacking.
 
-19. [**Headers, Métodos, URL, Cookies, Status**](aulas/hacking/web-hacking/)
+23. [**Headers, Métodos, URL, Cookies, Status**](aulas/hacking/web-hacking/)
     - Análise de cabeçalhos, métodos HTTP e URLs.
 
-20. [**Banner grabbing**]
+24. [**Banner grabbing**]
    - [Banner grabbing com netcat](/aulas/linux/ferramentas/nc/netcat.md)
    - [Banner grabbing com curl](/aulas/hacking/web-hacking/curl/cURL.md)
-   -
 
    
 21. [**Shell**](aulas/hacking/geral/shell/shell.md)

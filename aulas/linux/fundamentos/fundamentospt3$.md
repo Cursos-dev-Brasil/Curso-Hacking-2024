@@ -38,7 +38,7 @@ Já se perguntou como seria baixar arquivos direto pelo terminal? Com o wget, is
 "Aí, mas se eu tenho o link eu tive que abrir o google pra encontrar", se você pensou isso, para de ser chato e aceita
 
 ## Transferindo Arquivosa Usando o SCP
-O SCP (Não os monstro, o Secure copy) é tipo o correios da internet. Quer enviar um arquivo do seu computador para outro? Ou pegar algo de uma máquina remota? SCP é o cara certo para o trabalho, e faz isso tudo usando uma camada de segurança que impediria até o ladrão mais esperto. E quer saber o melhor? Diferente dos correios ele não trava os prodoutos na alfandega e ele vem sem NENHUMA, exatamente, NENHUMA taxa (por enquanto)
+O SCP (Não os monstro, o Secure copy) é tipo o correios da internet. Quer enviar um arquivo do seu computador para outro? Ou pegar algo de uma máquina remota? SCP é o cara certo para o trabalho, e faz isso tudo usando uma camada de segurança que impediria até o ladrão mais esperto de roubar sua encomenda. E quer saber o melhor? Diferente dos correios ele não trava os prodoutos na alfandega e ele vem sem NENHUMA, exatamente, NENHUMA taxa (por enquanto)
 
 Por exemplo, para transferir um arquivo da sua máquina para outra
 
@@ -49,6 +49,31 @@ Esse comando é útil quando você precisa tacar um payload destruidor pra ferra
 Ou, se você estiver na outra máquina e quiser se vingar do cara que pegou seu ip depois de você clicar num link muito suspeito num site mais suspeito ainda
 
 `scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt nota.txt`
+
+O SCP só vai funcionar se você tiver credenciais ssh no host remoto
+
+```bash
+bash@root[/~]$ scp linenum.sh user@remotehost:/tmp/linenum.sh
+
+user@remotehost's password: *********
+linenum.sh
+```
+
+### base64
+
+As vezes o firewall estraga todo o seu plano e bloqueia o download usando scp ou wget, nesse caso você pode burlar ele usando base64 para codificar o arquivo, copiar ele no host remoto e decodificar ele depois
+
+```
+parrot@root[/~]$ base64 shell -w 0
+
+f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAA... ...lIuy9iaW4vc2gAU0iJ51JXSInmDwU
+```
+
+agora você copia para o host remoto
+
+`user@remotehost$ echo f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAA... <SNIP> ...lIuy9iaW4vc2gAU0iJ51JXSInmDwU | base64 -d > shell`
+
+Pra garantir que nada foi bagunçado nem modificado no trajeto, você pode usar o comando `md5sum shell` na sua máquina, agora você faz a mesma coisa no host remoto, se os 2 hashs forem iguais deu tudo certo
 
 ## Fazendo seu PC ser um Servidor com o Python
 Imagine que seu PC pode virar um servidor, tipo aqueles que você acessa o toda hora e nem repara. Com um comando, você pode servir arquivos para serem baixados
