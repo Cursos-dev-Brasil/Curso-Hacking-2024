@@ -8,7 +8,7 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 
 2. [**Fundamentos Linux**](aulas/linux/fundamentos/)
    - Introdução ao Linux.
-
+x - [**Tmux**](aulas/linux/ferramentas/tmux/tmux.md)
 3. [**Bash Scripting**](aulas/linux/bash/bash-scripting.md)
    - Scripts básicos em Bash.
 
@@ -20,6 +20,9 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 
 6. [**DNS**](aulas/network/DNS.md)
    - Funcionamento detalhado do DNS.
+
+x. [**SSH**](aulas/linux/ferramentas/ssh/ssh.md)
+   - Secure shell
 
 7. [**Ping e Ferramentas de Rede**](aulas/network/ferramentas/)
    - Uso de Ping e outras ferramentas.
@@ -35,7 +38,7 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 
 10. [**Varreduras Nmap e Scripts**](aulas/network/ferramentas/nmap/)
    - Varredura avançada e scripts no Nmap.
-
+x. - [**netcat**](aulas/linux/ferramentas/nc/netcat.md)
 11. [**Evasão de Firewall**](aulas/network/ferramentas/nmap/firewall-evasion.md)
    - Estratégias para evasão de firewall e filtros de rede.
 
@@ -55,7 +58,8 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 15. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
     - Pesquisa de informações em fontes abertas.
 
-16. [**Enumeração e Fuzzing**](aulas/network/ferramentas)
+16. [**Enumeração e Fuzzing**](aulas/network/ferramentas)  
+    - [enumeração com what web](aulas/hacking/web-hacking/banner-grabbing/whatweb/whatweb.md)
     - [Gobuster](aulas/network/ferramentas/gobuster.md)
     - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
 
@@ -71,11 +75,14 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 20. [**Banner grabbing**]
    - [Banner grabbing com netcat](/aulas/linux/ferramentas/nc/netcat.md)
    - [Banner grabbing com curl](/aulas/hacking/web-hacking/curl/cURL.md)
+   -
+
+   
+21. [**Shell**](aulas/hacking/geral/shell/shell.md)
+    - Introdução a shells
+
 20. [**SQL Injection**](aulas/hacking/web-hacking/sqlInjection.md)
     - Exploração e defesa contra injeções SQL.
-
-21. [**Web Reverse Shell**](aulas/hacking/web-hacking/web-rev-shell.md)
-    - Introdução a reverse shell na web
 
 22. [**Burp Suite**](aulas/hacking/burp-suite)
     - Uso do Burp Suite em testes de segurança.
