@@ -33,6 +33,7 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 11. [**Criptografia**](aulas/CyberSec/criptografia.md)
    - Principios da criptografia
 
+12. [**Chave SSH**](/aulas/linux/ssh/chaves ssh.md
 12. [**Nmap**](aulas/network/ferramentas/nmap/nmap.md)
    - Visão geral e utilização básica do Nmap.
 
