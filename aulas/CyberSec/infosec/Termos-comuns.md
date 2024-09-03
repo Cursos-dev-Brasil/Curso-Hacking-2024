@@ -20,6 +20,7 @@ Bind Shell: É como se você deixasse a porta da sua casa aberta e esperasse alg
 
 Web shell: É como se você tivesse esquecido a chave do portão em casa e gritasse pra sua mãe pegar pra você. Você dá comandos a partir do navegador
 
+A definição completa de todos os shells tá na aula de [shells](../../hacking/geral/shell/shell.md)
 Caso você ainda não saiba oque é uma porta, uma porta é basicamente a janela (ou uma porta, o que faz mais sentido) de uma casa, se a porta estiver aberta, qualquer um pode passar por ela. No TI, uma porta é onde uma conexão começa e termina
 
 portas tem números, da 0 até a 1023 são portas reservadas

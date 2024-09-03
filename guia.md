@@ -3,7 +3,7 @@
 Este guia organiza o conteúdo do curso de forma progressiva e lógica para facilitar a sua vida.
 1. [**Fundamentos**](aulas/CyberSec/)
    - Fundamentos da cibersegurança e da segurança da informação
-      - [cibersegurança](aulas/CyberSec/Introdução/)
+      - [cibersegurança](aulas/CyberSec/introCyberSec.md)
       - [segurança da informação](aulas/CyberSec/infosec/)
 
 2. [**Fundamentos Linux**](aulas/linux/fundamentos/)
@@ -27,8 +27,9 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 8. [**Encapsulamento de Dados**](aulas/network/encapsulamento.md)
    - Conceito de encapsulamento.
 
-9. [**Criptografia**]()
+9. [**Criptografia**](aulas/CyberSec/criptografia.md)
    - Principios da criptografia
+
 9. [**Nmap**](aulas/network/ferramentas/nmap/nmap.md)
    - Visão geral e utilização básica do Nmap.
 
@@ -67,6 +68,9 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
 19. [**Headers, Métodos, URL, Cookies, Status**](aulas/hacking/web-hacking/)
     - Análise de cabeçalhos, métodos HTTP e URLs.
 
+20. [**Banner grabbing**]
+   - [Banner grabbing com netcat](/aulas/linux/ferramentas/nc/netcat.md)
+   - [Banner grabbing com curl](/aulas/hacking/web-hacking/curl/cURL.md)
 20. [**SQL Injection**](aulas/hacking/web-hacking/sqlInjection.md)
     - Exploração e defesa contra injeções SQL.
 

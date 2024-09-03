@@ -15,6 +15,21 @@ o NVD (National Vulnerability Database) acompanha as CVE's (Common Vulnerabiliti
 
 Se você prefere usar a CLI no linux, o Kali vem pré-instalado com a ferramenta *searchsploit*, que permite pesquisar exploits no ExploitDB a partir da própria máquina, de forma offline e usando uma versão baixada do banco de dados, uma desvantagem disso é que talvez o DB não esteja atualizado
 
+```
+----------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                                                               |  Path
+----------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+OpenSSH 2.3 < 7.7 - Username Enumeration                                                                                     | linux/remote/45233.py
+OpenSSH 2.3 < 7.7 - Username Enumeration (PoC)                                                                               | linux/remote/45210.py
+OpenSSH 7.2 - Denial of Service                                                                                              | linux/dos/40888.py
+OpenSSH 7.2p1 - (Authenticated) xauth Command Injection                                                                      | multiple/remote/39569.py
+OpenSSH 7.2p2 - Username Enumeration                                                                                         | linux/remote/40136.py
+OpenSSH < 7.4 - 'UsePrivilegeSeparation Disabled' Forwarded Unix Domain Sockets Privilege Escalation                         | linux/local/40962.txt
+OpenSSH < 7.4 - agent Protocol Arbitrary Library Loading                                                                     | linux/remote/40963.txt
+OpenSSH < 7.7 - User Enumeration (2)                                                                                         | linux/remote/45939.py
+OpenSSHd 7.2p2 - Username Enumeration                                                                                        | linux/remote/40113.txt
+----------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+```
 Vamos supor que você está fazendo um pentest e descobriu esse site: <br>
 ![FuelCMS](/content/fuelCMS.png)
 

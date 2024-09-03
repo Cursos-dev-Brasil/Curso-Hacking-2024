@@ -3,7 +3,7 @@
 Imagina que você está navegando por um site, navegando pelas páginas que todo mundo vê. Mas e se eu te disser que, escondido no meio daquele dominio, existem diretórios secretos, arquivos esquecidos e até mesmo sitemaps abandonados que os desenvolvedores deixaram de proteger? Sim, isso acontece mais do que você imagina! E é aqui que entra o Gobuster, uma ferramenta incrível para caçar esses segredos como um verdadeiro detetive digital.
 
 ## O que é o Gobuster?
-O Gobuster é como aquele amigo impaciente que, ao invés de explorar um site clicando em cada link, decide testar todos os caminhos de uma vez só – e rápido! Ele é feito para descobrir diretórios e arquivos ocultos, forçando caminhos comuns que os desenvolvedores esquecem de esconder. E se você já tentou adivinhar URLs no navegador, sabe como é chato. Mas o Gobuster faz isso em uma fração de minutos!
+O Gobuster é meio impaciente, ao invés de explorar um site clicando em cada link, decide testar todos os caminhos de uma vez só – e rápido! Ele é feito para descobrir diretórios e arquivos ocultos, forçando caminhos comuns que os desenvolvedores esquecem de esconder. E se você já tentou adivinhar URLs no navegador, sabe como é chato. Mas o Gobuster faz isso em uma fração de minutos!
 
 ## Os Modos do Gobuster
 
@@ -31,6 +31,8 @@ Simples, né? Mas calma que tem mais! O Gobuster é mais esperto que você e con
 
 Imagina que você tem uma wordlist com as palavras "backup" e "icecream". O comando para o Gobuster seria algo assim
 
+## modo dir
+
 `gobuster dir -u example.com -w wordlist.txt -x php,txt,html`
 
 O Gobuster vai tentar “backup.php”, “backup.txt”, “icecream.html” e assim por diante. Rápido, eficiente e preparado pra descobrir qualquer coisa que os desenvolvedores idiotas tenham deixado para trás
@@ -50,6 +52,34 @@ Aqui estão algumas das opções comuns que você vai usar no Gobuster
 
 E se você quiser ir além do básico, o Gobuster funciona como qualquer ferramenta Linux. Tem um [manual online](https://manpages.ubuntu.com/manpages/focal/man1/gobuster.1.html) que você pode consultar para explorar todas as outras opções e parâmetros.
 
+## Modo dns
+
+As vezes alguns recursos são hospedados em subdominios, nesse caso o modo dir não é muito útil, caso você saiba que um dominio tem pelo menos um subdominio, você pode usar o gobuster para explorar isso
+
+`Klython@root[/~]$ gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt`
+
+```
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Domain:     inlanefreight.com
+[+] Threads:    10
+[+] Timeout:    1s
+[+] Wordlist:   /usr/share/SecLists/Discovery/DNS/namelist.txt
+===============================================================
+2020/12/17 23:08:55 Starting gobuster
+===============================================================
+Found: blog.inlanefreight.com
+Found: customer.inlanefreight.com
+Found: my.inlanefreight.com
+Found: ns1.inlanefreight.com
+Found: ns2.inlanefreight.com
+Found: ns3.inlanefreight.com
+===============================================================
+2020/12/17 23:10:34 Finished
+===============================================================
+```
 
 
 

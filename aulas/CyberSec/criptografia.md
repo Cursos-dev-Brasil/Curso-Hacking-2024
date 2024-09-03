@@ -1,27 +1,50 @@
 # Criptografia
 
-Caso você não proteja seus dados, eles podem ser interceptados por qualquer idiota usando Wireshark, a criptografia garante que caso qualquer engraçadinho tente roubar seus dados, receba um monte de letras e números sem o menor padrão e sem nenhuma possibilidade de descriptografia
+Imagina que você tem uma fofoca daquelas e ninguém pode descubrir. É isso que a criptografia faz: transforma suas informações valiosas em um código ininteligível, como se você tivesse jogado suas mensagens em um cofre com 7 camadas de segurança (No nosso caso é só uma mesmo). Se algum enxerido tentar ler com o Wireshark, vai encontrar letras e números extremamente sem sentido.
 
-A criptografia tem como objetivo garantir os princípios de confidenciabilidade, integridade e autenticidade do seu login no pornhub
+## Como Funciona
 
-## Como funciona
+### Criptografia Simétrica
+Aqui, a gente usa uma chave para criptografar e descriptografar tudo. A parte engraçada é que, se você enviar a chave junto com os dados, seria como se você deixasse a chave da sua casa na fechadura. A criptografia simétrica é rápida, mas não é a mais segura.
 
-A criptografia funciona como um cano que carrega seus dados de um sistema pra outro(esse foi o pior exemplo possível), pros seus dados entrarem nesse cano, 2 alternativas são muito usadas
+Algoritmos famoso incluem AES (o top 1, não me pergunte por que), RC4, DES, RC5 e RC6. É como ter vários tênis com diferentes modelos e tamanhos, mas todos com o mesmo objetivo: andar.
 
-### Criptografia assimetrica X simétrica
+### Criptografia Assimétrica
+Aqui a coisa fica mais legal. Usamos um par de chaves: uma pública e uma privada. A chave pública, que é quase um cofre com a combinação aberta, é compartilhada com todos. A chave privada, que é o segredo mais bem guardado, é usada para descriptografar. Então, qualquer um pode trancar o cofre com a chave pública, mas apenas você pode abrir com a chave privada.
 
-Existem 2 tipos famosos de criptografia
+Essa abordagem adiciona uma camada extra de segurança, mas é um pouco mais lenta, pois envolve mais trabalho criptográfico.
 
-#### Criptografia Simétrica
+# Assinatura Digital
+Vamo simplificar isso. A assinatura digital é tipo resumir aquele filme chato pra ninguém precisar perder tempo assistindo.
 
-Nesse estilo de criptografia uma única chave é gerada para criptografar e descriptografar os dados, obviamente isso não é seguro, imagina enviar seus dados criptografados junto com a chave pra descriptografar, não é a decisão Mais inteligente que você pode tomar, normalmente a criptografia simétrica e usada nos dados e a criptografia assimétrica é usada na chave simétrica 
+1. Criação do Hash: O servidor faz um resumo (hash) da mensagem original.
+2. Criptografia do Hash: O servidor criptografa esse resumo com a chave privada, criando uma assinatura digital.
+3. Envio: O servidor envia a mensagem original junto com a assinatura digital.
 
-os principais algoritmos de criptografia simétrica são o AES, RC4, DES, RC5 e RC6, o que muda é como ele criptografa os dados, no geral o mais usado é o AES-128 (advanced encryption standard), todos os algoritmos usam blocos de 128 bits mas com chaves de tamanhos diferentes, é tipo um tênis com modelos iguais mas com números diferentes
+Verificação:
 
-#### Criptografia Assimétrica
+1. O cliente usa a chave pública para descriptografar a assinatura e obter o hash original.
+2. O cliente faz o hash da mensagem recebida.
+3. Compara os dois hashes: se eles forem iguais, a mensagem é autêntica e intacta.
 
-o tipo mais seguro de criptografia, ela funciona no servidor-cliente, o servidor envia uma chave, conhecida como chave pública, para o cliente, essa chave é usada para criptografar os dados e enviar de volta pro servidor, quando os dados chegam no servidor, o servidor usa uma chave privada pra descriptografar os dados, as duas chaves se completam e a privada não funciona sem a pública
+# Hashing
+Hashing é como transformar dados em um enigma de uma via. Uma vez que você aplica o hash, não tem volta. Ideal pra armazenar senhas sem sair mostrando ela pra geral.
 
-essa criptografia torna o processo dos dados muito mais difícil, já que seu servidor gasta muito tempo criptografando, descriptografando e fazendo todo o processo chato de tratamento de erros
+Os hashes comuns incluem MD5, NTLM, SHA-2 e SHA-3.
 
-Por isso, normalmente a criptografia simétrica é usada para os dados, e a assimétrica criptografa a chave simétrica, uso torna o trabalho mais fácil
+# Sal e Pimenta
+
+## Salt (Sal)
+O salt é como um tempero que você adiciona na sua senha antes de aplicá-la ao hash (por isso chama sal, pelo menos eu acho). Isso garante que mesmo que dois usuários tenham a mesma senha, os resultados serão diferentes. Ninguém quer receber a mensagem "Senha já cadastrada"
+
+1. um salt aleatório é gerado quando a senha é criada.
+2. O salt é misturado com a senha antes de aplicar o hash.
+3. O salt é armazenado com a senha no banco de dados.
+
+Na hora do login, o salt é recuperado e o processo é repetido.
+Mesmo se alguém invadir o banco de dados, precisaria de uma tabela nova pra cada senha, tornando o ataque  mais difícil e muito mais sem graça.
+
+## Pepper
+
+O pepper é parecido com o salt, mas não é armazenado. Em vez disso, é um valor adicionado à senha antes de hashear ela, aumentando a segurança..
+

@@ -25,7 +25,7 @@ Seu computador confirma: Envia um "Obrigado, confirmando nossa conexão!" com um
 ## História: Como Chegamos Aqui
 Antigamente, as redes eram como a cidade de São Paulo de noite (sem regras) – cada fabricante fazia do seu jeito, e a compatibilidade era quase uma piada. Então, em 1982, o Departamento de Defesa dos EUA decidiu acabar com a bagunça e lançou o TCP/IP como o padrão universal. Mais tarde, a ISO entrou em cena com o modelo OSI, que serviu como uma referência teórica mais detalhada para aprendizado e ensino.
 
-No final das contas, o TCP/IP é o verdadeiro "trabalhador" das redes, enquanto o OSI é o "professor" que explica o que está acontecendo. E lembre-se: da próxima vez que sua conexão estiver ruim, agradeça ao TCP pela dedicação em garantir que seus dados cheguem intactos (ou pelo menos não tão ruins).
+No final das contas, o TCP/IP é o verdadeiro trabalhador, enquanto o OSI é o professor que explica o que está acontecendo. E lembre-se: da próxima vez que sua conexão estiver ruim, agradeça ao TCP pela dedicação em garantir que seus dados cheguem intactos (ou pelo menos não tão ruins).
 
 
 ![](/content/comparaçãoTCp-OSI.png)
