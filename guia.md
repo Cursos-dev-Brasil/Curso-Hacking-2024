@@ -34,22 +34,22 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
    - Principios da criptografia
 
 12. [**Chave SSH**](/aulas/linux/ferramentas/ssh/chavesSSH.md)
-12. [**Nmap**](aulas/network/ferramentas/nmap/nmap.md)
+13. [**Nmap**](aulas/network/ferramentas/nmap/nmap.md)
    - Visão geral e utilização básica do Nmap.
 
-13. [**Varreduras Nmap e Scripts**](aulas/network/ferramentas/nmap/)
+14. [**Varreduras Nmap e Scripts**](aulas/network/ferramentas/nmap/)
    - Varredura avançada e scripts no Nmap.
-14. - [**netcat**](aulas/linux/ferramentas/nc/netcat.md)
+15. - [**netcat**](aulas/linux/ferramentas/nc/netcat.md)
 
-15. [**Evasão de Firewall**](aulas/network/ferramentas/nmap/firewall-evasion.md)
+16. [**Evasão de Firewall**](aulas/network/ferramentas/nmap/firewall-evasion.md)
    - Estratégias para evasão de firewall e filtros de rede.
 
-16. [**VPN (Virtual Private Network)**](aulas/network/vpn.md)
+17. [**VPN (Virtual Private Network)**](aulas/network/vpn.md)
 
-17. [**ataque MITM**](aulas/network/sniffing.md)
+18. [**ataque MITM**](aulas/network/sniffing.md)
    - Ataque de interceptação de dados
 
-18. [**Protocolos de rede**](aulas/OSINT/pesquisa/)
+19. [**Protocolos de rede**](aulas/OSINT/pesquisa/)
    - Protocolos de rede que compõe a internet
     - [SMB](/aulas/network/protocols/SMB/)
     - [Telnet](/aulas/network/protocols/Telnet/)
@@ -57,40 +57,40 @@ Este guia organiza o conteúdo do curso de forma progressiva e lógica para faci
     - [ftp](/aulas/network/protocols/FTP/)
 
 
-19. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
+20. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
     - Pesquisa de informações em fontes abertas.
 
-20. [**Enumeração e Fuzzing**](aulas/network/ferramentas)  
+21. [**Enumeração e Fuzzing**](aulas/network/ferramentas)  
     - [enumeração com what web](aulas/hacking/web-hacking/banner-grabbing/whatweb/whatweb.md)
     - [Gobuster](aulas/network/ferramentas/gobuster.md)
     - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
 
-21. [**servidor Web**](aulas/hacking/web-hacking/servidor-web.md)
+22. [**servidor Web**](aulas/hacking/web-hacking/servidor-web.md)
    - explicação breve do conceito de servidor web
 
-22. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
+23. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
     - Protocolos HTTP(S) e web hacking.
 
-23. [**Headers, Métodos, URL, Cookies, Status**](aulas/hacking/web-hacking/)
+24. [**Headers, Métodos, URL, Cookies, Status**](aulas/hacking/web-hacking/)
     - Análise de cabeçalhos, métodos HTTP e URLs.
 
-24. [**Banner grabbing**]
+25. [**Banner grabbing**]
    - [Banner grabbing com netcat](/aulas/linux/ferramentas/nc/netcat.md)
    - [Banner grabbing com curl](/aulas/hacking/web-hacking/curl/cURL.md)
 
    
-21. [**Shell**](aulas/hacking/geral/shell/shell.md)
+26. [**Shell**](aulas/hacking/geral/shell/shell.md)
     - Introdução a shells
 
-20. [**SQL Injection**](aulas/hacking/web-hacking/sqlInjection.md)
+27. [**SQL Injection**](aulas/hacking/web-hacking/sqlInjection.md)
     - Exploração e defesa contra injeções SQL.
 
-22. [**Burp Suite**](aulas/hacking/burp-suite)
+28. [**Burp Suite**](aulas/hacking/burp-suite)
     - Uso do Burp Suite em testes de segurança.
       1. [**Introdução**](aulas/hacking/burp-suite/burp-suite.md)
       2. [**Ataques de Força Bruta no Burp**](aulas/hacking/burp-suite/brute.md)
       3. [**SQLMap e Burp Suite**](aulas/hacking/burp-suite/burp&SQLi.md)
 
-23. [**OWASP (Open Web Application Security Project)**](aulas/hacking/web-hacking/OWASP/)
+29. [**OWASP (Open Web Application Security Project)**](aulas/hacking/web-hacking/OWASP/)
     - Diretrizes e ferramentas da OWASP para segurança em aplicações web.
 
