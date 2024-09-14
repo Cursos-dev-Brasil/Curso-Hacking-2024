@@ -39,7 +39,7 @@ Em cada pasta (IPT e EPT) temos subpastas para alguns tipos de dados, scans, fer
 
 Eu sei, pode parecer chato demais fazer isso, e as vezes é mesmo, mas mais chato que isso é ficar 45 minutos procurando seu scan no terminal que nem um idiota
 
-O jeito que você organiza é completamente pessoa, algumas pessoas criam uma pasta pra cada host, e salvam prints nela, outras organizam por host ou rede e salvam em aplicativos de notas. Você pode testar várias estruturas até encontrar uma que você se sinta confortável
+O jeito que você organiza é completamente pessoal, algumas pessoas criam uma pasta pra cada host, e salvam prints nela, outras organizam por host ou rede e salvam em aplicativos de notas. Você pode testar várias estruturas até encontrar uma que você se sinta confortável
 
 ### Ferramentas de anotação
 
@@ -55,7 +55,7 @@ Existem várias ferramentas para organização e criação de notas, escolher um
 - Sublime Text
 - Notepad++
 
-Você precisa garantir que qualquer dado do cliente não seja armazenado na nuvem nem fora do seu ambiente local. Não sei se você percebeu mas segurança é um pouquinho importante neessa indústria
+Você precisa garantir que qualquer dado do cliente não seja armazenado na nuvem nem fora do seu ambiente local. Não sei se você percebeu mas segurança é um pouquinho importante nessa indústria
 
 **OBS: esse curso que eu sei que você ama é escrito em linguagem markdown, pode ser muito útil aprender ele, fica tudo muito mais bonito, confia no adm que é sucesso**
 
