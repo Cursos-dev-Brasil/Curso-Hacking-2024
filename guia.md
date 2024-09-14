@@ -1,96 +1,105 @@
 # Guia de Estudo das Aulas
 
 Este guia organiza o conteúdo do curso de forma progressiva e lógica para facilitar a sua vida.
-1. [**Fundamentos**](aulas/CyberSec/)
-   - Fundamentos da cibersegurança e da segurança da informação
-      - [cibersegurança](aulas/CyberSec/introCyberSec.md)
-      - [segurança da informação](aulas/CyberSec/infosec/)
 
-2. [**Fundamentos Linux**](aulas/linux/fundamentos/)
-   - Introdução ao Linux.
-3. [**Tmux**](aulas/linux/ferramentas/tmux/tmux.md)
-4. [**Bash Scripting**](aulas/linux/bash/bash-scripting.md)
-   - Scripts básicos em Bash.
+## Nível 1 - Fundamentos
 
-5. [**Termos comuns**](aulas/CyberSec/infosec/Termos-comuns.md)
-   - Os termos mais usados na cybersegurança e na segurança da informação
-   
-6. [**Modelo OSI e TCP/IP**](aulas/network/)
-   - Modelos de rede OSI e TCP/IP.
+1. **Fundamentos de Cibersegurança**
+   - [Introdução à Cibersegurança](aulas/CyberSec/introCyberSec.md)
+   - [Segurança da Informação](aulas/CyberSec/infosec/)
 
-7. [**DNS**](aulas/network/DNS.md)
-   - Funcionamento detalhado do DNS.
+2. **Termos Comuns**
+   - [Termos usados em Cibersegurança e Segurança da Informação](aulas/CyberSec/infosec/Termos-comuns.md)
 
-8. [**SSH**](aulas/linux/ferramentas/ssh/ssh.md)
-   - Secure shell
+3. **Fundamentos Linux**
+   - [Introdução ao sistema Linux](aulas/linux/fundamentos/)
 
-9. [**Ping e Ferramentas de Rede**](aulas/network/ferramentas/)
-   - Uso de Ping e outras ferramentas.
+4. **Bash Scripting**
+   - [Scripts básicos em Bash](aulas/linux/bash/bash-scripting.md)
 
-10. [**Encapsulamento de Dados**](aulas/network/encapsulamento.md)
-   - Conceito de encapsulamento.
+5. **Modelo OSI e TCP/IP**
+   - [Modelos de rede OSI e TCP/IP](aulas/network/)
 
-11. [**Criptografia**](aulas/CyberSec/criptografia.md)
-   - Principios da criptografia
+## Nível 2 - Intermediário
 
-12. [**Chave SSH**](/aulas/linux/ferramentas/ssh/chavesSSH.md)
-13. [**Nmap**](aulas/network/ferramentas/nmap/nmap.md)
-   - Visão geral e utilização básica do Nmap.
+1. **Tmux**
+   - [Básico do Tmux](aulas/linux/ferramentas/tmux/tmux.md)
 
-14. [**Varreduras Nmap e Scripts**](aulas/network/ferramentas/nmap/)
-   - Varredura avançada e scripts no Nmap.
-15. - [**netcat**](aulas/linux/ferramentas/nc/netcat.md)
+2. **DNS (Domain Name System)**
+   - [Funcionamento detalhado do DNS](aulas/network/DNS.md)
 
-16. [**Evasão de Firewall**](aulas/network/ferramentas/nmap/firewall-evasion.md)
-   - Estratégias para evasão de firewall e filtros de rede.
+3. **Ping e Ferramentas de Rede**
+   - [Uso de Ping e outras ferramentas de rede](aulas/network/ferramentas/)
 
-17. [**VPN (Virtual Private Network)**](aulas/network/vpn.md)
+4. **SSH (Secure Shell)**
+   - [Introdução ao SSH](aulas/linux/ferramentas/ssh/ssh.md)
 
-18. [**ataque MITM**](aulas/network/sniffing.md)
-   - Ataque de interceptação de dados
+5. **Encapsulamento de Dados**
+   - [Conceito de encapsulamento de dados](aulas/network/encapsulamento.md)
 
-19. [**Protocolos de rede**](aulas/OSINT/pesquisa/)
-   - Protocolos de rede que compõe a internet
-    - [SMB](/aulas/network/protocols/SMB/)
-    - [Telnet](/aulas/network/protocols/Telnet/)
-    - [arp](/aulas/network/protocols/arp.md)
-    - [ftp](/aulas/network/protocols/FTP/)
+6. **Criptografia**
+   - [Princípios de Criptografia](aulas/CyberSec/criptografia.md)
 
+7. **Chave SSH**
+   - [Conexão SSH com chaves](aulas/linux/ferramentas/ssh/chavesSSH.md)
 
-20. [**OSINT (Open-source Intelligence)**](aulas/OSINT/pesquisa/)
-    - Pesquisa de informações em fontes abertas.
+8. **Nmap - Visão Geral**
+   - [Utilização básica do Nmap](aulas/network/ferramentas/nmap/nmap.md)
 
-21. [**Enumeração e Fuzzing**](aulas/network/ferramentas)  
-    - [enumeração com what web](aulas/hacking/web-hacking/banner-grabbing/whatweb/whatweb.md)
-    - [Gobuster](aulas/network/ferramentas/gobuster.md)
-    - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
+## Nível 3 - Avançado
 
-22. [**servidor Web**](aulas/hacking/web-hacking/servidor-web.md)
-   - explicação breve do conceito de servidor web
+1. **Varreduras Nmap e Scripts**
+   - [Varredura avançada e scripts no Nmap](aulas/network/ferramentas/nmap/)
 
-23. [**HTTP(S)**](aulas/hacking/web-hacking/http(s).md)
-    - Protocolos HTTP(S) e web hacking.
+2. **Netcat**
+   - [Uso básico do Netcat](aulas/linux/ferramentas/nc/netcat.md)
 
-24. [**Headers, Métodos, URL, Cookies, Status**](aulas/hacking/web-hacking/)
-    - Análise de cabeçalhos, métodos HTTP e URLs.
+3. **Evasão de Firewall**
+   - [Estratégias para evasão de firewall e filtros de rede](aulas/network/ferramentas/nmap/firewall-evasion.md)
 
-25. [**Banner grabbing**]
-   - [Banner grabbing com netcat](/aulas/linux/ferramentas/nc/netcat.md)
-   - [Banner grabbing com curl](/aulas/hacking/web-hacking/curl/cURL.md)
+4. **VPN (Virtual Private Network)**
+   - [Funcionamento de VPNs](aulas/network/vpn.md)
 
-   
-26. [**Shell**](aulas/hacking/geral/shell/shell.md)
-    - Introdução a shells
+5. **Ataque MITM (Man-in-the-Middle)**
+   - [Ataque de interceptação de dados](aulas/network/sniffing.md)
 
-27. [**SQL Injection**](aulas/hacking/web-hacking/sqlInjection.md)
-    - Exploração e defesa contra injeções SQL.
+6. **Protocolos de Rede**
+   - [SMB](aulas/network/protocols/SMB/)
+   - [Telnet](aulas/network/protocols/Telnet/)
+   - [ARP](aulas/network/protocols/arp.md)
+   - [FTP](aulas/network/protocols/FTP/)
 
-28. [**Burp Suite**](aulas/hacking/burp-suite)
-    - Uso do Burp Suite em testes de segurança.
-      1. [**Introdução**](aulas/hacking/burp-suite/burp-suite.md)
-      2. [**Ataques de Força Bruta no Burp**](aulas/hacking/burp-suite/brute.md)
-      3. [**SQLMap e Burp Suite**](aulas/hacking/burp-suite/burp&SQLi.md)
+7. **OSINT (Open-source Intelligence)**
+   - [Pesquisa de informações em fontes abertas](aulas/OSINT/pesquisa/)
 
-29. [**OWASP (Open Web Application Security Project)**](aulas/hacking/web-hacking/OWASP/)
-    - Diretrizes e ferramentas da OWASP para segurança em aplicações web.
+8. **Enumeração e Fuzzing**
+   - [Enumeração com WhatWeb](aulas/hacking/web-hacking/banner-grabbing/whatweb/whatweb.md)
+   - [Gobuster](aulas/network/ferramentas/gobuster.md)
+   - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
 
+9. **Servidor Web**
+   - [Conceito de Servidor Web](aulas/hacking/web-hacking/servidor-web.md)
+
+10. **HTTP(S)**
+    - [Protocolos HTTP(S)](aulas/hacking/web-hacking/http(s).md)
+
+11. **Headers, Métodos, URL, Cookies, Status**
+    - [Análise de cabeçalhos, métodos HTTP e URLs](aulas/hacking/web-hacking/)
+
+12. **Banner Grabbing**
+    - [Banner Grabbing com Netcat](aulas/linux/ferramentas/nc/netcat.md)
+    - [Banner Grabbing com cURL](aulas/hacking/web-hacking/curl/cURL.md)
+
+13. **Shell**
+    - [Introdução a Shells](aulas/hacking/geral/shell/shell.md)
+
+14. **SQL Injection**
+    - [Exploração e defesa contra injeções SQL](aulas/hacking/web-hacking/sqlInjection.md)
+
+15. **Burp Suite**
+    - [Introdução ao Burp Suite](aulas/hacking/burp-suite/burp-suite.md)
+    - [Ataques de Força Bruta no Burp Suite](aulas/hacking/burp-suite/brute.md)
+    - [SQLMap e Burp Suite](aulas/hacking/burp-suite/burp&SQLi.md)
+
+16. **OWASP (Open Web Application Security Project)**
+    - [Diretrizes e ferramentas da OWASP para segurança em aplicações web](aulas/hacking/web-hacking/OWASP/)
