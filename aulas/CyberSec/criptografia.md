@@ -7,7 +7,7 @@ Imagina que você tem uma fofoca daquelas e ninguém pode descubrir. É isso que
 ### Criptografia Simétrica
 Aqui, a gente usa uma chave para criptografar e descriptografar tudo. A parte engraçada é que, se você enviar a chave junto com os dados, seria como se você deixasse a chave da sua casa na fechadura. A criptografia simétrica é rápida, mas não é a mais segura.
 
-Algoritmos famoso incluem AES (o top 1, não me pergunte por que), RC4, DES, RC5 e RC6. É como ter vários tênis com diferentes modelos e tamanhos, mas todos com o mesmo objetivo: andar.
+Algoritmos famosos incluem AES (o top 1, não me pergunte por que), RC4, DES, RC5 e RC6. É como ter vários tênis com diferentes modelos e tamanhos, mas todos com o mesmo objetivo: andar.
 
 ### Criptografia Assimétrica
 Aqui a coisa fica mais legal. Usamos um par de chaves: uma pública e uma privada. A chave pública, que é quase um cofre com a combinação aberta, é compartilhada com todos. A chave privada, que é o segredo mais bem guardado, é usada para descriptografar. Então, qualquer um pode trancar o cofre com a chave pública, mas apenas você pode abrir com a chave privada.

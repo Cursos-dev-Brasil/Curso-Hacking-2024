@@ -1,11 +1,13 @@
-# **Encapsulamento**
+# Encapsulamento
 
-O processo de **encapsulamento** é fundamental no modelo OSI. Ele envolve adicionar informações da camada aos dados conforme descem pela camada do modelo. Por exemplo, a camada de rede adiciona os IPs de origem e destino no header, enquanto a camada de transporte inclui detalhes do protocolo. Já a camada de enlace adiciona um trailer para verificar a integridade dos dados, aumentando a segurança.
+Encapsulamento é como preparar um lanche. Imagina que você tem um sanduíche\. Só que, em vez de mandar o sanduíche direto na mochila (porque, né, isso ia virar uma bagunça), você vai colocando camadas e mais camadas de aluminio.
 
-Esse processo varia a terminologia de cada camada. Nas camadas 7, 6 e 5, os dados são chamados de **dados**. Na camada de transporte, eles são denominados **segmentos** ou **datagramas**, dependendo do uso de TCP/UDP. A camada de rede transforma os dados em um **pacote**, e na camada de enlace, eles se tornam um **quadro** antes de serem transmitidos como bits.
+Primeiro, você embrulha o sanduíche no papel alumínio (a camada de transporte, protegendo o conteúdo e garantindo que ele chegue intacto). Depois, você coloca o embrulho em um saquinho plástico (camada de rede, pra manter tudo organizado e identificar de onde veio e pra onde vai). E depois, você coloca o saquinho dentro de uma lancheira (camada de enlace, garantindo que o sanduíche esteja seguro e pronto pra ser transportado). Finalmente, você joga a lancheira na mochila (camada física).
 
-![Representação do encapsulamento](/content/encapsulamento.png)
+E assim, o sanduíche é encapsulado em várias camadas.
 
-# **Desencapsulamento**
+Agora, quando você pode comer e tá morrendo de fome, o que você faz? Desencapsula idiot
 
-Ao receber a mensagem, o computador receptor reverte o processo com o **desencapsulamento**, começando da camada física e subindo até a de aplicação, removendo informações adicionais enquanto avança. Esse método garante uma transmissão consistente de dados entre dispositivos habilitados para rede, independentemente do fabricante, sistema operacional e outras configurações.
+Primeiro você tira a lancheira da mochila. Depois, abre a lancheira e tira o saquinho plástico. Aí você abre o saquinho e desfaz o embrulho de papel alumínio até chegar no seu sanduíche. Cada etapa remove uma camada de proteção até que você chegue no sanduíche (ou seja, os dados que você queria).
+
+E aí é só alegria: você aproveita o sanduíche, ou, no caso dos dados, deixa a aplicação fazer o que precisa fazer.

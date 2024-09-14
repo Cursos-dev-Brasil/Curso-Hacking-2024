@@ -1,66 +1,40 @@
 # O que é FTP
 
-O *file transfer protocol*(FTP) é um protocolo usado para **permitir transferência de arquivos pela rede**. é implementado no **modelo cliente-servidor** e **retransmite comandos e dados** de forma eficiente
+O File Transfer Protocol (ou, para os íntimos, FTP) é como um carteiro da internet. Ele é responsável por transportar arquivos de um lado pro outro. Mas, ao contrário do carteiro real, que mantém suas correspondências lacradas, o FTP entrega tudo aberto.
 
-## Como funciona
+## Como Funciona
 
-Quando um serviço que aceita conexões remotas é iniciado, ele **escuta em uma porta** especifica. Quando o **cliente faz uma conexão** a uma porta de um serviço FTP, eles podem **trocar informações**. Inicialmente, isso é na **forma de comandos**. Comandos estabelecem **detalhes da conexão e as operações** executadas
+Imagine que você é um cliente querendo enviar uma encomenda. Você se conecta ao servidor (o carteiro) através de uma porta específica, a 21. Quando o carteiro atende, vocês começam a conversar. Inicialmente, vocês trocam comandos: "Abra essa caixa!", "Feche aquela!" e coisas do tipo. Essa troca acontece através de um canal de comando, que é quase uma linha telefônica exclusiva para fofocas.
 
-Geralmente, a **porta que roda o servidor FTP é a 21**
+Mas, claro, o que interessa mesmo é a encomenda, né? Então, o FTP também tem um canal de dados, que é o caminho por onde os arquivos (a encomenda) são enviados. Assim, enquanto você continua dando ordens ao carteiro pelo canal de comando, a encomenda está viajando pelo canal de dados.
 
+### Modos Ativo e Passivo
+O FTP é tão bom (só que não) que oferece três formas de se conectar ao carteiro:
 
-uma sessão FTP padrão **opera com dois canais**
+Ativa: Aqui, você (cliente) é quem espera a ligação. Abre uma porta e fica ali, escutando. O carteiro (servidor) é quem precisa ligar para você.
 
-- um canal de comando (as vezes controle)
-- um canal de dados
+Passiva: Agora, é o carteiro quem espera. Ele abre uma porta e fica lá, pronto para receber sua ligação.
 
-O **canal de comando** é **usado para transmitir comandos** (e as respostas desse comando) e o canal de dados é **responsável por transferir os dados**
+Ambas: Esse carteiro é tão flexível que pode tanto ligar quanto receber ligações – tudo depende do que você preferir.
 
-O ftp funciona da seguinte forma: O **cliente inicia a conexão**, o **servidor valida as credenciais** de login e **abre a sessão**
+Enumeração FTP
+Para entrar no FTP, primeiro você precisa descobrir se tem um carteiro disponível. No Linux, a maioria das vezes ele já está lá, pronto para te atender. é só digitar ftp no terminal, e se um `ftp>` aparecer, parabéns, você encontrou o carteiro! Caso contrário, um `sudo apt install ftp` resolve o problema.
 
-**com a sessão aberta**, o **cliente pode executar comandos** ftp no sistema
+Agora, vamo brincar de detetive. No FTP, o comando cwd (Change Work Directory) é o equivalente a perguntar "O que tem aqui?". Se você pedir para ver o que tem em /home/user, e o carteiro responde "250 OK", bingo! Você encontrou um diretório. Mas, se ele disser "550 Not Found", parece que não tem nada lá.
 
-## Ativo e passivo
-
-O servidor ftp suporta **3 tipos de conexão** 
-
-1. ativa
-2. passiva
-3. ambas
-
-**Em uma conexão ativa, o cliente abre uma porta, escuta e o servidor precisa se conectar a ele**
-
-**Na passiva, o servidor abre uma porta, escuta e o cliente se conecta a ele**
-
-
-Essa separação de informações de comando e dados em canais separados é um modo de **enviar comandos sem esperar a transferência de dados** terminar. Se os canais fossem interligados, você só poderia utilizar comandos entre as transferências de dados. O que não seria eficiente para transferências grandes, internets lentas ou até UX
-
-como não quero que cada aula tenha 500 linhas, não vou detalhar 100% do protocolo ftp, caso queira aprender mais sobre, visite o site da [Internet engineering task force](https://www.ietf.org/rfc/rfc959.txt). A IETF é uma das agências que definem padrões de protocolos na internet
-
-## Enumeração FTP
-
-Para fazer login em um servidor ftp, você precisa saber se existe um cliente ftp no sistema. Na **maioria dos sistemas linux** o cliente já vem instalado, você pode testar isso digitando `ftp` no terminal. Se você for redirecionado para um prompt que diz: `ftp>`, você tem um cliente ftp. Caso contrário, o comando `sudo apt install ftp` deve funcionar
-
-No ftp, o comando `cwd` (change work directory) é muitas vezes associado a uma vulnerabilidade, por exemplo, `cwd /home/user` mudaria o diretório atual para /home/user
-
-Algumas versões do ftp, como in.ftpd têm um comportamento diferente em relação a esse comando
-
-1. Se você mudar para um diretório existente, o servidor responde com um código de sucesso, muitas vezes 250 OK
-2. Se não ele responde com um erro como 550 Not Found
-
-Como o comando cwd pode ser usado antes da autenticação, você pode usar isso para descobrir diretórios e contas de usuário
-
-um exemplo prático seria o seguinte:
+Aqui vai um exemplo prático para você se sentir um verdadeiro Sherlock:
 
 ```
 CWD /home
 250 OK
+```
 
+```
 CWD /home/user1
 250 OK
-
+```
+```
 CWD /home/user2
 550 Not Found
 ```
-
-Lembrando que isso pode variar de versão em versão do ftp
+Moral da história: O FTP pode ser útil, mas provavelmente seus dados vão acabar num 4chan de dados vazados. Então usa direito – e, se possível criptografado

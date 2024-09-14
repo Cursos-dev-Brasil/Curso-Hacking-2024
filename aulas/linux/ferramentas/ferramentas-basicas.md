@@ -8,7 +8,7 @@ A primeira ferramenta útil é o SSH, a gente vai falar dele na aula de [SSH](ss
 
 ## Netcat
 
-O netcat é uma ferramenta bipolar que não decide um nome só, pode ser netcat, ncat ou nc, mais detalhes [aqui](nc/netcat.md)
+O netcat é uma ferramenta bipolar que não decide um nome só, pode ser netcat ou nc, mais detalhes [aqui](nc/netcat.md). também tem o ncat mas a gente vai falar dele mais tarde
 
 ## Tmux
 

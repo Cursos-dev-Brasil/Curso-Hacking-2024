@@ -183,3 +183,93 @@ onde:
 --tables - copia as tabelas do banco de dados
 --columns - copia as colunas do banco de dados
 
+## Riscos
+
+Se você (no caso seu site) for alvo de um ataque de injeção sql, eu sinto muito, mas as chances desse ataque ter pouco impacto é bem baixa, um ataque de SQLInjection pode ser devastador, se explorado do jeito certo
+
+Na maioria das vezes esse tipo de ataque acontece em servidores com opção de login (ou qualquer entrada sensível), ou qualquer outro tipo de input. Ataques complexos podem usar UNION também
+
+## Danos
+
+Os principais e (mais comuns) dano que esse ataque causa é: 
+
+- Extração de dados sensíveis
+- Enumeração de autenticação de usuários pra tentar a sorte e usar esses dados em outros sites (ou até adicionar em uma wordlist)
+- Excluir dados e remover tabelas, corrompendo o Db
+- Injeção de código malicioso
+
+Normalmente esses códigos são mais comuns do que as empresas gostariam, muitos sites por aí já foram alvos de SQLInjection, se até o Yahoo e a Sony cairam por que o seu site não estaria?
+
+## Como se defender de um SQL injection
+
+Como esse curso não é só sobre invadir o coleguinha do lado, mas também pra não deixar o coleguinha do lado te invadir, eu vou te ensinar a se proteger desse ataque
+
+### Parameterized Statements
+
+Linguagens de programação se comunicam com o Db usando drivers, um driver permite construção e execução de instruções sql, extraindo e manipulando dados. As intruções garantem que os parâmetros passados pelas instruções SQL sejam tratados corretamente
+
+Uma maneira segura de se conectar a um banco de dados usando JDBC seria:
+
+```java
+// Conectar ao db
+Connection conn = DriverManager.getConnection(URL, USER, PASS);
+
+// Montar a consulta com parâmetros
+String sql = "SELECT * FROM users WHERE email = ?";
+
+// Gerar uma declaração preparada com placeholder
+PreparedStatement stmt = conn.prepareStatement(sql);
+
+// Vincular o email ao indice do primeiro parâmetro
+stmt.setString(1, email)
+
+// Iniciar a consulta
+ResultSet results = stmt.executeQuery(sql);
+
+[...]
+```
+
+Agora vamos ver esse mesmo código só que feito de maneira extremamente porca e insegura
+
+```java
+String email = "seuEmail@gmail.com";
+
+// Conectar ao db
+Connection conn = DriverManager.getConnection(URL, USER, PASS);
+Statement stmt = conn.createStatement();
+
+// Não dá pra ser mais burro...
+String sql = "SELECT * FROM users WHERE email = '" + email + "'";
+
+// Eu avisei...
+ResultSet results = stmt.executeQuery(sql);
+
+[...]
+```
+
+Por favor, sempre use parameterized statements, é pro seu bem...
+
+### Mapeamento Objeto-relacional
+
+Muitos devs usam frameworks de ORM (Object relational mapping) para traduzir consultas sql em objetos. Infelizmente pra gente ou felizmente pra eles esses frameworks usam instruções parametrizadas
+
+```ruby
+def current_user(email)
+    # user é um objeto Active record com métodos find
+    # gerado pelo rails
+    User.find_by_email(email)
+end
+```
+
+Esse código é seguro
+
+Usar ORM não te deixa imuni a SQLInjection, mas é melhor que fazer uma burrice dessas:
+
+```ruby
+def current_user(email)
+    # Denovo não...
+    User.where("email = '" + email + "'")
+end
+```
+
+Existem outras formas de se proteger de um ataque de SQLI, como Escaping inputs (entradas de escape) ou Sanitizing inputs (Sanitização de entradas)

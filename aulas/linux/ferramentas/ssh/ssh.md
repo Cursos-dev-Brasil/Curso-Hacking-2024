@@ -16,4 +16,4 @@ Bob@remotehost's password:
 Bob@remotehost#
 ```
 
-Bob é só um exemplo, mas se seu nome for Bob... Qualquer semelhança é mera conhecidência. Também da pra ler chaves privadas locais de um sistema comprometido ou adicionar a sua pública para ter acesso ao servidor SSH 
+Bob é só um exemplo, mas se seu nome for Bob... Qualquer coincidência é mera conhecidência. Também da pra ler chaves privadas locais de um sistema comprometido ou adicionar a sua pública para ter acesso ao servidor SSH 

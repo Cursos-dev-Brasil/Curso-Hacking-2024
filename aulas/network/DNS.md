@@ -56,4 +56,4 @@ Servidor Autoritativo -> Servidor DNS Recursivo: O servidor autoritativo respond
 Servidor DNS Recursivo -> Cache Local: Armazena a resposta no cache local.
 Servidor DNS Recursivo -> Cliente: Transmite a resposta de volta ao cliente original.
 
-E assim, o DNS garante que, sempre que você digitar um nome de domínio, você será levado ao lugar certo, sem precisar se perder no caminho. É o GPS da web, sem precisar se preocupar com engarrafamentos! 🌐🚀
+E assim, o DNS garante que, sempre que você digitar um nome de domínio, você será levado ao lugar certo, sem precisar se perder no caminho. É o GPS da web, sem precisar se preocupar com engarrafamentos!

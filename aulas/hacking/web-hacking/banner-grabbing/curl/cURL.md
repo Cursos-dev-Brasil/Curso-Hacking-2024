@@ -15,3 +15,4 @@ Link: <https://www.inlanefreight.com/>; rel=shortlink
 Content-Type: text/html; charset=UTF-8
 ```
 
+As flags do comando curl são:
