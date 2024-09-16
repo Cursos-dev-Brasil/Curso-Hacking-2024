@@ -1,10 +1,10 @@
 # Windows (eca)
 
-Eu vou ser bem sincero, minha última vontade era precisar fazer uma aula sobre linux, esse sistema é tão ruim que não existe quase nenhum conteúdo, eu vou fazer o possível pra criar algum conteúdo em cima desse sistema horroroso, se não vão achar que eu tô dando prioridade pro linux (eu tô)
+Eu vou ser bem sincero, minha última vontade era precisar fazer uma aula sobre Windows, esse sistema é tão ruim que não existe quase nenhum conteúdo, a maioria das coisas são icones super genéricos que até uma criança de 5 anos consegue entender, eu vou fazer o possível pra criar algum conteúdo em cima desse sistema, se não vão achar que eu tô dando prioridade pro linux (eu tô)
 
 ## Fundamentos Windows
 
-Como eu disse antes, não tem conteúdo suficiente pra fazer 4 aulas só sobre fundamentos de windows, então uma já serve
+Eu até vou tentar criar 4 aulas de fundamentos, por mais que seja difícil, de qualquer forma, o windows tem seus prós e contras (muito mais contras que prós)
 
 Durante essa aula, vou tentar ser o mais imparcial possível com o windows (mesmo que seja difícil)
 
@@ -16,7 +16,7 @@ MASSS, como eu não suporto falar bem do windows isso tem uma desvantagem, uma i
 
 ### Comandos e ferramentas  
 
-Por incrível que pareça o Windows tem um terminal, no windows o terminal (Comand prompt / cmd) é mais uma pedra do que um terminal, você não pode adicionar outros comandos, você só tem os comandos do windows e pronto
+Por incrível que pareça o Windows tem um terminal, no windows o terminal (Comand prompt / cmd) é mais uma pedra do que um terminal, você não pode adicionar outros comandos (a não ser que faça isso externamente, baixando código fonte / pré-compilado e colocando no path), você só tem os comandos do windows e pronto
 
 | Comando          | Descrição                                                      | Exemplo de Uso                        | Saída Exemplo                     |
 | ---------------- | -------------------------------------------------------------- | ------------------------------------- | --------------------------------- |
@@ -27,7 +27,6 @@ Por incrível que pareça o Windows tem um terminal, no windows o terminal (Coma
 | `type <arquivo>` | Esse daqui é equivalente ao cat   | `root@windows1:~$ type text.txt`       | `Conteúdo do arquivo text.txt`    |
 | `pwd`            | O Windows copiou esses comandos do linux. Então é a mesma coisa que no Linux           | `root@windows1:~/documents $ pwd`      | `/home/ubuntu/Documents`          |
 
-Você pode até me falar "Mas o linux é 6 anos mais novo que o windows" a primeira coisa que eu vou fazer é te fazer devolver o curso, defensor de windows não tem lugar aqui, depois disso eu vou te dizer que você tá completamente enganado, já que o linux é um sistema baseado no UNIX-Like, O modelo UNIX-Like por sua vez é do ano de 1971
 
 #### Localização de arquivos
 

@@ -1,105 +1,65 @@
-# Guia de Estudo das Aulas
+# Guia de Estudos de Cyber Security
 
-Este guia organiza o conteúdo do curso de forma progressiva e lógica para facilitar a sua vida.
+Este guia fornece uma ordem sugerida para os estudos, começando pelos fundamentos e avançando para temas mais complexos.
 
-## Nível 1 - Fundamentos
+## 1. Introdução à Segurança Cibernética
 
-1. **Fundamentos de Cibersegurança**
-   - [Introdução à Cibersegurança](aulas/CyberSec/introCyberSec.md)
-   - [Segurança da Informação](aulas/CyberSec/infosec/)
+1.1. [Introdução à Cyber Segurança](aulas/introCyberSec.md)
+1.2. [Introdução à segurança da informação](aulas/CyberSec/infosec/fundamentos/)
 
-2. **Termos Comuns**
-   - [Termos usados em Cibersegurança e Segurança da Informação](aulas/CyberSec/infosec/Termos-comuns.md)
+## 2. Criptografia
 
-3. **Fundamentos Linux**
-   - [Introdução ao sistema Linux](aulas/linux/fundamentos/)
+2.1. [Criptografia](aulas/CyberSec/criptografia.md)
 
-4. **Bash Scripting**
-   - [Scripts básicos em Bash](aulas/linux/bash/bash-scripting.md)
+## 3. Fundamentos de Redes
 
-5. **Modelo OSI e TCP/IP**
-   - [Modelos de rede OSI e TCP/IP](aulas/network/)
+3.1. [Modelo OSI](aulas/network/modelo-osi.md)  
+3.2. [Modelo TCP/IP](aulas/network/modeloTCPIP.md)  
+3.3. [Encapsulamento](aulas/network/encapsulamento.md)  
+3.4. [DNS - Sistema de Nomes de Domínio](aulas/network/DNS.md)  
+3.5. [VPN - Redes Privadas Virtuais](aulas/network/vpn.md)
 
-## Nível 2 - Intermediário
+## 4. Fundamentos de Sistemas Operacionais
 
-1. **Tmux**
-   - [Básico do Tmux](aulas/linux/ferramentas/tmux/tmux.md)
+4.1. [Windows - Fundamentos](aulas/windows/fundamentos)  
+4.2. [Linux - Fundamentos](aulas/linux/fundamentos)  
 
-2. **DNS (Domain Name System)**
-   - [Funcionamento detalhado do DNS](aulas/network/DNS.md)
+    - [linux - Fundamentos 1](aulas/linux/fundamentos/fundamentos$.md)  
+    - [linux - Fundamentos 2](aulas/linux/fundamentos/fundamentos$.md)  
+    - [linux - Fundamentos 3](aulas/linux/fundamentos/fundamentos$.md)  
+    - [linux - Fundamentos 4](aulas/linux/fundamentos/fundamentos$.md)
 
-3. **Ping e Ferramentas de Rede**
-   - [Uso de Ping e outras ferramentas de rede](aulas/network/ferramentas/)
+## 5. Ferramentas de Rede
 
-4. **SSH (Secure Shell)**
-   - [Introdução ao SSH](aulas/linux/ferramentas/ssh/ssh.md)
+5.1. [Ferramentas de Rede](aulas/network/ferramentas)  
+5.2. [Protocolos de Rede](aulas/network/protocols)
 
-5. **Encapsulamento de Dados**
-   - [Conceito de encapsulamento de dados](aulas/network/encapsulamento.md)
+## 6. OSINT - Pesquisa de Vulnerabilidades
 
-6. **Criptografia**
-   - [Princípios de Criptografia](aulas/CyberSec/criptografia.md)
+6.1. [Pesquisa Básica](aulas/OSINT/pesquisa/pesquisa-basica$.md)  
+6.2. [Busca por Vulnerabilidades](aulas/OSINT/pesquisa/busca-vulnerabilidades.md)  
+6.3. [Manual de Pesquisa](aulas/OSINT/pesquisa/manual.md)
 
-7. **Chave SSH**
-   - [Conexão SSH com chaves](aulas/linux/ferramentas/ssh/chavesSSH.md)
+## 7. Hacking - Introdução
 
-8. **Nmap - Visão Geral**
-   - [Utilização básica do Nmap](aulas/network/ferramentas/nmap/nmap.md)
+7.1. [Introdução ao Hacking](aulas/hacking/introdução)
 
-## Nível 3 - Avançado
+## 8. Hacking - Estilos / ferramentas
 
-1. **Varreduras Nmap e Scripts**
-   - [Varredura avançada e scripts no Nmap](aulas/network/ferramentas/nmap/)
+8.1. [Python + programação](aulas/hacking/hacking+programming/hackingWithPython/)
+8.1. [Burp Suite - Introdução](aulas/hacking/burp-suite)  
+8.2. [Network Hacking](aulas/hacking/network-hacking)  
+8.3. [Web Hacking](aulas/hacking/web-hacking)
+8.4. [Geral](aulas/hacking/geral/)
 
-2. **Netcat**
-   - [Uso básico do Netcat](aulas/linux/ferramentas/nc/netcat.md)
+## 9. Linux - Ferramentas
 
-3. **Evasão de Firewall**
-   - [Estratégias para evasão de firewall e filtros de rede](aulas/network/ferramentas/nmap/firewall-evasion.md)
+9.1. [Bash - Introdução](aulas/linux/bash)  
+9.2. [Ferramentas de Linux](aulas/linux/ferramentas)
 
-4. **VPN (Virtual Private Network)**
-   - [Funcionamento de VPNs](aulas/network/vpn.md)
+## 10. Ferramentas para Conexão Remota
 
-5. **Ataque MITM (Man-in-the-Middle)**
-   - [Ataque de interceptação de dados](aulas/network/sniffing.md)
+10.1. [Xfreerdp - Fundamentos](windows/xfreerdp.md)
+10.2. [SSH - Introdução](aulas/linux/ferramentas/ssh/ssh.md)
+      - [SSH - Chaves](aulas/linux/ferramentas/ssh/chavesSSH.md)
 
-6. **Protocolos de Rede**
-   - [SMB](aulas/network/protocols/SMB/)
-   - [Telnet](aulas/network/protocols/Telnet/)
-   - [ARP](aulas/network/protocols/arp.md)
-   - [FTP](aulas/network/protocols/FTP/)
-
-7. **OSINT (Open-source Intelligence)**
-   - [Pesquisa de informações em fontes abertas](aulas/OSINT/pesquisa/)
-
-8. **Enumeração e Fuzzing**
-   - [Enumeração com WhatWeb](aulas/hacking/web-hacking/banner-grabbing/whatweb/whatweb.md)
-   - [Gobuster](aulas/network/ferramentas/gobuster.md)
-   - [Wfuzz](aulas/hacking/web-hacking/wfuzz.md)
-
-9. **Servidor Web**
-   - [Conceito de Servidor Web](aulas/hacking/web-hacking/servidor-web.md)
-
-10. **HTTP(S)**
-    - [Protocolos HTTP(S)](aulas/hacking/web-hacking/http(s).md)
-
-11. **Headers, Métodos, URL, Cookies, Status**
-    - [Análise de cabeçalhos, métodos HTTP e URLs](aulas/hacking/web-hacking/)
-
-12. **Banner Grabbing**
-    - [Banner Grabbing com Netcat](aulas/linux/ferramentas/nc/netcat.md)
-    - [Banner Grabbing com cURL](aulas/hacking/web-hacking/curl/cURL.md)
-
-13. **Shell**
-    - [Introdução a Shells](aulas/hacking/geral/shell/shell.md)
-
-14. **SQL Injection**
-    - [Exploração e defesa contra injeções SQL](aulas/hacking/web-hacking/sqlInjection.md)
-
-15. **Burp Suite**
-    - [Introdução ao Burp Suite](aulas/hacking/burp-suite/burp-suite.md)
-    - [Ataques de Força Bruta no Burp Suite](aulas/hacking/burp-suite/brute.md)
-    - [SQLMap e Burp Suite](aulas/hacking/burp-suite/burp&SQLi.md)
-
-16. **OWASP (Open Web Application Security Project)**
-    - [Diretrizes e ferramentas da OWASP para segurança em aplicações web](aulas/hacking/web-hacking/OWASP/)
