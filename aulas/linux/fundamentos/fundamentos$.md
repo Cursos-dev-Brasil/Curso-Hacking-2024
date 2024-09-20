@@ -1,123 +1,47 @@
-# Antes de começar com o hacking, é preciso saber como um sistema Linux funciona e por que ele é útil no hacking
+# Introdução ao linux
 
-**O linux é um dos Sistemas operacionais mais utilizados do mundo e é um sistema altamente flexível, além de ser leve, o requisito minimo de um linux são 512Mb de ram dependendo da distribuição. Provavelmente você já usou um linux, seja em um sistema de um carro, ou até nos semáforos da cidade, obviamente, o linux também tem suas desvantagens, ao mesmo tempo que é flexível e leve, não é tão simples de aprender, entender e até usar**
+Antes de Começar a escrever naqueles terminais de filme você precisa entender o Linux e por que ele é tão maravilhoso
 
-**Para fazer o linux mais leve possível, muitas coisas devem ser sacrificadas, como GUI's, portanto, uma boa parte das interfaces Windows ou Mac, podem não estar disponiveis no Linux, a maioria dos linux são altamente customizáveis pelo usuário ou já são pré-definidas para um público alvo**
+Ah, o Linux! O sistema operacional que dá uma surra bem dada no Windows. Leve, rápido e bonito. Se você já se perguntou por que o Linux é tão amado por hackers e gente do ti, a resposta é simples: ele é poderoso e não exige muito. Você pode instalar uma versão com 512MB de RAM. Isso mesmo, menos do que o chrome consome a cada 2 abas!
 
-**Como foi dito, o Linux pode não ter as mesmas GUI's de outros sistemas, e para anular isso, o *Terminal* é usado para personalizar o sistema, usar comandos, criar scripts ou até mesmo obter acesso remoto a um sistema, seja por *SSH*, *FTP*, etc...**
+Embora o Linux seja útil, ele tem suas diferenças. Pode ser mais complicado aprender, mas é tipo aprender a andar de bicicleta sem rodinhas – um pouco difícil no começo, mas depois você voa. O Linux é tipo o amigo que não se importa de não ter um guarda-roupa cheio de roupas chamativas. Ele é minimalista e, quando você aprende a usar, fica claro que não precisa de todo aquele luxo.
 
-## Comandos básicos de navegação
+Ao invés de GUIs com bugs e opções que você nunca usa, o Linux tá lá pra te dar o poder com menos bagunça. E se você gosta de escrever, então você vai amar. O Terminal é tipo o superpoder dos hackers – uma interface que pode fazer quase tudo com uns comandos. É tipo transformar seu pc numa máquina de combate com um simples toque no teclado (só que sem a parte do combate).
 
-O terminal tem alguns comandos básicos que vão ser indispensáveis em um pentest ou qualquer coisa do tipo. alguns desses incluem:
+## Comandos de Navegação: Sua Primeira Aula no Terminal
 
-| Comando  | Descrição                          | Exemplo                                 |
-|----------|------------------------------------|-----------------------------------------|
-| echo     | Exibe qualquer texto fornecido na tela|`root@linux1:~$ echo "Hello, world!` <br> output: `Hello, world!`|
-| whoami   | Verifica qual é o usuário logado atualmente | `root@linux1:~$ whoami` <br> output: `root` |
-| ls       | Listagem de diretórios e arquivos | `root@linux1:~$ ls` <br> output:  `a.txt` <br> `text.txt` `documents` <br> `folder` |
-| cd <diretório> | Altera de um diretório pra outro | `root@linux1:~$ cd documents` <br> output: `root@linux1:~/documents $`|
-| cat <arquivo>  | concatenar arquivos | `root@linux1:~$ cat text.txt` <br> output: `Conteúdo do arquivo text.txt`|
-| pwd            | imprime o diretório de trabalho | `root@linux1:~/documents $ pwd` <br> output: `~/documents`|
+Vamo ver alguns comandos que vão ajudar a navegar no Linux
 
-- ls: **antes de descobrir o conteúdo de pastas e arquivos, você precisa saber o nome e localização deles. Isso é possível usando ls**
-```
-root@linux1:~$ ls
-a.txt text.txt documents folder access.log
-```
+| Comando          | Descrição                                                      | Exemplo de Uso                        | Saída Exemplo                     |
+| ---------------- | -------------------------------------------------------------- | ------------------------------------- | --------------------------------- |
+| `echo`           | Quer exibir uma mensagem na tela? echo é o seu amigo.          | `root@linux1:~$ echo "Hello, world!"` | `Hello, world!`                   |
+| `whoami`         | tá achando que logou no user errado? whoami te fala a verdade. | `root@linux1:~$ whoami`               | `root`                            |
+| `ls`             | O comando que revela todos os segredos (do diretório).         | `root@linux1:~$ ls`                   | `a.txt text.txt documents folder` |
+| `cd <diretório>` | pular de diretório em diretório que nem um besta.    | `root@linux1:~$ cd documents`         | `root@linux1:~/documents $`       |
+| `cat <arquivo>`  | Quer ver o que tá dentro de um arquivo? cat dá uma olhada por você.  | `root@linux1:~$ cat text.txt`         | `Conteúdo do arquivo text.txt`    |
+| `pwd`            | Se perdeu no caminho? pwd te mostra a saída.                   | `root@linux1:~/documents $ pwd`       | `/home/ubuntu/Documents`          |
 
-Com o nome das pastas, você pode ter uma ideia do que esperar de cada uma e abrir as com mais potencial primeiro
+## Comandos de Pesquisa de Arquivos: Caçando Tesouros
+Se você acha que procurar arquivos é tipo procurar uma agulha no palheiro, pensa denovo, e você acertou. O Linux tem ferramentas pra te poupar tempo de vida:
 
-*Dica profissional: Você pode listar o conteúdo de um diretório sem ter que navegar até ele usando ls e o nome do diretório. Ou seja, ls documents*
+| Comando | Descrição | Exemplo | Saída |
+|---------|-----------|---------|-------|
+| `find`  | O comando para caçar arquivos em qualquer lugar. | `find -name passwd.txt` | `./documents/.senhas.txt` |
+| `grep`  | Vai procurar o texto que você pedir pra você não ficar 30 minutos fazendo isso. | `grep "senha" passwd.txt` | `senha 1 - - !4CFF0` |
 
-- cd: **Agora que você sabe as pastas disponiveis, podemos usar cd (abreviação de *change directory*) para acessa-las, para fazer isso, você precisa usar cd e o diretório, depois disso, podemos combinar com ls:**
-```
-root@linux1:~$ cd documents
-root@linux1:~/documents $ ls
-"Arquivos secretos" imagem.jpeg "Confidencial" clientes.txt
-```
+**Dica:** Se você encontrar arquivos ocultos, use `ls -a` para revelá-los. Sim, alguns arquivos são tímidos!
 
-*Dica profissional: Você não precisa necessáriamente navegar para o próximo diretório disponivel, você por exemplo usar cd documents/"arquivos secretos" para ir direto para arquivos secretos*
-- cat: **Saber da existência de um arquivo é útil, mas não ajuda em nada se você não puder abri-lo, por enquanto você vai aprender a ler arquivos, mas no futuro vai aprender a transferi-lo de uma máquina para outra também, enquanto isso, vamos usar o comando cat (Abreviação de concatenar) para para exibir o conteúdo de arquivos (não necessáriamente .txt)**
+## Operadores do Terminal: Seus Superpoderes Digitais
+Os operadores do terminal são quase truques pra tornam sua vida mais fácil economizando 0.7 segundos.
 
-```
+| Operador | Descrição | Exemplo | Observação |
+|----------|-----------|---------|------------|
+| `&`      | Executa comandos em segundo plano. | `comando &` | (Porque você não precisa ficar esperando um comando gigante terminar) |
+| `&&`     | Combina comandos, onde o segundo só roda se o primeiro der certo. | `comando1 && comando2` | (Pra que fazer uma coisa de cada vez, se você pode fazer duas, uma depois da outra?) |
+| `>`      | Redireciona a saída pra um arquivo, substituindo o conteúdo se o arquivo já existir. | `echo "conteúdo" > arquivo.txt` | (Sobre escreve sem dor de cabeça!) |
+| `>>`     | Adicione a saída ao final de um arquivo sem apagar o que já estava lá. | `echo "mais conteúdo" >> arquivo.txt` | (Porque você pode querer adicionar, não apagar!) |
 
-root@linux1:~/documents $ ls
-"Arquivos secretos" imagem.jpeg "Confidencial" clientes.txt
-root@linux1:~/documents $ cat clientes.txt
-cliente 1. Almir        email: almirAzevedo@hotmail.com
-cliente 2. Gabriel      email: gabriel__@gmail.com
-cliente 3. júlio        email: Ju__l_io@yahoo.com
-```
-
-As vezes senhas, usuários, credenciais ou até mesmo flags (em CTF's) ou configurações são armazenadas em arquivos que suportam o cat, no nosso caso, descobrimos o E-mail do que parecem ser 3 clientes de alguma empresa, isso pode ser útil para técnicas de engenharia social ou phishing
-
-*Dica profissional: no mesmo estilo do ls e cd, você pode usar cat para exibir o conteúdo de um arquivo dentro de diretórios sem ter que navegar até ele usando cat e o nome do diretório. Ou seja, cat /Documents/tarefas.txt*
-
-- pwd: **É fácil se perder enquanto você navega em uma máquina, principalmente no começo, por isso o comando pwd (abreviação de print work directory). Nos comandos anteriores, navegamos até o diretório documents, mas qual é o path completo?**
-
-```
-root@linux1:~/documents $ pwd
-/home/ubuntu/Documents
-```
-
-Antes, o terminal informava que o diretório atual era documents, mas até agora não sabiamos aonde documents estava armazenado, sabendo disso, fica mais fácil voltar lá no futuro
-
-## Comandos básicos de pesquisa de arquivos
-
-O linux é um sistema muito eficiente se você estiver familiarizado. a medida que você executa os comandos mais comuns, eles acabam se torando memória muscular
-
-uma das maneiras de ser eficiente nesse tipo de OS é combinando comandos para procurar arquivos em todo o sistema, sem cd e sem ls consistentemente nesse caso, ao invés disso, podemos usar *find* para automatizar isso
-
-- find: **O comando find pode ser usado de forma simples ou muito complexa, dependendo do objetivo. É normal que uma máquina tenham um diretório dentro do outro dentro do outro e por aí vai, e isso acaba tornando a busca muito chata e complexa**
-
-Vamos criar uma situação em que você sabe o nome do arquivo que está procurando, mas não lembra a sua localização exata, vamos procurar o arquivo passwd.txt com find
-
-```
-root@linux1:~$ find -name passwd.txt
-./documents/.senhas.txt
-```
-Ótimo, encontramos o arquivo dentro de documents.
-
-*dica: Observe que tem um "." antes do nome do arquivo, isso significa que ele não será listado automaticamente, para corrigir isso você pode usar o comando ls -a ou ls -Hidden para exibir os arquivos ocultos*
-
-Para encontrar o arquivo que sabemos usamos -name, mas e se não soubermos o nome ou queremos pesquisar todos os arquivos com extensão .txt
-
-Podemos usar o curinga(*) para procurar qualquer coisa com .txt no diretório atual.
-
-```
-root@linux1:~$ find -name *.txt
-./documents/.senhas.txt
-./Documents/clientes.txt
-```
-
-- Grep: **Outro comando ótimo é o *grep*, que nos permite pesquisar arquivos por valores especificos. Por exemplo procurar alguma frase em um arquivo especifico**
-
-```
-root@linux1:~/documents $ grep "senha" passwd.txt
-senha 1 - - !4CFF0
-
-[....]
-```
-
-Aqui o comando grep filtra a palavra senha no arquivo passwd.txt
-
-## Operadores do terminal
-
-Os operadores do terminal são muito importantes para garantir um melhor aproveitamento e uma melhor produtividade em ambiente Linux 
-| Operador | Descrição                                                                                       | Exemplo                          |
-|----------|-------------------------------------------------------------------------------------------------|----------------------------------|
-| `&`      |  executar comandos em segundo plano no terminal.                                         | `comando &`                      |
-| `&&`     | Combina múltiplos comandos em uma linha ; o segundo comando só executa se o primeiro for bem-sucedido. | `comando1 && comando2`           |
-| `>`      | Redireciona a saída de um comando para outro lugar, como um arquivo, sobrescrevendo seu conteúdo se o arquivo já existir. | `echo "conteúdo" > arquivo.txt`  |
-| `>>`     | Redireciona a saída de um comando para outro lugar, como um arquivo, adicionando ao final do conteúdo existente no arquivo. | `echo "mais conteúdo" >> arquivo.txt` |
+Agora você tá  pronto para explorar o Linux e começar a hackear sistemas bancários com ferramentas prontas (contém ironia). 
 
 
-- `&`: **esse operador executa comandos em segundo plano, se quisermos copiar um arquivo grande, levaria muito tempo e travaria nosso terminal. O operador "&" adicionado ao comando executa a tarefa a segundo plano, sem precisar interromper outros processoa**
-
-- `&&`: **Esse comando é enganador por se parecer muito com o operador "&",só que ao contrário dele, o operador de "&&" é usado para rodar mais de um comando de uma vez, `comando 1 &&,comando 2`. Vale lembrar ar que o comando 2 só será executado se o comando 1 for bem sucessido**
-
-- `>`: **Esse operador é conhecido como redirecionamento de saída,  ou seja, pegamos a saída de um comando que executamos e enviamos a saída para outro lugar. Um bom exemplo disso é usar o comando echo para redirecionar a string para outro arquivo, por exemplo.**
-
-*Nota: se o arquivo existir, o conteúdo é sobre escrito, caso contrário o arquivo é criado*
-
-- '>>': **Esse operador também é um direcionamento de saída, o que diferencia ele do,">". Em vez de sobreescrever o arquivo, ele adiciona o novo conteúdo ao final do arquivo, mantendo o resto do conteúdo
+6

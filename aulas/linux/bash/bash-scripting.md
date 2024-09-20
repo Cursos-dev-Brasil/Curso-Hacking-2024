@@ -1,231 +1,160 @@
-# Bash
-## Oque é bash?
+# O que é Bash?
 
-Bash é uma linguagem de script que roda no terminal na maioria das distribuições Linux e no MacOS. Scripts shell são uma sequência de comandos bash dentro de um arquivo, combinados para realizar tarefas mais complexas do que simples comandos de uma linha, e são especialmente úteis para automatizar tarefas de administração de sistemas, como backups.
+Imagina o Bash como o super-herói dos scripts de terminal. Ele é a linguagem que te ajuda a realizar tarefas, automatizar backups e salvar alguns segundos do seu dia, tudo com alguns comandos. Ele faz isso rodando no terminal do Linux e do macOS (novamente o windows sendo humilhado), e é o rei dos scripts que deixam o seu trabalho mais fácil.
 
-Algumas coisas básicas do bash são:
+## Começando no bash
+Cada script Bash começa com a mesma linha de código, como uma introdução padrão de youtuber infantil:
 
-- Sintaxe
-- Variáveis
-- Parâmetros
-- Arrays
-- Condicionais
-
-Um script bash **sempre começa com a mesma linha de código no topo do script**
 
 `#!/bin/bash`
 
-Isso é para o shell saber que precisa usar o bash para iniciar seu arquivo no terminal
+Essa linha é tipo a "Abertura" de um filme: diz ao sistema qual arsenal ele deve usar para rodar o script.
 
-Você pode executar comandos padrão do Linux dentro do script bash, e eles são executados e formatados. Por exemplo, você pode usar o comando `ls` dentro de um script bash, você vai ver a saída ao executar o arquivo
+## Execute seu Primeiro Script
+Vamos criar um script de boas-vindas, como um convite para uma festa:
 
-Antes de executar o script bash, você precisa atribuir a ele a permissão de execução
-
-`chmod +x script.sh`
-
-ele é executado usando:
-
-`./script.sh`
-
-crie um script bash com esse conteúdo:
-
-```
+```bash
+#!/bin/bash
 echo "HELLO WORLD"
 ls
 whoami
 id
 ```
+Salve isso como hello.sh, adicione privilégios:
 
-agora execute usando ./nome_do_script.sh (não esqueça que a primeira linha deve ser `#!/bin/bash`)
 
-### Variáveis
+`chmod +x hello.sh`
+E execute a festa:
 
-a forma de escrever variáveis em bash é:
+
+`./hello.sh`
+## Variáveis: O começo da programação
+Definir variáveis em Bash é como escolher o nome do seu personagem em um jogo:
+
 `name="phantom"`
+Para usar a variável, você só precisa colocar um $ antes do nome dela:
 
-Nesse caso, você atribuiu o valor phantom a variável name
 
-**lembrete: em bash, você não pode ter espaços entre o nome, o sinal de igual (recebe na programação) e o valor**
+`echo $name`
 
-#### Usando sua variável
+A saída será phantom – o nome do seu personagem.
 
-É muito simples usar as variáveis em um script bash, a única coisa que você precisa é colocar um `$` e o nome da variável (sem espaços)
+Para uma festa mais divertida:
 
-por exemplo:
-```
-name="phantom"
-echo $name
-```
-
-Caso você teste isso, você deverá ver **phantom** na saída
-
-Variáveis tornam seu código muito mais simples, elas ajudam você a guardar dados e permite que você não fique repetindo o mesmo código centenas de vezes
-
-Você pode usar quantas variáveis quiser no código, e quantas variáveis quiser em cada comando, por exemplo: 
-```
+```bash
 name="Billy"
 age=21
 echo "$name tem $age anos de idade"
 ```
 
-### Parametros
+### Parâmetros: Os Convites para a Festa
+Você pode passar parâmetros nos seus scripts como convites. Aqui está um exemplo
 
-Uma das principais funcionalidade do bash são os parametros
-
-Primeiro, vamos usar os parametros especificados usando a cli (command line interface) para executar o arquivo. Existem várias formas de usa-los, mas normalmente tem o "$" porque um parametro é uma variável (em bash)
-
-```
-teste=$parametro
-echo $teste
-```
-Agora execute o script com a palavra teste (./script.sh teste)
-
-em vez de receber "parametro", a saída deve ser "teste"
-
-outro exemplo:
-```
+```bash
+#!/bin/bash
 name=$1
 surname=$2
+echo "$name $surname"
+Execute seu script com parâmetros:
 ```
-Agora faça a mesma coisa da primeira vez, mas com 2 palavras diferentes
-O resultado é o último parametro que você usou
 
-Se você não quiser usar esse tipo de parametro, você pode permitir que o usuário digite seu nome de forma interativa, você pode fazer isso usando o comando `read`
-```
+`./script.sh João Silva`
+
+E assista a mágica!
+
+Se preferir uma entrada interativa, use o comando read:
+
+```bash
 echo "Digite seu nome: "
 read name
 echo "Olá, $name"
 ```
 
-Quando executado, você deve ver algo como: 
-<br>
-![saída](../../../content/bash-input.png)
+### Arrays: Um grupo em uma linha
+Arrays podem ser traduzidas como uma lista de amigos que você pode acessar usando índices (começam em 0). Aqui está um exemplo de um array de transporte:
 
-Para se adaptar com comandos básicos, você pode tentar criar algo, como um gerador de biografia, onde você usa nome idade e ocupação como parametros, armazena em variáveis exibe na tela dentro de uma frase
 
-Lembra, a prática é o melhor jeito de estudar, já que você tem mais liberdade
-
-### Arrays
-Arrays são usados para armazenar mais de um dado em uma variável, esses dados são acessados por indices (index). Na programação, o **index começa em 0**
-
-sintaxe:
 `transporte=("carro" "trem" "bicicleta" "onibus")`
 
-transporte = nome da array
-cada frase entre aspas é um item de transporte
-index:
-carro = 0
-trem = 1
-bicicleta = 2
-onibus = 3
-
-para exibir todos os elementos da array:
+Para exibir todos os transportes do grupo:
 
 `echo "${transporte[@]}"`
-"@" Se refere a todos os elementos do array
 
-Para exibir um elemento especifico você usa o indice dele
-`echo "${transporte[1]}"`
+Para um item especifico específico:
 
-Como trem é o index 1, trem é mostrado na saída
+`echo "${transporte[1]}"` (exibe trem)
 
-#### Modificando e removendo elementos da array
-
-para remover um elemento de uma array, você pode usar unset
+Se quiser remover um amigo:
 
 `unset transporte[1]`
 
-Isso remove o item trem 
+adicionar um novo:
 
-para definir um novo valor:
 `transporte[1]="avião"`
 
-tente expandir seu criador de biografia, incluindo arrays para armazenar mais nomes e mais fatos sobre a pessoa. 
+## Condicionais
+As condicionais são quase um pilar em qualquer algoritmo. elas servem para verificar se uma coisa é igual (ou diferente, existem vários tipos) a outra coisa:
 
-### Condicionais
-
-Estruturas condicionais na programação são muito comuns, elas são blocos de código que só são cumpridas caso uma condição seja atendida, normalmente isso é determinado com operadores relacionais
-
-Vamos fazer uma declaração if simples para verificar se uma variável é igual a um valor, também é possível fazer um script que verifica se um arquivo existe e se ele é gravável, se for, escrevemos uma mensagem no arquivo, se não for ele é excluído e um novo é criado
-
-Sintaxe básica:
-if [condição]
-then
-Tudo entre then e fi é executado se a condição passar
-fi
-
-exemplo prático:
-```
+```bash
 #!/bin/bash
 count=10
-if[$count -eq 10]
-then 
+if [ $count -eq 10 ]; then
     echo "True"
 else
-    echo "false"
+    echo "False"
 fi
-```
-Essa condição testa se a variável count é igual a 10, e se for, imprime True, caso contrário imprime False
-
-
-Você pode terminar o projeto do gerador de biografia adicionando uma condicional, você pode por exemplo adicionar uma condição para testar se a idade é maior ou igual a 18, se não for você exibe a mensagem "Você não pode trabalhar", e se for, você exibe "qual é seu trabalho" e um read logo depois
-
-
-Boa sorte e tente não consultar as aulas para fazer o projeto, a prática é o caminho mais fácil para melhorar
-#### Operadores relacionais
-
-
-| Comando | Nome completo  |
-|---------|----------------|
-| -eq | Verifica se o valor de dois operandos é igual; se sim, a condição é verdadeira |
-| -ne | Verifica se o valor de dois operandos é diferente; se sim, a condição é verdadeira. |
-| -gt | Verifica se o valor do operando esquerdo é maior que o do direito; se sim, a condição é verdadeira. | 
-| -lt | Verifica se o valor do operando esquerdo é menor que o do direito; se sim, a condição é verdadeira. |
-| -ge |Verifica se o valor do operando esquerdo é maior ou igual ao do direito; se sim, a condição é verdadeira. |
-
-você também pode usar operadores comuns:
 
 ```
+Você pode usar essas condições para verificar se arquivos existem ou são graváveis, e até mesmo criar um novo arquivo se necessário.
+
+### Operadores Relacionais
+Aqui temos a tabela de operadores relacionais – é quase uma tabela de comparação:
+
+| Comando | Descrição         |
+|---------|-------------------|
+| -eq     | Igualdade         |
+| -ne     | Diferença         |
+| -gt     | Maior que         |
+| -lt     | Menor que         |
+| -ge     | Maior ou igual    |
+| -le     | Menor ou igual    |
+
+Exemplo de comparação:
+
+```bash
 #!/bin/bash
-
 guess=$1
-
-if [ "$guess" = "guessme" ]
-then
-    echo "They are equal"
+if [ "$guess" = "guessme" ]; then
+    echo "Eles são iguais"
 else
-    echo "They are not equal"
+    echo "Eles não são iguais"
 fi
 ```
-#### Verificação de arquivos com condicional
 
-```
+### Verificação de Arquivos com Condicionais
+O seguinte script verifica se um arquivo existe e é gravável, e então decide o que fazer:
+
+```bash
 #!/bin/bash
-
 file=$1
-
-if[-f "$file"] && [-w "$file"]
-then
-    echo "Hi" >> "$file"
+if [ -f "$file" ] && [ -w "$file" ]; then
+    echo "Olá" >> "$file"
 else
-    echo "Hi" > "$file"
+    echo "Olá" > "$file"
 fi
 ```
 
-A flag -f verifica se é um arquivo e a flag -w verifica se é um arquivo gravável
+### Debugando: O Paracetamol da programação
+Às vezes, você precisa de uma mãozinha com o código. O modo debug no Bash é tipo um superpoder que revela o que está acontecendo com seu script. Para ativar o modo debug:
 
-### Debugando um arquivo
 
-O Debug é uma parte muito importante na programação e pode te salvar na hora de resolver um problema o mais rápido possível. O bash tem algumas funções feitas para facilitar a sua vida
-
-Agora que você sabe a sintaxe básica, você pode montar um script bash básico e talvez você faça algo errado, então você pode consertar isso com o debug mode para ver aonde você errou
-
-O debug mode te mostra quais linhas funcionam e quais não funcionam, se você quiser debugar até um certo ponto do código, você pode usar `set x-` para iniciar o debug e `set x+` para finalizar
-exemplo:
-```
-echo "hi"
+```bash
 set -x
-# Essa parte do código seria debugada
+# Código que será depurado
 set +x
 ```
+
+## O Desafio Final
+
+Crie um aplicativo de contatos, que tenha funções como adicionar contatos, excluir contatos, ver contatos e qualquer outra função, use condicionais e arrays
 

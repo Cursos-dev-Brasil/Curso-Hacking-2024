@@ -12,19 +12,10 @@ Essa aula **não** tem um desafio
 *aula-com-desafio.md*
 ```
 
-Agora que você sabe identificar uma aula com desafios, você precisa saber resolve-los, cada desafio tem uma **Flag**, uma flag é um séries de caracteres aleatórios (ou não) usadas para provar que você realmente completou o desafio, as flags normalmente serão colocadas em arquivos (os nomes podem variar de flag.txt até algum nome aleatório, a graça é procurar as flags)
+Agora que você sabe identificar uma aula com desafios, você precisa saber resolvê-los, cada desafio tem uma **Flag**, uma flag é um séries de caracteres aleatórios (ou não) usadas para provar que você realmente completou o desafio, as flags normalmente serão colocadas em arquivos (os nomes podem variar de flag.txt até algum nome aleatório, a graça é procurar as flags)
 
 Agora que você sabe identificar e resolver as flags, você precisa saber como envia-las, nosso modelo foi baseado na plataforma *Hack The Box*, só que adaptado, primeiro, você abre uma [**issue**](https://github.com/Cursos-dev-Brasil/Curso-Hacking-2024/issues/new) no repositóro com o nome do desafio e a flag, por exemplo:
 
-![issue](content/image.png)
-
-Sua imagem vai ser analisada pela equipe, e vai ser respondida o mais rápido possível
-
-Se a resposta da equipe for Correto, obviamente você acertou
-Se a resposta da equipe for Errado, você errou
-Se a resposta da equipe for Quase, você cometeu algum erro, mas está quase lá
-
-obs: No titulo da issue, coloque o desafio, por exemplo desafio-stegnography.md, na descrição a flag, certifique-se de não clicar em uma issue de um desafio que você não resolveu. A issue será apagada 24h após a resposta da equipe
 
 # Resumo:
 
