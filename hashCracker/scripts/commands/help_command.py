@@ -1,0 +1,33 @@
+import sys
+def helpFun():
+    help_message = """
+    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Comando de ajuda =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    Argumentos:
+    -w, --wordlist     Especifica a wordlist a ser utilizada.
+    -t, --threads      Número de threads a ser utilizado (padrão: 1).
+    --hash_type        Especifica o tipo de hash a ser quebrado.
+                       Formatos disponíveis: sha256, md5-sha1, sha512, ...
+
+    python hash_cracker.py -w wordlist.txt -t 10 --hash_type sha256 -a test.txt
+
+    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Tipos de hash =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+        - md5 = 1
+        - sha1 = 2
+        - sha224 = 3
+        - sha256 = 4
+        - sha384 = 5
+        - sha512 = 6
+        - sha3_224 = 7
+        - sha3_256 = 8
+        - sha3_384 = 9
+        - sha3_512 = 10
+        - shake_128 = 11
+        - shake_256 = 12
+        - blake2b = 13
+        - blake2s = 14
+    """
+    print(help_message)
+    sys.exit()
+

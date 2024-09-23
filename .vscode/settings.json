@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./hashCracker/scripts",
+        "./hashCracker/scripts/commands",
+        "./hashCracker/scripts/commands/hash_types"
+    ]
+}
