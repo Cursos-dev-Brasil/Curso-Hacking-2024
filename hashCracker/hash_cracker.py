@@ -1,24 +1,37 @@
 import sys
 import os
 
+# adiciona outros scripts ao path
 sys.path.append(os.path.join(os.path.dirname(__file__), "scripts"))
 sys.path.append(os.path.join(os.path.dirname(__file__), "scripts/commands"))
 sys.path.append(os.path.join(os.path.dirname(__file__), "scripts/commands/hash_types"))
 
+# importação de funções e arquivos externos
 from exec import choose
 from scripts.commands.help_command import *
 from arg_parser import parse_args
 
+# captura os argumentos passados na execução
 args = parse_args()
 # Verificação de wordlist
 def wordlist(wordlistFile):
+				# verifica se o arquivo da wordlist existe
     if os.path.exists(wordlistFile):
+									# verifica se o usuário tem permissão de leitura na wordlist
         if os.access(wordlistFile, os.R_OK):
-            if wordlistFile.lower().endswith(".txt"):
+        # verifica se a wordlist é um arquivo de texto
+
+									if wordlistFile.lower().endswith(".txt"):
+																		# verifica se a wordlist tem conteúdo
                 if os.path.getsize(wordlistFile) > 0:
+																						# abre a wordlist
                     with open(wordlistFile, "r", encoding="utf-8") as file:
-                        return file.read().splitlines()
-                        
+                        return
+# Le o conteúdo da wordlist e separa em linhas
+ file.read().splitlines()
+          
+
+# Erros...              
                 else:
                     print("ERRO: O arquivo de texto está vazio")
                     exit()
