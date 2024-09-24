@@ -17,7 +17,8 @@ def wordlist(wordlistFile):
             if wordlistFile.lower().endswith(".txt"):
                 if os.path.getsize(wordlistFile) > 0:
                     with open(wordlistFile, "r", encoding="utf-8") as file:
-                        return file.read()
+                        return file.read().splitlines()
+                        
                 else:
                     print("ERRO: O arquivo de texto está vazio")
                     exit()

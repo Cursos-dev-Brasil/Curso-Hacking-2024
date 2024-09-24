@@ -27,6 +27,12 @@ def helpFun():
         - shake_256 = 12
         - blake2b = 13
         - blake2s = 14
+        - ripemd160 = 15
+        - whirlpool = 16
+        - md4 = 17
+        - md5-sha1 = 18
+        - sm3 = 19
+        - mdc2 = 20
     """
     print(help_message)
     sys.exit()

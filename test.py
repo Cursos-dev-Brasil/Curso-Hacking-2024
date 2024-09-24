@@ -1,3 +1,3 @@
 import hashlib
 
-print(hashlib.algorithms_available)
+hashlib.sha1()
