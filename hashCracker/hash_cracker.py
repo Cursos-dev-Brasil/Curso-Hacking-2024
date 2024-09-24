@@ -80,7 +80,10 @@ def main():
     choose(wordlist_data, hash_data)
     return wordlist_data, hash_data
 
+# condição para verificar se o script está sendo executado diretamente
+# se não estiver, nada nesse bloco é executado 
 if __name__ == "__main__":
+# verifica se argumentos não foram passados
     if (
         not args.wordlist
         or not args.hash_type
@@ -88,7 +91,8 @@ if __name__ == "__main__":
         and not args.help
     ):
         print(
-            "Erro ao processar os argumentos, preencha os argumentos necessários '-w/--wordlist', '--hash_type' e '-f/--file' Ou use o comando help"
+            "Erro ao processar os argumentos, preencha os argumentos necessários '-w/--wordlist', '--hash_type' e '-f/--file' Ou use o comando --help"
     )
     else:
+# atribui os valores retornados da função main a wordlist_data e hash_data
         wordlist_data, hash_data = main()
