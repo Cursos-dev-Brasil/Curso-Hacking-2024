@@ -1,5 +1,7 @@
 import sys
+
 def helpFun():
+    # Mensagem de ajuda que será exibida
     help_message = """
     =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Comando de ajuda =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -9,7 +11,8 @@ def helpFun():
     --hash_type        Especifica o tipo de hash a ser quebrado.
                        Formatos disponíveis: sha256, md5-sha1, sha512, ...
 
-    python hash_cracker.py -w wordlist.txt -t 10 --hash_type sha256 -a test.txt
+    Exemplo de uso:
+    python hash_cracker.py -w wordlist.txt -t 10 --hash_type sha256 -f test.txt
 
     =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Tipos de hash =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -35,5 +38,4 @@ def helpFun():
         - mdc2 = 20
     """
     print(help_message)
-    sys.exit()
-
+    sys.exit()  # Encerra o programa após exibir a ajuda
