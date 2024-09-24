@@ -1,7 +1,7 @@
 import sys
 import os
 
-# adiciona outros scripts ao path
+# adiciona outros diretórios ao path do python
 sys.path.append(os.path.join(os.path.dirname(__file__), "scripts"))
 sys.path.append(os.path.join(os.path.dirname(__file__), "scripts/commands"))
 sys.path.append(os.path.join(os.path.dirname(__file__), "scripts/commands/hash_types"))
@@ -71,7 +71,9 @@ def hash_fileVerify(hash_file):
         exit()
 
 
+# função principal que inicia outras
 def main():
+# pega os dados dos argumentos
     global wordlist_data, hash_data
     wordlist_data = wordlist(args.wordlist)
     hash_data = hash_fileVerify(args.file)
