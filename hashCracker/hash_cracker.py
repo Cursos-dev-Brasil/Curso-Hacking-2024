@@ -1,44 +1,37 @@
 import sys
 import os
 
-# adiciona outros diretórios ao path do python
+# Adiciona diretórios ao path do Python para permitir a importação de módulos
 sys.path.append(os.path.join(os.path.dirname(__file__), "scripts"))
 sys.path.append(os.path.join(os.path.dirname(__file__), "scripts/commands"))
 sys.path.append(os.path.join(os.path.dirname(__file__), "scripts/commands/hash_types"))
 
-# importação de funções e arquivos externos
+# Importação de funções e arquivos externos
 from exec import choose
 from scripts.commands.help_command import *
 from arg_parser import parse_args
 
-# captura os argumentos passados na execução
+# Captura os argumentos passados na execução
 args = parse_args()
-# Verificação de wordlist
+
+# Função para verificar a wordlist
 def wordlist(wordlistFile):
-				# verifica se o arquivo da wordlist existe
+    # Verifica se o arquivo da wordlist existe
     if os.path.exists(wordlistFile):
-									# verifica se o usuário tem permissão de leitura na wordlist
+        # Verifica se o usuário tem permissão de leitura
         if os.access(wordlistFile, os.R_OK):
-        # verifica se a wordlist é um arquivo de texto
-
-									if wordlistFile.lower().endswith(".txt"):
-																		# verifica se a wordlist tem conteúdo
+            # Verifica se a wordlist é um arquivo de texto
+            if wordlistFile.lower().endswith(".txt"):
+                # Verifica se a wordlist tem conteúdo
                 if os.path.getsize(wordlistFile) > 0:
-																						# abre a wordlist
+                    # Lê o conteúdo da wordlist e separa em linhas
                     with open(wordlistFile, "r", encoding="utf-8") as file:
-                        return
-# Le o conteúdo da wordlist e separa em linhas
- file.read().splitlines()
-          
-
-# Erros...              
+                        return file.read().splitlines()
                 else:
                     print("ERRO: O arquivo de texto está vazio")
                     exit()
             else:
-                print(
-                    "ERRO: O script não suporta outro tipo de arquivo, converta para .txt"
-                )
+                print("ERRO: O script não suporta outro tipo de arquivo, converta para .txt")
                 exit()
         else:
             print("ERRO: O arquivo está inacessível")
@@ -47,7 +40,7 @@ def wordlist(wordlistFile):
         print("ERRO: O arquivo não existe, Adeus...")
         exit()
 
-
+# Função para verificar o arquivo de hash
 def hash_fileVerify(hash_file):
     if os.path.exists(hash_file):
         if os.access(hash_file, os.R_OK):
@@ -59,9 +52,7 @@ def hash_fileVerify(hash_file):
                     print("ERRO: O arquivo de texto está vazio")
                     exit()
             else:
-                print(
-                    "ERRO: O script não suporta outro tipo de arquivo, converta para .txt"
-                )
+                print("ERRO: O script não suporta outro tipo de arquivo, converta para .txt")
                 exit()
         else:
             print("ERRO: O arquivo está inacessível")
@@ -70,29 +61,20 @@ def hash_fileVerify(hash_file):
         print("ERRO: O arquivo não existe, Adeus...")
         exit()
 
-
-# função principal que inicia outras
+# Função principal que inicia outras funções
 def main():
-# pega os dados dos argumentos
     global wordlist_data, hash_data
+    # Pega os dados dos argumentos
     wordlist_data = wordlist(args.wordlist)
     hash_data = hash_fileVerify(args.file)
     choose(wordlist_data, hash_data)
     return wordlist_data, hash_data
 
-# condição para verificar se o script está sendo executado diretamente
-# se não estiver, nada nesse bloco é executado 
+# Verifica se o script está sendo executado diretamente
 if __name__ == "__main__":
-# verifica se argumentos não foram passados
-    if (
-        not args.wordlist
-        or not args.hash_type
-        or not args.file
-        and not args.help
-    ):
-        print(
-            "Erro ao processar os argumentos, preencha os argumentos necessários '-w/--wordlist', '--hash_type' e '-f/--file' Ou use o comando --help"
-    )
+    # Verifica se argumentos necessários foram passados
+    if not args.wordlist or not args.hash_type or not args.file and not args.help:
+        print("Erro ao processar os argumentos, preencha os argumentos necessários '-w/--wordlist', '--hash_type' e '-f/--file' Ou use o comando --help")
     else:
-# atribui os valores retornados da função main a wordlist_data e hash_data
+        # Atribui os valores retornados da função main a wordlist_data e hash_data
         wordlist_data, hash_data = main()
