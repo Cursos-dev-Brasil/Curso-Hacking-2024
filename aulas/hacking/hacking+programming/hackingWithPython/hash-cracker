@@ -1,0 +1,5 @@
+# Cracker de senha 
+
+Seu primeiro desafio vai ser simples, criar um script pra quebrar uma senha com python em formato md5, que é o formato padrão, na raiz do projeto, eu tenho um script completo só pra isso, a diferença é que ele usa argumentos e arquivos personalizados com parâmetros passados na execução do script, além de outros 24 tipos de hash, eu não me importo se você vai fazer esse desafio com 100 linhas ou 500, o que importa é terminar o script
+
+Você pode usar 
