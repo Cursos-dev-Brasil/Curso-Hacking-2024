@@ -20,6 +20,6 @@ print(s)
 
 ## linhas física e lógica
 
-O que você vê quando digita um código é a linha física. O que o python recebee quando você executa é chamado de linha lógica. Com isso dito, você precisa saber que o python interpreta toda linha física que você digita resulta em uma linha lógica (ou mais, depende do tamanho dela). Nessa linguagem, uma linha lógica pode ser dividida em várias linhas físicas usando o comando de escape (barra invertida - \)
+O que você vê quando digita um código é a linha física. O que o python recebee quando você executa é chamado de linha lógica. Com isso dito, você precisa saber que o python interpreta toda linha física que você digita resulta em uma linha lógica (ou mais, depende do tamanho dela). Nessa linguagem, uma linha lógica pode ser dividida em várias linhas físicas usando o comando de escape (barra invertida - \\)
 
 
